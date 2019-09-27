@@ -110,11 +110,13 @@ class _MapTabState extends State<MapTab> {
                                     fontWeight: FontWeight.normal,
                                   )),
                               Text(
-                                placeMark.name,
+                                placeMark.subAdministrativeArea +
+                                    ' - ' +
+                                    placeMark.name,
                                 textAlign: TextAlign.start,
                                 style: kGreyTextStyle.copyWith(
                                   color: Colors.grey,
-                                  fontSize: 16,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.normal,
                                 ),
                               ),

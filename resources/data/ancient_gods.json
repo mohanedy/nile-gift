@@ -121,6 +121,50 @@
         "https://upload.wikimedia.org/wikipedia/commons/0/01/Egypte_louvre_066.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/1/1b/The_judgement_of_the_dead_in_the_presence_of_Osiris.jpg"
       ]
+    },
+    {
+      "id": 3,
+      "name": "Isis",
+      "nickname": "The goddess of magic",
+      "animation_path": "Ra.flr",
+      "animation_name": "Ra Animation",
+      "appeared_in": [
+        {
+          "lat": 24.0889,
+          "lon": 32.8998
+        }
+      ],
+      "when": "2494BC",
+      "symbol": "Noon Sun - Falcon",
+      "parents": [],
+      "consort": [
+        "Hathor",
+        "Sekhmet",
+        "Bastet"
+      ],
+      "siblings": [
+        "Apep",
+        "Sobek",
+        "Serket"
+      ],
+      "believed_in": [
+        "Userkaf",
+        "Menkauhor Kaiu",
+        "Sahure"
+      ],
+      "god_of": [
+        {
+          "value": "Magic",
+          "asset": "images/magic.png"
+        }
+      ],
+      "story": "She tricked Ra into retiring by poisoning him with a magic snake, then encouraging the old sun god to reveal his secret name so Isis could cure him. Once Isis knew Ra’s secret name, she could force him to do just about anything. She encouraged him to retreat into the sky, opening the throne for Osiris. Isis was the patron of magicians, and loved her husband very much. She encouraged their son Horus to take vengeance on the evil Set, who had killed Osiris. Isis is often pictured as a beautiful woman with multicolored wings.",
+      "about": "Isis was first mentioned in the Old Kingdom (c. 2686–2181 BCE) as one of the main characters of the Osiris myth, in which she resurrects her slain husband, the divine king Osiris, and produces and protects his heir, Horus. She was believed to help the dead enter the afterlife as she had helped Osiris, and she was considered the divine mother of the pharaoh, who was likened to Horus. Her maternal aid was invoked in healing spells to benefit ordinary people.",
+      "know_more": "https://en.wikipedia.org/wiki/Isis",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/4/45/Terre_cuite_pleureuse_Louvre_E27247.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a5/Abydos_Tempelrelief_Sethos_I._15.JPG"
+      ]
     }
   ]
 }

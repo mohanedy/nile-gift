@@ -4,7 +4,7 @@ import 'package:gift_of_the_nile/screens/home_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This is  testing comment
+  // بحبك فشخ
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

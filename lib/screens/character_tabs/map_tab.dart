@@ -67,9 +67,10 @@ class _MapTabState extends State<MapTab> {
                     physics: ClampingScrollPhysics(),
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
-                      final distance = snapshot.data[0]['distance'] as double;
+                      final distance =
+                          snapshot.data[index]['distance'] as double;
                       final placeMark =
-                          snapshot.data[0]['placemark'] as Placemark;
+                          snapshot.data[index]['placemark'] as Placemark;
                       return Row(
                         children: <Widget>[
                           Material(

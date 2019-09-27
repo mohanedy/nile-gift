@@ -9,8 +9,8 @@
       "animation_name": "Ra Animation",
       "appeared_in": [
         {
-          "lat": 221.15121515,
-          "lon": 216.51515515
+          "lat": 24.0889,
+          "lon": 32.8998
         }
       ],
       "when": "2494BC",
@@ -51,6 +51,75 @@
       "gallery": [
         "https://upload.wikimedia.org/wikipedia/commons/5/54/Figure_of_Re-Horakhty%2C_305-200_B.C.E.%2C_71.40.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/7/73/Pyramidion_of_Khonsu_font.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Osiris",
+      "nickname": "The god of Underworld and Judge of the Dead",
+      "animation_path": "Judge.flr",
+      "animation_name": "judge animation",
+      "appeared_in": [
+        {
+          "lat": 24.0889,
+          "lon": 32.8998
+        },
+        {
+          "lat": 22.3372,
+          "lon": 31.6258
+        }
+      ],
+      "when": "2613BC",
+      "symbol": "Crook and flail",
+      "parents": [
+        "Geb",
+        "Nut"
+      ],
+      "consort": [
+        "Isis"
+      ],
+      "siblings": [
+        "Isis",
+        "Set",
+        "Nephthys",
+        "Heru Wer"
+      ],
+      "believed_in": [
+        "Userkaf",
+        "Menkauhor Kaiu",
+        "Sahure"
+      ],
+      "god_of": [
+        {
+          "value": "fertility",
+          "asset": "images/fertilizer.png"
+        },
+        {
+          "value": "agriculture",
+          "asset": "images/crops.png"
+        },
+        {
+          "value": "the dead",
+          "asset": "images/death.png"
+        },
+        {
+          "value": "resurrection",
+          "asset": "images/death.png"
+        },
+        {
+          "value": "life",
+          "asset": "images/heartbeat.png"
+        }
+      ],
+      "story": "The first son of Geb and Nut, Osiris was a wise and good pharaoh when he took over the world from Ra. Osiris taught man about farming, and created the first cities in Egypt. Unfortunately, Osiris’s brother Set was jealous of him. Set tricked him into laying down in a golden coffin, then sealed the coffin and cut it into pieces. Set scattered the pieces all over Egypt, and Osiris’s wife Isis spent years searching for them. Eventually, Isis put her husband back together, binding him in cloth to make the first mummy, but Osiris only came partially back to life. After that, he was the god of the underworld, sitting in judgment over the souls of the dead. He appears as a king with blue skin and white robes.",
+      "about": "is the Egyptian Lord of the Underworld and Judge of the Dead, brother-husband to Isis, and one of the most important gods of ancient Egypt. The name `Osiris' is the Latinized form of the Egyptian Usir which is interpreted as 'powerful' or 'mighty'. He is the first-born of the gods Geb (earth) and Nut (sky) shortly after the creation of the world, was murdered by his younger brother Set, and brought back to life by his sister-wife Isis.",
+      "know_more": "https://www.ancient.eu/osiris/#targetText=Osiris%20is%20the%20Egyptian%20Lord,powerful'%20or%20'mighty'.",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/d/d6/Head_of_the_God_Osiris%2C_ca._595-525_B.C.E..jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b4/La_Tombe_de_Horemheb_cropped.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b0/Ptah-Sokar-Osiris_Figure_MET_LC-21_9_1_EGDP025129.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/01/Egypte_louvre_066.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/1/1b/The_judgement_of_the_dead_in_the_presence_of_Osiris.jpg"
       ]
     }
   ]

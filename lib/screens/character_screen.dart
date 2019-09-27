@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gift_of_the_nile/bloc/character_screen_bloc.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/about_tab.dart';
+import 'package:gift_of_the_nile/screens/character_tabs/map_tab.dart';
 
 class CharacterScreen extends StatefulWidget {
   final AncientGodCharacter character;
@@ -20,7 +21,6 @@ class _CharacterScreenState extends State<CharacterScreen>
   String _loveAnimationName = 'Unlove';
   TabController _tabController;
   final tabStyle = TextStyle(
-    color: Colors.grey,
     fontFamily: 'Righteous',
     fontSize: 18,
   );
@@ -51,10 +51,8 @@ class _CharacterScreenState extends State<CharacterScreen>
           physics: ClampingScrollPhysics(),
           controller: _tabController,
           children: <Widget>[
-            AboutTab(),
-            Text(
-              'test',
-            ),
+            AboutTab(_character),
+            MapTab(_character),
             Text(
               'test',
             )
@@ -146,6 +144,7 @@ class _CharacterScreenState extends State<CharacterScreen>
                 ),
                 Text(
                   _character.nickname,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.grey,
                     fontWeight: FontWeight.normal,
@@ -197,6 +196,9 @@ class _CharacterScreenState extends State<CharacterScreen>
             centerTitle: true,
           ),
           bottom: TabBar(
+            unselectedLabelColor: Colors.grey,
+            labelColor: Colors.yellow.shade600,
+            indicatorColor: Colors.yellow.shade600,
             controller: _tabController,
             tabs: <Widget>[
               Tab(

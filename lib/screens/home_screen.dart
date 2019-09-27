@@ -83,11 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           right: 20,
                                         ),
                                         child: ItemWidget(
-                                          itemLabel: ancientGods
-                                                  .data.characters[0].name +
-                                              ' - ' +
-                                              ancientGods
-                                                  .data.characters[0].nickname,
+                                          itemLabel: v.name,
                                           onPressed: () {
                                             Navigator.push(
                                                 context,

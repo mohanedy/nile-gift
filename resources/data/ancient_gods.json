@@ -1,0 +1,57 @@
+{
+  "type": "gods",
+  "characters": [
+    {
+      "id": 1,
+      "name": "Ra",
+      "nickname": "The God of The Sun",
+      "animation_path": "Ra.flr",
+      "animation_name": "Ra Animation",
+      "appeared_in": [
+        {
+          "lat": 221.15121515,
+          "lon": 216.51515515
+        }
+      ],
+      "when": "2494BC",
+      "symbol": "Noon Sun - Falcon",
+      "parents": [],
+      "consort": [
+        "Hathor",
+        "Sekhmet",
+        "Bastet"
+      ],
+      "siblings": [
+        "Apep",
+        "Sobek",
+        "Serket"
+      ],
+      "believed_in": [
+        "Userkaf",
+        "Menkauhor Kaiu",
+        "Sahure"
+      ],
+      "god_of": [
+        {
+          "value": "Sun",
+          "asset": "images/sunny.png"
+        },
+        {
+          "value": "Sky",
+          "asset": "images/cloudy.png"
+        },
+        {
+          "value": "Underworld",
+          "asset": "images/moon.png"
+        }
+      ],
+      "story": "Ra wanted to teach the people he made how to live. So he took on the shape of a man and became the first pharaoh, king of Egypt. Since Ra was now in the form of a man, he could no longer stay young forever. He was bound to grow old one day. After ruling Egypt for many thousands of years, that time finally came. At his old age, Ra began to notice that his people no longer respected him. They laughed at him. They mocked him. They said, \"Look at Ra! Ra is so old! His bones are like silver, his flesh like gold, and his hair the color of lapis lazuli!\" They also said, We cant go on like this. We need a new leader.",
+      "about": "is the ancient Egyptian deity of the sun. By the Fifth Dynasty in the 25th and 24th centuries BC, he had become one of the most important gods in ancient Egyptian religion, identified primarily with the noon sun. Ra was believed to rule in all parts of the created world: the sky, the Earth, and the underworld. He was the god of the sun, order, kings, and the sky",
+      "know_more": "https://en.wikipedia.org/wiki/Ra",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/5/54/Figure_of_Re-Horakhty%2C_305-200_B.C.E.%2C_71.40.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/73/Pyramidion_of_Khonsu_font.jpg"
+      ]
+    }
+  ]
+}

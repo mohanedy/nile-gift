@@ -136,7 +136,9 @@
       ],
       "when": " 2686BC",
       "symbol": "Tyet",
-      "parents": ["Geb and Nut"],
+      "parents": [
+        "Geb and Nut"
+      ],
       "consort": [
         "Osiris",
         "Min",
@@ -163,7 +165,6 @@
       "story": "She tricked Ra into retiring by poisoning him with a magic snake, then encouraging the old sun god to reveal his secret name so Isis could cure him. Once Isis knew Ra’s secret name, she could force him to do just about anything. She encouraged him to retreat into the sky, opening the throne for Osiris. Isis was the patron of magicians, and loved her husband very much. She encouraged their son Horus to take vengeance on the evil Set, who had killed Osiris. Isis is often pictured as a beautiful woman with multicolored wings.",
       "about": "Isis was first mentioned in the Old Kingdom (c. 2686–2181 BCE) as one of the main characters of the Osiris myth, in which she resurrects her slain husband, the divine king Osiris, and produces and protects his heir, Horus. She was believed to help the dead enter the afterlife as she had helped Osiris, and she was considered the divine mother of the pharaoh, who was likened to Horus. Her maternal aid was invoked in healing spells to benefit ordinary people.",
       "know_more": "https://en.wikipedia.org/wiki/Isis",
-
       "gallery": [
         "https://upload.wikimedia.org/wikipedia/commons/4/45/Terre_cuite_pleureuse_Louvre_E27247.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/a/a5/Abydos_Tempelrelief_Sethos_I._15.JPG"
@@ -183,7 +184,9 @@
       ],
       "when": " 1650BC",
       "symbol": "Was-sceptre and Set animal",
-      "parents": ["Geb and Nut"],
+      "parents": [
+        "Geb and Nut"
+      ],
       "consort": [
         "Nephthys",
         "Anat",
@@ -201,8 +204,8 @@
         "Menkauhor Kaiu",
         "Sahure"
       ],
-      " god_of": [
-         {
+      "god_of": [
+        {
           "value": "fire",
           "asset": "images/fire.png"
         },
@@ -227,10 +230,9 @@
           "asset": "images/violent.png"
         }
       ],
-      "story":  "Set was one mean dude. His color was red, the color of sterile soil and the desert. Set was the strongest of the gods, and very tricky. He became pharaoh of Egypt after killing his brother, but was later overthrown by his nephew Horus. After that, Set fled into the desert, where he controlled all the evil harsh lands outside the Nile Valley. Set wasn’t all bad, however. In the old days, he sailed on Ra’s boat and helped defend the sun god from the armies of the chaos serpent Apep. Set is usually pictured with red skin and the head of an unknown animal demon – part dog, part anteater, all ugly",
+      "story": "Set was one mean dude. His color was red, the color of sterile soil and the desert. Set was the strongest of the gods, and very tricky. He became pharaoh of Egypt after killing his brother, but was later overthrown by his nephew Horus. After that, Set fled into the desert, where he controlled all the evil harsh lands outside the Nile Valley. Set wasn’t all bad, however. In the old days, he sailed on Ra’s boat and helped defend the sun god from the armies of the chaos serpent Apep. Set is usually pictured with red skin and the head of an unknown animal demon – part dog, part anteater, all ugly",
       "about": "Set had a positive role where he accompanies Ra on his solar boat to repel Apep, the serpent of Chaos. Set had a vital role as a reconciled combatant. He was lord of the red (desert) land where he was the balance to Horus' role as lord of the black (soil) land.",
       "know_more": "https://en.wikipedia.org/wiki/Set_(deity)",
-
       "gallery": [
         "https://upload.wikimedia.org/wikipedia/commons/6/66/Nephthis_and_Seth-E_3374-IMG_8007-gradient.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/f/f0/Edfu47.JPG",
@@ -244,19 +246,18 @@
       "nickname": "the Avenger",
       "animation_path": "Judge.flr",
       "animation_name": "judge animation",
-      "appeared_in":
-        {
-          "lat": 24.9779,
-          "lon": 32.8734
-        },
-
+      "appeared_in": [{
+        "lat": 24.9779,
+        "lon": 32.8734
+      }],
       "when": "2400BC",
       "symbol": "Eye of Horus",
       "parents": [
-        "Osiris" , "Isis"
+        "Osiris",
+        "Isis"
       ],
       "consort": [
-       "Hathor"
+        "Hathor"
       ],
       "siblings": [
         "Anubis",
@@ -280,7 +281,8 @@
       "story": "When he grew to manhood, he challenged Set and eventually defeated him, becoming the new pharaoh of Egypt. Afterwards, all mortal pharaohs considered themselves to be the descendants of Horus. Horus’s symbol was the falcon, and he is often pictured as a man with a falcon’s head.",
       "about": " is one of the most significant ancient Egyptian deities who served many functions, most notably god of kingship and the sky. He was worshipped from at least the late prehistoric Egypt until the Ptolemaic Kingdom and Roman Egypt. Different forms of Horus are recorded in history and these are treated as distinct gods by Egyptologists.",
       "know_more": "https://en.wikipedia.org/wiki/Horus",
-      "gallery": ["https://upload.wikimedia.org/wikipedia/commons/4/42/Ram-headed_falcon_amulet-E_80-IMG_2503-with_reflection-gradient.jpg",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/4/42/Ram-headed_falcon_amulet-E_80-IMG_2503-with_reflection-gradient.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/f/fd/Replica_Horus_Falcon_British_Museum.JPG",
         "https://upload.wikimedia.org/wikipedia/commons/f/f5/God_Horus_as_a_falcon_wearing_the_Double_Crown_of_Egypt._27th_dynasty._State_Museum_of_Egyptian_Art%2C_Munich.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/c/cc/Edfu17.JPG",
@@ -293,23 +295,20 @@
       "nickname": "god of death",
       "animation_path": "Judge.flr",
       "animation_name": "judge animation",
-      "appeared_in":
-      {
+      "appeared_in":[ {
         "lat": 24.9779,
         "lon": 32.8734
-      },
-
+      }],
       "when": "3100BC",
-      "symbol": ["mummy gauze",
-        "fetish",
-        "jackal",
-        "flail"],
+      "symbol":
+        "mummy gauze",
+      
       "parents": [
-        "Nepthys" ,
+        "Nepthys",
         "Set"
       ],
       "consort": [
-        "\tAnput"
+        "Anput"
       ],
       "siblings": [
         "Wepwawet"
@@ -337,10 +336,11 @@
           "asset": "images/tombstone.png"
         }
       ],
-      "story": " helped prepare the soul for the Afterlife and escorted the dead to the hall of judgment. The Egyptians noticed jackals hanging around their graveyards, so they decided jackals must be Anubis’s sacred animals. Priests even wore jackal masks when they made the pharaoh’s body into a mummy. Anubis helped Isis make Osiris into the first mummy. ",
-      "about": " Like many ancient Egyptian deities, Anubis assumed different roles in various contexts. Depicted as a protector of graves as early as the First Dynasty (c. 3100 – c. 2890 BC), Anubis was also an embalmer. By the Middle Kingdom (c. 2055 – 1650 BC) he was replaced by Osiris in his role as lord of the underworld. One of his prominent roles was as a god who ushered souls into the afterlife. He attended the weighing scale during the Weighing of the Heart, in which it was determined whether a soul would be allowed to enter the realm of the dead. Despite being one of the most ancient and one of the most frequently depicted and mentioned gods in the Egyptian pantheon, Anubis played almost no role in Egyptian myths.",
+      "story": "helped prepare the soul for the Afterlife and escorted the dead to the hall of judgment. The Egyptians noticed jackals hanging around their graveyards, so they decided jackals must be Anubis’s sacred animals. Priests even wore jackal masks when they made the pharaoh’s body into a mummy. Anubis helped Isis make Osiris into the first mummy. ",
+      "about": "Like many ancient Egyptian deities, Anubis assumed different roles in various contexts. Depicted as a protector of graves as early as the First Dynasty (c. 3100 – c. 2890 BC), Anubis was also an embalmer. By the Middle Kingdom (c. 2055 – 1650 BC) he was replaced by Osiris in his role as lord of the underworld. One of his prominent roles was as a god who ushered souls into the afterlife. He attended the weighing scale during the Weighing of the Heart, in which it was determined whether a soul would be allowed to enter the realm of the dead. Despite being one of the most ancient and one of the most frequently depicted and mentioned gods in the Egyptian pantheon, Anubis played almost no role in Egyptian myths.",
       "know_more": "https://en.wikipedia.org/wiki/Anubis",
-      "gallery": ["https://upload.wikimedia.org/wikipedia/commons/0/06/Anubis_attending_the_mummy_of_Sennedjem.jpg",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/0/06/Anubis_attending_the_mummy_of_Sennedjem.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/8/86/Tutankhamun_jackal.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/1/16/Statuette_of_Anubis_MET_38.5_EGDP022863.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/9/9b/Egyptian_-_A_Worshipper_Kneeling_Before_the_God_Anubis_-_Walters_54400_-_Three_Quarter_View.jpg"

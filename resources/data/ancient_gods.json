@@ -130,22 +130,24 @@
       "animation_name": "Ra Animation",
       "appeared_in": [
         {
-          "lat": 24.0889,
-          "lon": 32.8998
+          "lat": 24.0258,
+          "lon": 32.8842
         }
       ],
-      "when": "2494BC",
-      "symbol": "Noon Sun - Falcon",
-      "parents": [],
+      "when": " 2686BC",
+      "symbol": "Tyet",
+      "parents": ["Geb and Nut"],
       "consort": [
-        "Hathor",
-        "Sekhmet",
-        "Bastet"
+        "Osiris",
+        "Min",
+        "Serapis",
+        "Horus the Elder"
       ],
       "siblings": [
-        "Apep",
-        "Sobek",
-        "Serket"
+        "Osiris",
+        "Set",
+        "Nephthys",
+        "Horus the Elder"
       ],
       "believed_in": [
         "Userkaf",
@@ -161,9 +163,128 @@
       "story": "She tricked Ra into retiring by poisoning him with a magic snake, then encouraging the old sun god to reveal his secret name so Isis could cure him. Once Isis knew Ra’s secret name, she could force him to do just about anything. She encouraged him to retreat into the sky, opening the throne for Osiris. Isis was the patron of magicians, and loved her husband very much. She encouraged their son Horus to take vengeance on the evil Set, who had killed Osiris. Isis is often pictured as a beautiful woman with multicolored wings.",
       "about": "Isis was first mentioned in the Old Kingdom (c. 2686–2181 BCE) as one of the main characters of the Osiris myth, in which she resurrects her slain husband, the divine king Osiris, and produces and protects his heir, Horus. She was believed to help the dead enter the afterlife as she had helped Osiris, and she was considered the divine mother of the pharaoh, who was likened to Horus. Her maternal aid was invoked in healing spells to benefit ordinary people.",
       "know_more": "https://en.wikipedia.org/wiki/Isis",
+
       "gallery": [
         "https://upload.wikimedia.org/wikipedia/commons/4/45/Terre_cuite_pleureuse_Louvre_E27247.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/a/a5/Abydos_Tempelrelief_Sethos_I._15.JPG"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Set",
+      "nickname": "The god of the desert and evil",
+      "animation_path": "Ra.flr",
+      "animation_name": "Ra Animation",
+      "appeared_in": [
+        {
+          "lat": 24.4521,
+          "lon": 32.9284
+        }
+      ],
+      "when": " 1650BC",
+      "symbol": "Was-sceptre and Set animal",
+      "parents": ["Geb and Nut"],
+      "consort": [
+        "Nephthys",
+        "Anat",
+        "Astarte",
+        "Tawaret"
+      ],
+      "siblings": [
+        "Osiris",
+        "Isis",
+        "Nephthys",
+        "Horus the Elder"
+      ],
+      "believed_in": [
+        "Userkaf",
+        "Menkauhor Kaiu",
+        "Sahure"
+      ],
+      " god_of": [
+         {
+          "value": "fire",
+          "asset": "images/fire.png"
+        },
+        {
+          "value": "deserts",
+          "asset": "images/desert.png"
+        },
+        {
+          "value": "storms",
+          "asset": "images/storm.png"
+        },
+        {
+          "value": "envy",
+          "asset": "images/envy.png"
+        },
+        {
+          "value": "evil",
+          "asset": "images/evil.png"
+        },
+        {
+          "value": "violence",
+          "asset": "images/violent.png"
+        }
+      ],
+      "story":  "Set was one mean dude. His color was red, the color of sterile soil and the desert. Set was the strongest of the gods, and very tricky. He became pharaoh of Egypt after killing his brother, but was later overthrown by his nephew Horus. After that, Set fled into the desert, where he controlled all the evil harsh lands outside the Nile Valley. Set wasn’t all bad, however. In the old days, he sailed on Ra’s boat and helped defend the sun god from the armies of the chaos serpent Apep. Set is usually pictured with red skin and the head of an unknown animal demon – part dog, part anteater, all ugly",
+      "about": "Set had a positive role where he accompanies Ra on his solar boat to repel Apep, the serpent of Chaos. Set had a vital role as a reconciled combatant. He was lord of the red (desert) land where he was the balance to Horus' role as lord of the black (soil) land.",
+      "know_more": "https://en.wikipedia.org/wiki/Set_(deity)",
+
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/6/66/Nephthis_and_Seth-E_3374-IMG_8007-gradient.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f0/Edfu47.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/5/53/Relief_Herihor_Seth_obliterated.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f9/SethAndHorusAdoringRamsses_crop.jpg"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Horus",
+      "nickname": "the Avenger",
+      "animation_path": "Judge.flr",
+      "animation_name": "judge animation",
+      "appeared_in":
+        {
+          "lat": 24.9779,
+          "lon": 32.8734
+        },
+
+      "when": "2400BC",
+      "symbol": "Eye of Horus",
+      "parents": [
+        "Osiris" , "Isis"
+      ],
+      "consort": [
+       "Hathor"
+      ],
+      "siblings": [
+        "Anubis",
+        "Bastet"
+      ],
+      "believed_in": [
+        "Userkaf",
+        "Menkauhor Kaiu",
+        "Sahure"
+      ],
+      "god_of": [
+        {
+          "value": "kingship",
+          "asset": "images/fertilizer.png"
+        },
+        {
+          "value": "sky",
+          "asset": "images/sky.png"
+        }
+      ],
+      "story": "When he grew to manhood, he challenged Set and eventually defeated him, becoming the new pharaoh of Egypt. Afterwards, all mortal pharaohs considered themselves to be the descendants of Horus. Horus’s symbol was the falcon, and he is often pictured as a man with a falcon’s head.",
+      "about": " is one of the most significant ancient Egyptian deities who served many functions, most notably god of kingship and the sky. He was worshipped from at least the late prehistoric Egypt until the Ptolemaic Kingdom and Roman Egypt. Different forms of Horus are recorded in history and these are treated as distinct gods by Egyptologists.",
+      "know_more": "https://en.wikipedia.org/wiki/Horus",
+      "gallery": ["https://upload.wikimedia.org/wikipedia/commons/4/42/Ram-headed_falcon_amulet-E_80-IMG_2503-with_reflection-gradient.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/fd/Replica_Horus_Falcon_British_Museum.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f5/God_Horus_as_a_falcon_wearing_the_Double_Crown_of_Egypt._27th_dynasty._State_Museum_of_Egyptian_Art%2C_Munich.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/c/cc/Edfu17.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/0/0f/Horus_-_Temple_of_Seti_I_%283500450346%29.jpg"
       ]
     }
   ]

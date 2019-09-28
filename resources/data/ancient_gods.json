@@ -286,6 +286,65 @@
         "https://upload.wikimedia.org/wikipedia/commons/c/cc/Edfu17.JPG",
         "https://upload.wikimedia.org/wikipedia/commons/0/0f/Horus_-_Temple_of_Seti_I_%283500450346%29.jpg"
       ]
+    },
+    {
+      "id": 6,
+      "name": "Anubis",
+      "nickname": "god of death",
+      "animation_path": "Judge.flr",
+      "animation_name": "judge animation",
+      "appeared_in":
+      {
+        "lat": 24.9779,
+        "lon": 32.8734
+      },
+
+      "when": "3100BC",
+      "symbol": ["mummy gauze",
+        "fetish",
+        "jackal",
+        "flail"],
+      "parents": [
+        "Nepthys" ,
+        "Set"
+      ],
+      "consort": [
+        "\tAnput"
+      ],
+      "siblings": [
+        "Wepwawet"
+      ],
+      "believed_in": [
+        "Userkaf",
+        "Menkauhor Kaiu",
+        "Sahure"
+      ],
+      "god_of": [
+        {
+          "value": " death",
+          "asset": "images/death.png"
+        },
+        {
+          "value": " mummification",
+          "asset": "images/death.png"
+        },
+        {
+          "value": " afterlife",
+          "asset": "images/death.png"
+        },
+        {
+          "value": "cemeteries",
+          "asset": "images/tombstone.png"
+        }
+      ],
+      "story": " helped prepare the soul for the Afterlife and escorted the dead to the hall of judgment. The Egyptians noticed jackals hanging around their graveyards, so they decided jackals must be Anubis’s sacred animals. Priests even wore jackal masks when they made the pharaoh’s body into a mummy. Anubis helped Isis make Osiris into the first mummy. ",
+      "about": " Like many ancient Egyptian deities, Anubis assumed different roles in various contexts. Depicted as a protector of graves as early as the First Dynasty (c. 3100 – c. 2890 BC), Anubis was also an embalmer. By the Middle Kingdom (c. 2055 – 1650 BC) he was replaced by Osiris in his role as lord of the underworld. One of his prominent roles was as a god who ushered souls into the afterlife. He attended the weighing scale during the Weighing of the Heart, in which it was determined whether a soul would be allowed to enter the realm of the dead. Despite being one of the most ancient and one of the most frequently depicted and mentioned gods in the Egyptian pantheon, Anubis played almost no role in Egyptian myths.",
+      "know_more": "https://en.wikipedia.org/wiki/Anubis",
+      "gallery": ["https://upload.wikimedia.org/wikipedia/commons/0/06/Anubis_attending_the_mummy_of_Sennedjem.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/86/Tutankhamun_jackal.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/1/16/Statuette_of_Anubis_MET_38.5_EGDP022863.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9b/Egyptian_-_A_Worshipper_Kneeling_Before_the_God_Anubis_-_Walters_54400_-_Three_Quarter_View.jpg"
+      ]
     }
   ]
 }

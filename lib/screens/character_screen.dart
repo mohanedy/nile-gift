@@ -93,14 +93,16 @@ class _CharacterScreenState extends State<CharacterScreen>
                     ),
                   ),
                   Spacer(),
-                  Flexible(
+                  Expanded(
                     child: Container(
                       height: MediaQuery.of(context).size.height / 2 - 50,
-                      child: FlareActor(
-                        'resources/animation/${_character.animationPath}',
-                        animation: _character.animationName,
-                        fit: BoxFit.fitHeight,
-                      ),
+                      child: _character.icon == null
+                          ? FlareActor(
+                              'resources/animation/${_character.animationPath}',
+                              animation: _character.animationName,
+                              fit: BoxFit.fitHeight,
+                            )
+                          : Image.asset('resources/' + _character.icon),
                     ),
                   ),
                   IconButton(
@@ -126,11 +128,13 @@ class _CharacterScreenState extends State<CharacterScreen>
                 Flexible(
                   child: Container(
                     height: MediaQuery.of(context).size.height / 4,
-                    child: FlareActor(
-                      'resources/animation/${_character.animationPath}',
-                      animation: _character.animationName,
-                      fit: BoxFit.scaleDown,
-                    ),
+                    child: (_character.icon == null)
+                        ? FlareActor(
+                            'resources/animation/${_character.animationPath}',
+                            animation: _character.animationName,
+                            fit: BoxFit.scaleDown,
+                          )
+                        : Image.asset('resources/' + _character.icon),
                   ),
                 ),
                 Text(

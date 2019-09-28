@@ -43,6 +43,7 @@ class AncientGodCharacter {
   List<String> siblings;
   String story;
   String symbol;
+  String icon;
 
   AncientGodCharacter(
       {this.since,
@@ -61,6 +62,7 @@ class AncientGodCharacter {
       this.parents,
       this.siblings,
       this.story,
+      this.icon,
       this.symbol});
 
   factory AncientGodCharacter.fromJson(Map<String, dynamic> json) {
@@ -98,6 +100,7 @@ class AncientGodCharacter {
           : null,
       story: json['story'],
       symbol: json['symbol'],
+      icon: json['icon'],
     );
   }
 

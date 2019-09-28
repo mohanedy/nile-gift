@@ -15,6 +15,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  bloc:
+    dependency: transitive
+    description:
+      name: bloc
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.15.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -85,6 +92,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.5.9"
+  flick:
+    dependency: transitive
+    description:
+      name: flick
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   floating_search_bar:
     dependency: "direct main"
     description:
@@ -207,6 +221,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0+1"
+  peek_and_pop:
+    dependency: "direct main"
+    description:
+      name: peek_and_pop
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.2"
   platform:
     dependency: transitive
     description:
@@ -227,12 +248,19 @@ packages:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.21.0"
+    version: "0.22.2"
   sky_engine:
     dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.99"
+  snap:
+    dependency: transitive
+    description:
+      name: snap
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   source_span:
     dependency: transitive
     description:
@@ -289,6 +317,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.5"
+  transparent_image:
+    dependency: transitive
+    description:
+      name: transparent_image
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
   typed_data:
     dependency: transitive
     description:
@@ -296,6 +331,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.6"
+  url_launcher:
+    dependency: "direct main"
+    description:
+      name: url_launcher
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.1.4"
   uuid:
     dependency: transitive
     description:

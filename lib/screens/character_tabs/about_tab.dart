@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gift_of_the_nile/component/show_up_animation.dart';
 import 'package:gift_of_the_nile/constants.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutTab extends StatefulWidget {
   final AncientGodCharacter _character;
@@ -63,7 +64,13 @@ class _AboutTabState extends State<AboutTab> {
                   color: Colors.teal,
                 ),
                 RaisedButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    if (await canLaunch(_character.knowMore)) {
+                      await launch(_character.knowMore);
+                    } else {
+                      throw 'Could not launch ${_character.knowMore}';
+                    }
+                  },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
                       20,

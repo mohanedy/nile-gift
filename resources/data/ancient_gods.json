@@ -115,6 +115,7 @@
       "about": "is the Egyptian Lord of the Underworld and Judge of the Dead, brother-husband to Isis, and one of the most important gods of ancient Egypt. The name `Osiris' is the Latinized form of the Egyptian Usir which is interpreted as 'powerful' or 'mighty'. He is the first-born of the gods Geb (earth) and Nut (sky) shortly after the creation of the world, was murdered by his younger brother Set, and brought back to life by his sister-wife Isis.",
       "know_more": "https://www.ancient.eu/osiris/#targetText=Osiris%20is%20the%20Egyptian%20Lord,powerful'%20or%20'mighty'.",
       "gallery": [
+        "https://www.ancient.eu/uploads/images/775.jpg?v=1569518399",
         "https://upload.wikimedia.org/wikipedia/commons/d/d6/Head_of_the_God_Osiris%2C_ca._595-525_B.C.E..jpg",
         "https://upload.wikimedia.org/wikipedia/commons/b/b4/La_Tombe_de_Horemheb_cropped.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/b/b0/Ptah-Sokar-Osiris_Figure_MET_LC-21_9_1_EGDP025129.jpg",
@@ -126,6 +127,7 @@
       "id": 3,
       "name": "Isis",
       "nickname": "The goddess of magic",
+      "icon": "images/isis.png",
       "animation_path": "Ra.flr",
       "animation_name": "Ra Animation",
       "appeared_in": [
@@ -166,6 +168,8 @@
       "about": "Isis was first mentioned in the Old Kingdom (c. 2686–2181 BCE) as one of the main characters of the Osiris myth, in which she resurrects her slain husband, the divine king Osiris, and produces and protects his heir, Horus. She was believed to help the dead enter the afterlife as she had helped Osiris, and she was considered the divine mother of the pharaoh, who was likened to Horus. Her maternal aid was invoked in healing spells to benefit ordinary people.",
       "know_more": "https://en.wikipedia.org/wiki/Isis",
       "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/a5/Abydos_Tempelrelief_Sethos_I._15.JPG",
+        "https://en.m.wikipedia.org/wiki/Isis#/media/File%3AEgyptian_-_Isis_with_Horus_the_Child_-_Walters_54416_-_Three_Quarter_Right.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/4/45/Terre_cuite_pleureuse_Louvre_E27247.jpg",
         "https://upload.wikimedia.org/wikipedia/commons/a/a5/Abydos_Tempelrelief_Sethos_I._15.JPG"
       ]
@@ -243,13 +247,16 @@
     {
       "id": 5,
       "name": "Horus",
+      "icon": "images/horus.png",
       "nickname": "the Avenger",
       "animation_path": "Judge.flr",
       "animation_name": "judge animation",
-      "appeared_in": [{
-        "lat": 24.9779,
-        "lon": 32.8734
-      }],
+      "appeared_in": [
+        {
+          "lat": 24.9779,
+          "lon": 32.8734
+        }
+      ],
       "when": "2400BC",
       "symbol": "Eye of Horus",
       "parents": [
@@ -292,17 +299,18 @@
     {
       "id": 6,
       "name": "Anubis",
+      "icon": "images/anubis.png",
       "nickname": "god of death",
       "animation_path": "Judge.flr",
       "animation_name": "judge animation",
-      "appeared_in":[ {
-        "lat": 24.9779,
-        "lon": 32.8734
-      }],
+      "appeared_in": [
+        {
+          "lat": 24.9779,
+          "lon": 32.8734
+        }
+      ],
       "when": "3100BC",
-      "symbol":
-        "mummy gauze",
-
+      "symbol": "mummy gauze",
       "parents": [
         "Nepthys",
         "Set"

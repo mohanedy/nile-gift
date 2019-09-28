@@ -22,7 +22,7 @@ dependencies:
   flare_flutter: ^1.5.6
   floating_search_bar: ^0.2.0
   flutter_icons: ^0.3.1
-  rxdart: ^0.21.0
+  rxdart: ^0.22.0
   circle_list: ^1.0.0
   auto_size_text: ^2.1.0
   google_maps_flutter: ^0.5.21+6
@@ -30,6 +30,8 @@ dependencies:
   flutter_staggered_animations: ^0.1.2
   flutter_staggered_grid_view: ^0.3.0
   cached_network_image: ^1.1.1
+  peek_and_pop: ^1.0.2
+  url_launcher: ^5.1.4
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

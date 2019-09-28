@@ -271,7 +271,7 @@
       "god_of": [
         {
           "value": "kingship",
-          "asset": "images/fertilizer.png"
+          "asset": "images/crown.png"
         },
         {
           "value": "sky",
@@ -302,7 +302,7 @@
       "when": "3100BC",
       "symbol":
         "mummy gauze",
-      
+
       "parents": [
         "Nepthys",
         "Set"

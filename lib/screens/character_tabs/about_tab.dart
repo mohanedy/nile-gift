@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:circle_list/circle_list.dart';
 import 'package:flutter/material.dart';
+import 'package:gift_of_the_nile/component/show_up_animation.dart';
 import 'package:gift_of_the_nile/constants.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 
@@ -23,6 +24,7 @@ class _AboutTabState extends State<AboutTab> {
     _character = widget._character;
   }
 
+  int delay = 500;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -89,36 +91,47 @@ class _AboutTabState extends State<AboutTab> {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
-        Text(
-          'Who Is ${_character.name} ?',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
+        ShowUp(
+          delay: delay,
+          child: Text(
+            'Who Is ${_character.name} ?',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
-        Text(
-          _character.about,
-          style: kGreyTextStyle.copyWith(
-            fontSize: 17,
-            fontWeight: FontWeight.normal,
+        ShowUp(
+          delay: delay + 200,
+          child: Text(
+            _character.about,
+            style: kGreyTextStyle.copyWith(
+              fontSize: 17,
+              fontWeight: FontWeight.normal,
+            ),
           ),
         ),
-        buildBelievedInList(),
         SizedBox(
           height: 10,
         ),
-        Text(
-          'Stories About ${_character.name}',
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
+        ShowUp(
+          delay: delay,
+          child: Text(
+            'Stories About ${_character.name}',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
-        Text(
-          _character.story,
-          style: kGreyTextStyle.copyWith(
-            fontSize: 17,
-            fontWeight: FontWeight.normal,
+        ShowUp(
+          delay: delay + 200,
+          child: Text(
+            _character.story,
+            style: kGreyTextStyle.copyWith(
+              fontSize: 17,
+              fontWeight: FontWeight.normal,
+            ),
           ),
         ),
       ],
@@ -161,43 +174,43 @@ class _AboutTabState extends State<AboutTab> {
     );
   }
 
-  Widget buildBelievedInList() {
-    return Center(
-      child: CircleList(
-        outerCircleRotateWithChildren: true,
-        innerCircleRotateWithChildren: true,
-        onDragStart: (c) {
-          print(c);
-        },
-        outerRadius: 130,
-        origin: Offset(0, 0),
-        showInitialAnimation: true,
-        children: _character.believedIn.map((v) {
-          return Text(
-            v,
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.white,
-            ),
-          );
-        }).toList(),
-        outerCircleColor: Colors.lightBlue,
-        innerRadius: 50,
-        onDragUpdate: (v) {
-          print(v.angle);
-        },
-        centerWidget: Text(
-          'Kings Believed In',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontWeight: FontWeight.normal,
-            fontSize: 18,
-            color: Colors.grey,
-          ),
-        ),
-      ),
-    );
-  }
+//  Widget buildBelievedInList() {
+//    return Center(
+//      child: CircleList(
+//        outerCircleRotateWithChildren: true,
+//        innerCircleRotateWithChildren: true,
+//        onDragStart: (c) {
+//          print(c);
+//        },
+//        outerRadius: 130,
+//        origin: Offset(0, 0),
+//        showInitialAnimation: true,
+//        children: _character.believedIn.map((v) {
+//          return Text(
+//            v,
+//            style: TextStyle(
+//              fontSize: 18,
+//              color: Colors.white,
+//            ),
+//          );
+//        }).toList(),
+//        outerCircleColor: Colors.lightBlue,
+//        innerRadius: 50,
+//        onDragUpdate: (v) {
+//          print(v.angle);
+//        },
+//        centerWidget: Text(
+//          'Kings Believed In',
+//          textAlign: TextAlign.center,
+//          style: TextStyle(
+//            fontWeight: FontWeight.normal,
+//            fontSize: 18,
+//            color: Colors.grey,
+//          ),
+//        ),
+//      ),
+//    );
+//  }
 
   Widget topRow() {
     return Wrap(
@@ -234,17 +247,23 @@ class _AboutTabState extends State<AboutTab> {
   Column infoColumn(String label, String val) {
     return Column(
       children: <Widget>[
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 17,
-            color: Colors.grey,
+        ShowUp(
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 17,
+              color: Colors.grey,
+            ),
           ),
+          delay: 500,
         ),
-        Text(
-          val,
-          style: TextStyle(
-            fontSize: 17,
+        ShowUp(
+          delay: 500 + 200,
+          child: Text(
+            val,
+            style: TextStyle(
+              fontSize: 17,
+            ),
           ),
         )
       ],

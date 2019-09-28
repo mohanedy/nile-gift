@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gift_of_the_nile/bloc/character_screen_bloc.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/about_tab.dart';
+import 'package:gift_of_the_nile/screens/character_tabs/gallery_tab.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/map_tab.dart';
 
 class CharacterScreen extends StatefulWidget {
@@ -25,6 +26,7 @@ class _CharacterScreenState extends State<CharacterScreen>
     fontSize: 18,
   );
   AncientGodCharacter _character;
+
   @override
   void initState() {
     super.initState();
@@ -53,9 +55,7 @@ class _CharacterScreenState extends State<CharacterScreen>
           children: <Widget>[
             AboutTab(_character),
             MapTab(_character),
-            Text(
-              'test',
-            )
+            GalleryTab(_character),
           ],
         ),
       ),

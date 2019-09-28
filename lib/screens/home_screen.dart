@@ -1,6 +1,7 @@
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:gift_of_the_nile/bloc/home_screen_bloc.dart';
+import 'package:gift_of_the_nile/component/show_up_animation.dart';
 import 'package:gift_of_the_nile/component/sliver_floating_search.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 import 'package:gift_of_the_nile/screens/character_screen.dart';
@@ -24,6 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
     _bloc.dispose();
     super.dispose();
   }
+
+  bool isEgyptianGodsExpanded = false;
 
   @override
   Widget build(BuildContext context) {
@@ -75,31 +78,54 @@ class _HomeScreenState extends State<HomeScreen> {
                               stream: _bloc.ancientGods,
                               builder: (context, ancientGods) {
                                 if (ancientGods.hasData)
-                                  return CategoryWidget(
-                                    ancientGods.data.characters.map((v) {
-                                      return Padding(
-                                        padding: const EdgeInsets.only(
-                                          left: 20.0,
-                                          right: 20,
+                                  return Stack(
+                                    fit: StackFit.loose,
+                                    children: <Widget>[
+                                      Container(
+                                        height: 130,
+                                        child: ShowUp(
+                                          delay: 500,
+                                          child: Text(
+                                            'asDASASDFVVDfaghdhaasdafsfaghdhaasdafsfaghdhaasdafsfaghdhaasdafsfaghdhaasdafsfaghdhaasdafsfaghdhaasdafsfaghdha',
+                                            style: TextStyle(
+                                              fontFamily: 'Egyptian',
+                                              fontSize: 50,
+                                              color: Colors.yellow.shade700,
+                                              fontWeight: FontWeight.w900,
+                                              letterSpacing: 10.0,
+                                            ),
+                                          ),
                                         ),
-                                        child: ItemWidget(
-                                          itemLabel: v.name,
-                                          onPressed: () {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (c) =>
-                                                        CharacterScreen(
-                                                          v,
-                                                        )));
-                                          },
-                                        ),
-                                      );
-                                    }).toList(),
-                                    animationName: 'Ra Animation',
-                                    flareImage: 'resources/animation/Ra.flr',
-                                    label: 'Egyptian Gods',
-                                    color: Colors.blueGrey,
+                                      ),
+                                      CategoryWidget(
+                                        ancientGods.data.characters.map((v) {
+                                          return Padding(
+                                            padding: const EdgeInsets.only(
+                                              left: 20.0,
+                                              right: 20,
+                                            ),
+                                            child: ItemWidget(
+                                              itemLabel: v.name,
+                                              onPressed: () {
+                                                Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (c) =>
+                                                            CharacterScreen(
+                                                              v,
+                                                            )));
+                                              },
+                                            ),
+                                          );
+                                        }).toList(),
+                                        animationName: 'Ra Animation',
+                                        flareImage:
+                                            'resources/animation/Ra.flr',
+                                        label: 'Egyptian Gods',
+                                        onExpand: (val) {},
+                                        color: Colors.transparent,
+                                      ),
+                                    ],
                                   );
                                 else
                                   return Container();
@@ -119,18 +145,26 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class CategoryWidget extends StatelessWidget {
+  final GlobalKey key2;
   final String flareImage;
   final String animationName;
   final String label;
   final List<Widget> items;
   final Color color;
+  final Function(bool) onExpand;
 
   CategoryWidget(this.items,
-      {this.flareImage, this.animationName, this.label, this.color});
+      {this.flareImage,
+      this.key2,
+      this.animationName,
+      this.label,
+      this.color,
+      this.onExpand});
 
   @override
   Widget build(BuildContext context) {
     return Material(
+      key: key2,
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15),
@@ -138,6 +172,7 @@ class CategoryWidget extends StatelessWidget {
       elevation: 10,
       color: color,
       child: ExpansionTile(
+        onExpansionChanged: onExpand,
         trailing: Icon(
           Icons.add,
           color: Colors.white,

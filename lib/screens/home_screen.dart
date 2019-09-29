@@ -1,10 +1,11 @@
 import 'package:flare_flutter/flare_actor.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gift_of_the_nile/bloc/home_screen_bloc.dart';
-import 'package:gift_of_the_nile/component/show_up_animation.dart';
 import 'package:gift_of_the_nile/component/sliver_floating_search.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 import 'package:gift_of_the_nile/screens/character_screen.dart';
+import 'package:gift_of_the_nile/screens/timeline_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -42,12 +43,33 @@ class _HomeScreenState extends State<HomeScreen> {
                       delegate: SliverChildListDelegate([
                         Column(
                           children: <Widget>[
-                            Container(
-                              height: 140,
-                              child: FlareActor(
-                                'resources/animation/pharoh.flr',
-                                animation: 'eye',
-                              ),
+                            Stack(
+                              children: <Widget>[
+                                Positioned(
+                                  top: 20,
+                                  left: 10,
+                                  child: IconButton(
+                                    icon: Icon(
+                                      Icons.timeline,
+                                      size: 40,
+                                    ),
+                                    onPressed: () {
+                                      Navigator.push(context, MaterialPageRoute(
+                                          builder: (c) => TimelineScreen()
+                                      ));
+                                    },
+                                    color: Colors.yellow.shade700,
+                                    tooltip: 'Egyptian Timeline',
+                                  ),
+                                ),
+                                Center(
+                                  child: Container(
+                                    height: 140,
+                                    child: Image.asset(
+                                        'resources/images/pyramids.png'),
+                                  ),
+                                ),
+                              ],
                             ),
                             Text(
                               'Gift of The Nile',
@@ -55,6 +77,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontWeight: FontWeight.bold,
                                 fontSize: 25,
                                 color: Colors.black,
+                                fontFamily: 'Righteous',
+                              ),
+                            ),
+                            Text(
+                              'Where it all begins',
+                              style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 18,
+                                color: Colors.grey,
                                 fontFamily: 'Righteous',
                               ),
                             ),
@@ -78,58 +109,58 @@ class _HomeScreenState extends State<HomeScreen> {
                               stream: _bloc.ancientGods,
                               builder: (context, ancientGods) {
                                 if (ancientGods.hasData)
-                                  return Stack(
-                                    fit: StackFit.loose,
-                                    children: <Widget>[
-                                      Container(
-                                        height: 130,
-                                        child: ShowUp(
-                                          delay: 500,
-                                          child: Text(
-                                            'asDASASDFVVDfaghdhaasdafsfaghdhaasdafsfaghdhaasdafsfaghdhaasdafsfaghdhaasdafsfaghdhaasdafsfaghdhaasdafsfaghdha',
-                                            style: TextStyle(
-                                              fontFamily: 'Egyptian',
-                                              fontSize: 50,
-                                              color: Colors.yellow.shade700,
-                                              fontWeight: FontWeight.w900,
-                                              letterSpacing: 10.0,
-                                            ),
-                                          ),
+                                  return CategoryWidget(
+                                    ancientGods.data.characters.map((v) {
+                                      return Padding(
+                                        padding: const EdgeInsets.only(
+                                          left: 20.0,
+                                          right: 20,
                                         ),
-                                      ),
-                                      CategoryWidget(
-                                        ancientGods.data.characters.map((v) {
-                                          return Padding(
-                                            padding: const EdgeInsets.only(
-                                              left: 20.0,
-                                              right: 20,
-                                            ),
-                                            child: ItemWidget(
-                                              itemLabel: v.name,
-                                              onPressed: () {
-                                                Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (c) =>
-                                                            CharacterScreen(
-                                                              v,
-                                                            )));
-                                              },
-                                            ),
-                                          );
-                                        }).toList(),
-                                        animationName: 'Ra Animation',
-                                        flareImage:
-                                            'resources/animation/Ra.flr',
-                                        label: 'Egyptian Gods',
-                                        onExpand: (val) {},
-                                        color: Colors.transparent,
-                                      ),
-                                    ],
+                                        child: ItemWidget(
+                                          itemLabel: v.name,
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (c) =>
+                                                        CharacterScreen(
+                                                          v,
+                                                        )));
+                                          },
+                                        ),
+                                      );
+                                    }).toList(),
+                                    animationName: 'Ra Animation',
+                                    flareImage: 'resources/animation/Ra.flr',
+                                    label: 'Egyptian Gods',
+                                    onExpand: (val) {
+                                      setState(() {
+                                        isEgyptianGodsExpanded = val;
+                                      });
+                                    },
+                                    color: Colors.transparent,
                                   );
                                 else
                                   return Container();
                               }),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CategoryWidget(
+                            [
+                              ItemWidget(
+                                itemLabel: 'Test',
+                                onPressed: () {},
+                              )
+                            ],
+                            animationName: 'eye',
+                            flareImage: 'resources/animation/pharoh.flr',
+                            label: 'Egyptian Pharaohs',
+                            onExpand: (val) {
+                              setState(() {});
+                            },
+                            color: Colors.transparent,
+                          ),
                         ),
                       ]),
                     ),
@@ -155,11 +186,11 @@ class CategoryWidget extends StatelessWidget {
 
   CategoryWidget(this.items,
       {this.flareImage,
-      this.key2,
-      this.animationName,
-      this.label,
-      this.color,
-      this.onExpand});
+        this.key2,
+        this.animationName,
+        this.label,
+        this.color,
+        this.onExpand});
 
   @override
   Widget build(BuildContext context) {
@@ -171,46 +202,56 @@ class CategoryWidget extends StatelessWidget {
       ),
       elevation: 10,
       color: color,
-      child: ExpansionTile(
-        onExpansionChanged: onExpand,
-        trailing: Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-        backgroundColor: color,
-        title: Container(
-          height: 120,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              Flexible(
-                flex: 1,
-                child: Container(
-                  height: 150,
-                  child: FlareActor(
-                    flareImage,
-                    animation: animationName,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              Flexible(
-                flex: 2,
-                child: Text(
-                  label,
-                  style: TextStyle(
-                    fontSize: 27,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white,
-                    fontFamily: 'Righteous',
-                  ),
-                ),
-              ),
-            ],
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              'resources/images/heroBackground.jpg',
+            ),
+            fit: BoxFit.cover,
           ),
         ),
-        children: items,
+        child: ExpansionTile(
+          onExpansionChanged: onExpand,
+          trailing: Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
+          backgroundColor: color,
+          title: Container(
+            height: 120,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Flexible(
+                  flex: 1,
+                  child: Container(
+                    height: 130,
+                    child: FlareActor(
+                      flareImage,
+                      animation: animationName,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                Flexible(
+                  flex: 2,
+                  child: Text(
+                    label,
+                    style: TextStyle(
+                      fontSize: 27,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.white,
+                      fontFamily: 'Righteous',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          children: items,
+        ),
       ),
     );
   }

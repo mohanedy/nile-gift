@@ -5,3 +5,9 @@ const kGreyTextStyle = TextStyle(
   fontSize: 18,
   color: Colors.grey,
 );
+enum CharacterType {
+  EgyptianGod,
+  EgyptianPharaohs,
+  EgyptianKing,
+  EgyptianPresident,
+}

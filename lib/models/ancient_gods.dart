@@ -1,3 +1,6 @@
+import 'package:gift_of_the_nile/constants.dart';
+import 'package:gift_of_the_nile/models/charcter.dart';
+
 class AncientGods {
   List<AncientGodCharacter> characters;
   String type;
@@ -25,7 +28,7 @@ class AncientGods {
   }
 }
 
-class AncientGodCharacter {
+class AncientGodCharacter implements Character {
   String since;
   String about;
   String animationName;
@@ -139,6 +142,14 @@ class AncientGodCharacter {
     }
     return data;
   }
+
+  @override
+  // TODO: implement characterType
+  CharacterType get characterType => CharacterType.EgyptianGod;
+
+  @override
+  // TODO: implement knownFor
+  String get knownFor => nickname;
 }
 
 class AppearedIn {

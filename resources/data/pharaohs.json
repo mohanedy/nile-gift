@@ -1,0 +1,55 @@
+{
+  "type": "pharaohs",
+  "characters": [
+    {
+      "id": 1,
+      "name": "Tutankhamun",
+      "known_by": "King Tut",
+      "icon": "images/king_tut.png",
+      "animation_path": "",
+      "animation_name": "",
+      "appeared_in": [
+        {
+          "lat": 25.7404,
+          "lon": 32.6014
+        },
+        {
+          "lat": 30.0470,
+          "lon": 31.2336
+        }
+      ],
+      "from": "1334BC",
+      "to": "1325BC",
+      "born": "1342BC",
+      "died": "1325BC",
+      "parents": [
+        "Akhenaten",
+        "The Younger Lady"
+      ],
+      "burial": "KV62",
+      "consort": [
+        "Ankhesenamun"
+      ],
+      "siblings": [
+        "Apep",
+        "Sobek",
+        "Serket"
+      ],
+      "children": [
+      ],
+      "dynasty": 18,
+      "facts": [
+        "King Tut was only 19 at the time of his death. Scientists believe he may have died from a gangrene infection to the leg.",
+        "Tut married his half-sister."
+      ],
+      "story": "",
+      "about": "Was an ancient Egyptian pharaoh who was the last of his royal family to rule during the end of the 18th dynasty during the New Kingdom of Egyptian history. His father was the heretical king Akhenaten, believed to be the mummy found in the tomb KV55. His mother is his father's sister, identified through DNA testing as an unknown mummy referred to as; \"The Younger Lady\" who was found in KV35.",
+      "know_more": "https://en.wikipedia.org/wiki/Ra",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg",
+        "https://en.prothomalo.com/contents/cache/images/643x0x1/uploads/media/2018/12/02/f1891639acd700c4c3c21ca6415a573e-1.jpg",
+        "http://1.bp.blogspot.com/-qwj5o6OSJH0/U-6pCC3gjOI/AAAAAAAAh8I/GVf9aars9lg/s1600/20140815_121349.jpg"
+      ]
+    }
+  ]
+}

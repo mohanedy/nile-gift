@@ -30,11 +30,8 @@
       "consort": [
         "Ankhesenamun"
       ],
-      "siblings": [
-        "Apep",
-        "Sobek",
-        "Serket"
-      ],
+      "predecessor": "Neferneferuaten",
+      "successor": "Ay",
       "children": [
       ],
       "dynasty": 18,
@@ -42,13 +39,15 @@
         "King Tut was only 19 at the time of his death. Scientists believe he may have died from a gangrene infection to the leg.",
         "Tut married his half-sister."
       ],
-      "story": "",
-      "about": "Was an ancient Egyptian pharaoh who was the last of his royal family to rule during the end of the 18th dynasty during the New Kingdom of Egyptian history. His father was the heretical king Akhenaten, believed to be the mummy found in the tomb KV55. His mother is his father's sister, identified through DNA testing as an unknown mummy referred to as; \"The Younger Lady\" who was found in KV35.",
-      "know_more": "https://en.wikipedia.org/wiki/Ra",
+      "story": "Because of his tomb’s small size, historians suggest King Tut’s death must have been unexpected and his burial rushed by Ay, who succeeded him as pharaoh. The tomb’s antechambers were packed to the ceiling with more than 5,000 artifacts, including furniture, chariots, clothes, weapons and 130 of the lame king’s walking sticks. The entrance corridor was apparently looted soon after the burial, but the inner rooms remained sealed. The pharaohs who followed Tut chose to ignore his reign, as despite his work restoring Amun, he was tainted by the connection to his father’s religious upheavals. Within a few generations, the tomb’s entrance had been clogged with stone debris, built over by workmen’s huts and forgotten.",
+      "about": "Ruled Egypt as pharaoh for 10 years until his death at age 19, around 1324 B.C. Although his rule was notable for reversing the tumultuous religious reforms of his father, Pharaoh Akhenaten, Tutankhamun’s legacy was largely negated by his successors. He was barely known to the modern world until 1922, when British archaeologist Howard Carter chiseled through a doorway and entered the boy pharaoh’s tomb, which had remained sealed for more than 3,200 years. The tomb’s vast hoard of artifacts and treasure, intended to accompany the king into the afterlife, revealed an incredible amount about royal life in ancient Egypt, and quickly made King Tut the world’s most famous pharaoh.",
+      "know_more": "https://en.wikipedia.org/wiki/Tutankhamun",
       "gallery": [
         "https://upload.wikimedia.org/wikipedia/commons/2/27/CairoEgMuseumTaaMaskMostlyPhotographed.jpg",
         "https://en.prothomalo.com/contents/cache/images/643x0x1/uploads/media/2018/12/02/f1891639acd700c4c3c21ca6415a573e-1.jpg",
-        "http://1.bp.blogspot.com/-qwj5o6OSJH0/U-6pCC3gjOI/AAAAAAAAh8I/GVf9aars9lg/s1600/20140815_121349.jpg"
+        "https://www.history.com/.image/c_limit%2Ccs_srgb%2Cfl_progressive%2Ch_2000%2Cq_auto:good%2Cw_2000/MTYxNjQ2NzA3NDM5MDUyMDc4/2019_king_tut_tomb_17.jpg",
+        "https://www.history.com/.image/c_limit%2Ccs_srgb%2Cfl_progressive%2Ch_2000%2Cq_auto:good%2Cw_2000/MTYxNjQ2NzA3NDM4ODU1ODA1/2019_king_tut_tomb_7_20190122121138796.jpg",
+        "https://www.history.com/.image/c_limit%2Ccs_srgb%2Cfl_progressive%2Ch_2000%2Cq_auto:good%2Cw_2000/MTYxNjQ2NzA3NDM4NzkwMjY5/2019_king_tut_tomb_5.jpg"
       ]
     }
   ]

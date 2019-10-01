@@ -1,7 +1,7 @@
 import 'package:gift_of_the_nile/constants.dart';
 import 'package:gift_of_the_nile/models/charcter.dart';
 
-class AncientGods {
+class AncientGods implements Characters {
   List<AncientGodCharacter> characters;
   String type;
 

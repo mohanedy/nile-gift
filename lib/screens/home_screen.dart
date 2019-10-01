@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:gift_of_the_nile/bloc/home_screen_bloc.dart';
 import 'package:gift_of_the_nile/component/sliver_floating_search.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
+import 'package:gift_of_the_nile/models/pharaoh.dart';
 import 'package:gift_of_the_nile/screens/character_screen.dart';
 import 'package:gift_of_the_nile/screens/timeline_screen.dart';
 
@@ -54,9 +55,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                       size: 40,
                                     ),
                                     onPressed: () {
-                                      Navigator.push(context, MaterialPageRoute(
-                                          builder: (c) => TimelineScreen()
-                                      ));
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (c) =>
+                                                  TimelineScreen()));
                                     },
                                     color: Colors.yellow.shade700,
                                     tooltip: 'Egyptian Timeline',
@@ -144,24 +147,39 @@ class _HomeScreenState extends State<HomeScreen> {
                                   return Container();
                               }),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: CategoryWidget(
-                            [
-                              ItemWidget(
-                                itemLabel: 'Test',
-                                onPressed: () {},
-                              )
-                            ],
-                            animationName: 'eye',
-                            flareImage: 'resources/animation/pharoh.flr',
-                            label: 'Egyptian Pharaohs',
-                            onExpand: (val) {
-                              setState(() {});
-                            },
-                            color: Colors.transparent,
-                          ),
-                        ),
+                        StreamBuilder<Pharaohs>(
+                            stream: _bloc.pharaohs,
+                            builder: (context, pharaohs) {
+                              if (pharaohs.hasData) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: CategoryWidget(
+                                    pharaohs.data.characters.map((v) {
+                                      return Padding(
+                                        padding: const EdgeInsets.only(
+                                          left: 20.0,
+                                          right: 20,
+                                        ),
+                                        child: ItemWidget(
+                                          itemLabel: v.name,
+                                          onPressed: () {},
+                                        ),
+                                      );
+                                    }).toList(),
+                                    animationName: 'eye',
+                                    flareImage:
+                                        'resources/animation/pharoh.flr',
+                                    label: 'Egyptian Pharaohs',
+                                    onExpand: (val) {
+                                      setState(() {});
+                                    },
+                                    color: Colors.transparent,
+                                  ),
+                                );
+                              } else {
+                                return Container();
+                              }
+                            }),
                       ]),
                     ),
                   ],
@@ -186,11 +204,11 @@ class CategoryWidget extends StatelessWidget {
 
   CategoryWidget(this.items,
       {this.flareImage,
-        this.key2,
-        this.animationName,
-        this.label,
-        this.color,
-        this.onExpand});
+      this.key2,
+      this.animationName,
+      this.label,
+      this.color,
+      this.onExpand});
 
   @override
   Widget build(BuildContext context) {

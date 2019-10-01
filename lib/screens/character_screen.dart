@@ -3,12 +3,13 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:gift_of_the_nile/bloc/character_screen_bloc.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
+import 'package:gift_of_the_nile/models/charcter.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/about_tab.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/gallery_tab.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/map_tab.dart';
 
 class CharacterScreen extends StatefulWidget {
-  final AncientGodCharacter character;
+  final Character character;
 
   CharacterScreen(this.character);
 

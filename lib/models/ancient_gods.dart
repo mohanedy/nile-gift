@@ -144,12 +144,12 @@ class AncientGodCharacter implements Character {
   }
 
   @override
-  // TODO: implement characterType
   CharacterType get characterType => CharacterType.EgyptianGod;
 
   @override
-  // TODO: implement knownFor
   String get knownFor => nickname;
+  @override
+  int get date => int.parse(since.replaceAll('BC', ''));
 }
 
 class AppearedIn {

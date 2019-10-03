@@ -178,8 +178,9 @@
       "id": 4,
       "name": "Set",
       "nickname": "The god of the desert and evil",
-      "animation_path": "Ra.flr",
-      "animation_name": "Ra Animation",
+      "icon": "images/Set.png",
+      "animation_path": "",
+      "animation_name": "",
       "appeared_in": [
         {
           "lat": 24.4521,

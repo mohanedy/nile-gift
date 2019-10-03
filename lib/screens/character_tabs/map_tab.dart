@@ -3,14 +3,15 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:gift_of_the_nile/constants.dart';
-import 'package:gift_of_the_nile/models/ancient_gods.dart';
+import 'package:gift_of_the_nile/models/charcter.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/bloc/map_tab_bloc.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class MapTab extends StatefulWidget {
-  final AncientGodCharacter _character;
+  final Character _character;
 
   MapTab(this._character);
 
@@ -20,7 +21,7 @@ class MapTab extends StatefulWidget {
 
 class _MapTabState extends State<MapTab> {
   Completer<GoogleMapController> _controller = Completer();
-  AncientGodCharacter _character;
+  Character _character;
   static final CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(26.8206, 30.8025),
   );
@@ -62,76 +63,88 @@ class _MapTabState extends State<MapTab> {
               stream: _bloc.locationList,
               builder: (context, snapshot) {
                 if (snapshot.hasData) {
-                  return ListView.separated(
-                    padding: EdgeInsets.only(left: 8, right: 8, bottom: 10),
-                    physics: ClampingScrollPhysics(),
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) {
-                      final distance =
-                          snapshot.data[index]['distance'] as double;
-                      final placeMark =
-                          snapshot.data[index]['placemark'] as Placemark;
-                      return Row(
-                        children: <Widget>[
-                          Material(
-                            type: MaterialType.circle,
-                            color: Colors.yellow.shade700,
-                            elevation: 8,
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                vertical: 25,
-                              ),
-                              child: Row(
-                                children: <Widget>[
-                                  Icon(
-                                    Icons.location_on,
-                                    color: Colors.white,
-                                  ),
-                                  Text(
-                                    '${distance.floor()} KM ',
-                                    style: TextStyle(
-                                      color: Colors.white,
+                  return AnimationLimiter(
+                    child: ListView.separated(
+                      padding: EdgeInsets.only(left: 8, right: 8, bottom: 10),
+                      physics: ClampingScrollPhysics(),
+                      shrinkWrap: true,
+                      itemBuilder: (context, index) {
+                        final distance =
+                            snapshot.data[index]['distance'] as double;
+                        final placeMark =
+                            snapshot.data[index]['placemark'] as Placemark;
+                        return AnimationConfiguration.staggeredList(
+                          position: index,
+                          duration: Duration(milliseconds: 600),
+                          child: SlideAnimation(
+                            horizontalOffset: 50,
+                            child: Row(
+                              children: <Widget>[
+                                Material(
+                                  type: MaterialType.circle,
+                                  color: Colors.yellow.shade700,
+                                  elevation: 8,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                      vertical: 25,
+                                    ),
+                                    child: Row(
+                                      children: <Widget>[
+                                        Icon(
+                                          Icons.location_on,
+                                          color: Colors.white,
+                                        ),
+                                        Text(
+                                          '${distance.floor()} KM ',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(placeMark.administrativeArea,
+                                        textAlign: TextAlign.start,
+                                        style: kGreyTextStyle.copyWith(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.normal,
+                                        )),
+                                    Text(
+                                      placeMark.subAdministrativeArea +
+                                          ' - ' +
+                                          placeMark.name,
+                                      textAlign: TextAlign.start,
+                                      style: kGreyTextStyle.copyWith(
+                                        color: Colors.grey,
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.normal,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(placeMark.administrativeArea,
-                                  textAlign: TextAlign.start,
-                                  style: kGreyTextStyle.copyWith(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.normal,
-                                  )),
-                              Text(
-                                placeMark.subAdministrativeArea +
-                                    ' - ' +
-                                    placeMark.name,
-                                textAlign: TextAlign.start,
-                                style: kGreyTextStyle.copyWith(
-                                  color: Colors.grey,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      );
-                    },
-                    separatorBuilder: (c, i) => Divider(),
-                    itemCount: snapshot.data.length,
+                        );
+                      },
+                      separatorBuilder: (c, i) => Divider(),
+                      itemCount: snapshot.data.length,
+                    ),
                   );
                 } else {
                   return CircularProgressIndicator();
                 }
               }),
+          SizedBox(
+            height: 20,
+          ),
           Container(
             height: MediaQuery.of(context).size.height / 2,
             child: GoogleMap(

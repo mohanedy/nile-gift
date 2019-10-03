@@ -161,6 +161,8 @@ class Pharaoh implements Character {
   }
 
   @override
+  int get date => int.parse(from.replaceAll('BC', '').replaceAll('AD', ''));
+  @override
   // TODO: implement characterType
   CharacterType get characterType => CharacterType.EgyptianPharaohs;
 

@@ -49,6 +49,74 @@
         "https://www.history.com/.image/c_limit%2Ccs_srgb%2Cfl_progressive%2Ch_2000%2Cq_auto:good%2Cw_2000/MTYxNjQ2NzA3NDM4ODU1ODA1/2019_king_tut_tomb_7_20190122121138796.jpg",
         "https://www.history.com/.image/c_limit%2Ccs_srgb%2Cfl_progressive%2Ch_2000%2Cq_auto:good%2Cw_2000/MTYxNjQ2NzA3NDM4NzkwMjY5/2019_king_tut_tomb_5.jpg"
       ]
+    },
+    {
+      "id": 2,
+      "name": "Ramesses II",
+      "known_by": "Ramesses the Great",
+      "icon": "images/ramsesii.png",
+      "animation_path": "",
+      "animation_name": "",
+      "appeared_in": [
+        {
+          "lat": 30.0470,
+          "lon": 31.2336
+        },
+        {
+          "lat": 22.3372,
+          "lon": 31.6258
+        },
+        {
+          "lat": 25.740639,
+          "lon": 32.601558
+        },
+        {
+          "lat": 25.727778,
+          "lon": 32.610556
+        },
+        {
+          "lat": 23.2833,
+          "lon": 32.9
+        }
+      ],
+      "from": "1279BC",
+      "to": "1213BC",
+      "born": "1303BC",
+      "died": "1213BC",
+      "parents": [
+        "Seti I",
+        "Tuya"
+      ],
+      "burial": "KV7",
+      "consort": [
+        "Nefertari",
+        "Isetnofret",
+        "Henutmire",
+        "Meritamen"
+      ],
+      "predecessor": "Seti I",
+      "successor": "Merneptah",
+      "children": [
+        "48 - 50 Sons",
+        "40 - 53 Daughters"
+      ],
+      "dynasty": 19,
+      "facts": [
+        "Ramses was declared prince at the age of 14 and he ascended the throne at the age of 25. ",
+        "Ramses had many children nearly 100",
+        "He almost lost his life in the deadly Battle of Kadesh"
+      ],
+      "story": "Ramses II recognized that diplomacy and an exhaustive public relations campaign could mitigate any military shortcomings. His celebrated building accomplishments, including the marvels at Karnak and Abu Simbel, reflected his vision of a great nation and of himself as the “ruler of rulers.” He erected more monuments and statues—and sired more children—than any other pharaoh. As a result, he has long been regarded by Egyptians as Ramses the Great and his 66-year reign is considered to be the height of Egypt’s power and glory",
+      "about": "was the third pharaoh of the Nineteenth Dynasty of Egypt. He is often regarded as the greatest, most celebrated, and most powerful pharaoh of the New Kingdom.[8] His successors and later Egyptians called him the \"Great Ancestor\".",
+      "know_more": "https://en.wikipedia.org/wiki/Ramesses_II",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/f/f8/Ramesses_II_as_child.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/0/03/RamsesIIEgypt.jpg",
+        "https://en.wikipedia.org/wiki/Memphis,_Egypt#/media/File:Flickr_-_IDS.photos_-_Cairo_sculptures,_cleaning_time,_Egypt..jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/33/MemphisMuseumEgypt_2007feb1-4_byDanielCsorfoly.JPG",
+        "https://en.wikipedia.org/wiki/Gerf_Hussein#/media/File:Neu-Kalabscha_Gerf_Hussein_05.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/a/a5/Ramses_II_charging_Nubians.jpg"
+      ]
     }
   ]
 }

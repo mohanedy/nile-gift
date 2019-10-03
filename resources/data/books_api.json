@@ -1,0 +1,41 @@
+{
+  "books": [
+    {
+      "download_link": "http://bookfi.net/dl/619836/6d349a",
+      "isbn": "0195170245"
+    },
+    {
+      "download_link": "http://bookfi.net/dl/1382825/04c78b",
+      "isbn": "0192804588"
+    },
+    {
+      "download_link": "http://bookfi.net/dl/1382825/04c78b",
+      "isbn": "0760749434"
+    },
+    {
+      "download_link": "http://bookfi.net/dl/1382825/04c78b",
+      "isbn": "019521952X"
+    },
+    {
+      "download_link": "http://bookfi.net/dl/1403855/e96d23",
+      "isbn": "0553384902"
+    },
+    {
+      "download_link": "http://93.174.95.29/main/1561000/a9e0ee836992cccbb1463262828f7d98/Kara%20Cooney%20-%20The%20Woman%20Who%20Would%20Be%20King%20%20Hatshepsut%27s%20Rise%20to%20Power%20in%20Ancient%20Egypt-Crown%20%282014%29.pdf",
+      "isbn": "142622088X"
+    },
+    {
+      "download_link": "http://93.174.95.29/main/1561000/a9e0ee836992cccbb1463262828f7d98/Kara%20Cooney%20-%20The%20Woman%20Who%20Would%20Be%20King%20%20Hatshepsut%27s%20Rise%20to%20Power%20in%20Ancient%20Egypt-Crown%20%282014%29.pdf",
+      "isbn": "1405160713"
+    } ,
+    {
+      "download_link": "http://93.174.95.29/main/1561000/a9e0ee836992cccbb1463262828f7d98/Kara%20Cooney%20-%20The%20Woman%20Who%20Would%20Be%20King%20%20Hatshepsut%27s%20Rise%20to%20Power%20in%20Ancient%20Egypt-Crown%20%282014%29.pdf",
+      "isbn": "0674030656"
+    },
+    {
+      "download_link": "http://93.174.95.29/main/2239000/ab9a2caa4fe775b0fd5d2ef6b3305f6f/%28Studies%20in%20ancient%20medicine%2049.%29%20Wee%2C%20John%20Z.%20-%20The%20comparable%20body_%20analogy%20and%20metaphor%20in%20ancient%20Mesopotamian%2C%20Egyptian%2C%20and%20Greco-Roman%20medicine-Brill%20%282017%29.pdf",
+      "isbn": "0806128313"
+    }
+
+  ]
+}

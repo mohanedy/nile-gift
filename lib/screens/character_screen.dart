@@ -2,9 +2,11 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:gift_of_the_nile/bloc/character_screen_bloc.dart';
-import 'package:gift_of_the_nile/models/ancient_gods.dart';
+import 'package:gift_of_the_nile/constants.dart';
 import 'package:gift_of_the_nile/models/charcter.dart';
-import 'package:gift_of_the_nile/screens/character_tabs/about_tab.dart';
+import 'package:gift_of_the_nile/models/pharaoh.dart';
+import 'package:gift_of_the_nile/screens/character_tabs/about_ancient_god_tab.dart';
+import 'package:gift_of_the_nile/screens/character_tabs/about_pharaoh_tab.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/gallery_tab.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/map_tab.dart';
 
@@ -26,7 +28,7 @@ class _CharacterScreenState extends State<CharacterScreen>
     fontFamily: 'Righteous',
     fontSize: 18,
   );
-  AncientGodCharacter _character;
+  Character _character;
 
   @override
   void initState() {
@@ -54,13 +56,24 @@ class _CharacterScreenState extends State<CharacterScreen>
           physics: ClampingScrollPhysics(),
           controller: _tabController,
           children: <Widget>[
-            AboutTab(_character),
+            aboutTab(_character.characterType),
             MapTab(_character),
             GalleryTab(_character),
           ],
         ),
       ),
     );
+  }
+
+  Widget aboutTab(CharacterType type) {
+    switch (type) {
+      case CharacterType.EgyptianPharaohs:
+        return AboutPharaohTab(_character);
+      case CharacterType.EgyptianGod:
+        return AboutTab(_character);
+      default:
+        return Container();
+    }
   }
 
   Widget buildSliverAppBar(BuildContext context) {
@@ -135,7 +148,10 @@ class _CharacterScreenState extends State<CharacterScreen>
                             animation: _character.animationName,
                             fit: BoxFit.scaleDown,
                           )
-                        : Image.asset('resources/' + _character.icon),
+                        : Hero(
+                            tag: _character.name,
+                            child: Image.asset('resources/' + _character.icon),
+                          ),
                   ),
                 ),
                 Text(
@@ -148,7 +164,7 @@ class _CharacterScreenState extends State<CharacterScreen>
                   ),
                 ),
                 Text(
-                  _character.nickname,
+                  _character.knownFor,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.grey,
@@ -157,6 +173,19 @@ class _CharacterScreenState extends State<CharacterScreen>
                     fontSize: 17,
                   ),
                 ),
+                if (_character.characterType == CharacterType.EgyptianPharaohs)
+                  Text(
+                    (_character as Pharaoh).from +
+                        ' - ' +
+                        (_character as Pharaoh).to,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.normal,
+                      fontFamily: 'Righteous',
+                      fontSize: 17,
+                    ),
+                  ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,

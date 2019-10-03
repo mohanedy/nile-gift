@@ -5,8 +5,10 @@ import 'package:gift_of_the_nile/bloc/home_screen_bloc.dart';
 import 'package:gift_of_the_nile/component/sliver_floating_search.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 import 'package:gift_of_the_nile/models/pharaoh.dart';
+import 'package:gift_of_the_nile/screens/book_service/book_home_screen.dart';
 import 'package:gift_of_the_nile/screens/character_screen.dart';
 import 'package:gift_of_the_nile/screens/timeline_screen.dart';
+import 'package:koukicons/notebook1.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -70,6 +72,21 @@ class _HomeScreenState extends State<HomeScreen> {
                                     height: 140,
                                     child: Image.asset(
                                         'resources/images/pyramids.png'),
+                                  ),
+                                ),
+                                Positioned(
+                                  top: 20,
+                                  right: 10,
+                                  child: IconButton(
+                                    icon: KoukiconsNotebook1(),
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (c) =>
+                                                  BooksHomeScreen()));
+                                    },
+                                    tooltip: 'Library',
                                   ),
                                 ),
                               ],
@@ -136,11 +153,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                     animationName: 'Ra Animation',
                                     flareImage: 'resources/animation/Ra.flr',
                                     label: 'Egyptian Gods',
-                                    onExpand: (val) {
-                                      setState(() {
-                                        isEgyptianGodsExpanded = val;
-                                      });
-                                    },
                                     color: Colors.transparent,
                                   );
                                 else
@@ -162,7 +174,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                         child: ItemWidget(
                                           itemLabel: v.name,
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (c) =>
+                                                        CharacterScreen(
+                                                          v,
+                                                        )));
+                                          },
                                         ),
                                       );
                                     }).toList(),
@@ -170,9 +190,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                     flareImage:
                                         'resources/animation/pharoh.flr',
                                     label: 'Egyptian Pharaohs',
-                                    onExpand: (val) {
-                                      setState(() {});
-                                    },
                                     color: Colors.transparent,
                                   ),
                                 );

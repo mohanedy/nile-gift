@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:gift_of_the_nile/bloc/character_screen_bloc.dart';
@@ -192,7 +193,10 @@ class _CharacterScreenState extends State<CharacterScreen>
                   children: <Widget>[
                     IconButton(
                       onPressed: () {
-                        print('object');
+                        Share.text(
+                            '${_character.name}',
+                            'Short Story about ${_character.name} (${_character.knownFor}) \n${_character.story.substring(0, 100) + '...'}\nTo know more about ${_character.name} download Nile Gift now to start the journey with the egyptian history',
+                            'text/plain');
                       },
                       icon: Icon(
                         Icons.share,

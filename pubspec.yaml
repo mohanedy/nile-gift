@@ -46,6 +46,7 @@ dependencies:
   flutter_downloader: ^1.2.2
   path: ^1.6.4
   flutter_full_pdf_viewer: ^1.0.6
+  esys_flutter_share: ^1.0.2
 
 
 

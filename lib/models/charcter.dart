@@ -16,6 +16,7 @@ class Character {
   final String animationName;
   final String icon;
   final String animationPath;
+  final String story;
   final List<AppearedIn> appearedIn;
   final List<String> gallery;
   final int date;
@@ -30,5 +31,6 @@ class Character {
       this.animationPath,
       this.icon,
       this.appearedIn,
-      this.date);
+      this.date,
+      this.story);
 }

@@ -1,3 +1,4 @@
+import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -338,7 +339,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ),
                                           ],
                                         ),
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Share.text(
+                                              'Nile Gift',
+                                              'Download Nile Gift now to start the journey with the egyptian history',
+                                              'text/plain');
+                                        },
                                       ),
                                     ),
                                     Padding(

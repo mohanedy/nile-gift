@@ -25,15 +25,17 @@ class BookReference {
 class Book {
   String downloadLink;
   String isbn;
-  GBookResult bookResult;
+  String id;
+  Item bookResult;
+  double bookSize;
 
-  Book({this.downloadLink, this.isbn, this.bookResult});
+  Book({this.downloadLink, this.isbn, this.bookResult, this.id, this.bookSize});
 
   factory Book.fromJson(Map<String, dynamic> json) {
     return Book(
-      downloadLink: json['download_link'],
-      isbn: json['isbn'],
-    );
+        downloadLink: json['download_link'],
+        isbn: json['isbn'],
+        id: json['id']);
   }
 
   Map<String, dynamic> toJson() {

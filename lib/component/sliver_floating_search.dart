@@ -4,7 +4,7 @@ import 'package:flutter_icons/flutter_icons.dart';
 
 class SliverSearchFloatingBar extends StatelessWidget {
   final String placeHolder;
-  final Function onTextChanged;
+  final Function(String) onTextChanged;
   final TextEditingController controller;
 
   SliverSearchFloatingBar(

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:gift_of_the_nile/models/book_ref.dart';
+import 'package:gift_of_the_nile/models/gbook.dart';
 import 'package:gift_of_the_nile/services/data_service_provider.dart';
 import 'package:rxdart/rxdart.dart';
 
@@ -18,6 +19,10 @@ class BooksHomeBloc {
 
   _initData(BuildContext context) async {
     _booksList.sink.add(await _provider.getBooks(context));
+  }
+
+  Future<GBookResult> getBook(String isbn) async {
+    return _provider.getBook(isbn);
   }
 
   dispose() async {

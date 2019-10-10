@@ -11,3 +11,4 @@ enum CharacterType {
   EgyptianKing,
   EgyptianPresident,
 }
+const kGoodReads = 'BYZwOIKYYVkcHSeUGD22uQ';

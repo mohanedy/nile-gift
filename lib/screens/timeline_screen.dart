@@ -33,14 +33,23 @@ class _TimelineScreenState extends State<TimelineScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(
-          'Egyptian Timeline',
+          'Timeline',
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.amber,
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.white,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.amber,
+          ),
+        ),
       ),
       body: StreamBuilder<List<Character>>(
           stream: _bloc.characters,

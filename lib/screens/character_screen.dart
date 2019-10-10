@@ -34,8 +34,8 @@ class _CharacterScreenState extends State<CharacterScreen>
   void initState() {
     super.initState();
     _tabController = TabController(length: 3, vsync: this);
-    _bloc = CharacterScreenBloc();
     _character = widget.character;
+    _bloc = CharacterScreenBloc(_character);
   }
 
   @override
@@ -203,25 +203,25 @@ class _CharacterScreenState extends State<CharacterScreen>
                     ),
                     GestureDetector(
                       onTap: () {
-                        if (_loveAnimationName == 'Love') {
-                          setState(() {
-                            _loveAnimationName = 'Unlove';
-                          });
-                        } else
-                          setState(() {
-                            _loveAnimationName = 'Love';
-                          });
+                        _bloc.likeUnlikeCharacter();
                       },
-                      child: Container(
-                        width: 30,
-                        height: 35,
-                        child: FlareActor(
-                          'resources/animation/reaction_love.flr',
-                          animation: _loveAnimationName,
-                          fit: BoxFit.contain,
-                          shouldClip: false,
-                        ),
-                      ),
+                      child: StreamBuilder<bool>(
+                          stream: _bloc.isLiked,
+                          builder: (context, snapshot) {
+                            if (snapshot.hasData)
+                              return Container(
+                                width: 30,
+                                height: 35,
+                                child: FlareActor(
+                                  'resources/animation/reaction_love.flr',
+                                  animation: snapshot.data ? 'Love' : 'Unlove',
+                                  fit: BoxFit.contain,
+                                  shouldClip: false,
+                                ),
+                              );
+                            else
+                              return Container();
+                          }),
                     )
                   ],
                 )

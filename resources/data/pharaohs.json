@@ -117,6 +117,61 @@
         "https://en.wikipedia.org/wiki/Gerf_Hussein#/media/File:Neu-Kalabscha_Gerf_Hussein_05.JPG",
         "https://upload.wikimedia.org/wikipedia/commons/a/a5/Ramses_II_charging_Nubians.jpg"
       ]
+    },
+    {
+      "id": 3,
+      "name": "Hatshepsut",
+      "known_by": "Foremost of Noble Ladies",
+      "icon": "images/hatsh.png",
+      "animation_path": "",
+      "animation_name": "",
+      "appeared_in": [
+        {
+          "lat": 25.738266,
+          "lon": 32.606588
+        },
+        {
+          "lat": 30.047778,
+          "lon":  31.233333
+        }
+      ],
+      "from": "1479BC",
+      "to": "1458BC",
+      "born": "1507BC",
+      "died": "1458BC",
+      "parents": [
+        "Thutmose I",
+        "Ahmose"
+      ],
+      "burial": "KV20",
+      "consort": [
+        "Thutmose II"
+      ],
+      "predecessor": "Thutmose II",
+      "successor": "Thutmose III",
+      "children": [
+        "Neferure"
+      ],
+      "dynasty": 18,
+      "facts": [
+        "HATSHEPSUT WAS THE LONGEST REIGNING FEMALE PHARAOH",
+        "EGYPT PROSPERED DURING HER REIGN",
+        "THE FAMOUS HATSHEPSUT TEMPLE WAS CONSTRUCTED DURING HER REIGN",
+        "HER STEPSON TRIED TO ERASE EVIDENCE OF HATSHEPSUT BEING A PHARAOH",
+        "SHE WAS PROBABLY BURIED IN THE FIRST ROYAL TOMB OF THE VALLEY OF THE KINGS"
+      ],
+      "story": "When her two brothers died, she was in the unique position to gain the throne upon the death of her father. To have a female pharaoh was unprecedented, and probably most definitely unheard of as well. When Tuthmose I passed away, his son by the commoner Moutnofrit, Tuthmose II, technically ascended the throne. For the few years of his reign, however, Hatshepsut seems to have held the reins. From markings on his mummy, archaeologists believe Tuthmose II had a skin disease, and he died after ruling only three or four years. Hatshepsut, his half sister and wife, had produced no offspring with him (her daughter Nefrure was most likely the daughter of her lover Senmut), although he had sired a son through the commoner Isis. This son, Tuthmose III, was in line for the throne, but due to his age Hatshepsut was allowed to reign as queen dowager.",
+      "about": "was the fifth pharaoh of the Eighteenth Dynasty of Egypt. She was the second historically-confirmed female pharaoh, the first being Sobekneferu.Hatshepsut came to the throne of Egypt in 1478 BC. Her rise to power was noteworthy as it required her to utilize her bloodline, education, and an understanding of religion. Her bloodline was impeccable as she was the daughter, sister, and wife of a king.",
+      "know_more": "https://en.wikipedia.org/wiki/Hatshepsut",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/5/50/S_F-E-CAMERON_2006-10-EGYPT-WESTBANK-0153.JPG",
+       "https://www.egypttoursportal.com/wp-content/uploads/2017/12/Queen-Hatshepsut-Egypt-Tours-Portal.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/2/25/WLANL_-_koopmanrob_-_Maat-ka-Re_Hatsjepsoet_%28RMO_Leiden%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Hatshepsut-SmallSphinx_MetropolitanMuseum.png",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4f/Large_Kneeling_Statue_of_Hatshepsut_MET_21V_CAT091R2.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b8/Stela_cairo_museum_cg_20394.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/4/4a/Seated_Statue_of_Hatshepsut_MET_21V_CAT096R3.jpg"
+      ]
     }
   ]
 }

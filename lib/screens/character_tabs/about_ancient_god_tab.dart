@@ -48,7 +48,13 @@ class _AboutTabState extends State<AboutTab> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 RaisedButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    if (await canLaunch('http://www.egypt.travel/')) {
+                      await launch('http://www.egypt.travel/');
+                    } else {
+                      throw 'Could not launch ${'http://www.egypt.travel/'}';
+                    }
+                  },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(
                       20,

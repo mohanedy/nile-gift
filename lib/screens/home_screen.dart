@@ -7,6 +7,7 @@ import 'package:gift_of_the_nile/component/sliver_floating_search.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 import 'package:gift_of_the_nile/models/charcter.dart';
 import 'package:gift_of_the_nile/models/pharaoh.dart';
+import 'package:gift_of_the_nile/screens/about_screen.dart';
 import 'package:gift_of_the_nile/screens/book_service/book_home_screen.dart';
 import 'package:gift_of_the_nile/screens/character_screen.dart';
 import 'package:gift_of_the_nile/screens/fav_characters.dart';
@@ -371,7 +372,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                             ),
                                           ],
                                         ),
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (c) =>
+                                                      AboutScreen()));
+                                        },
                                       ),
                                     ),
                                   ]),

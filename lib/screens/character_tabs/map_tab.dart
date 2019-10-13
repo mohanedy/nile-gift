@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'dart:io';
 
+import 'package:android_intent/android_intent.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -78,58 +80,71 @@ class _MapTabState extends State<MapTab> {
                           duration: Duration(milliseconds: 600),
                           child: SlideAnimation(
                             horizontalOffset: 50,
-                            child: Row(
-                              children: <Widget>[
-                                Material(
-                                  type: MaterialType.circle,
-                                  color: Colors.yellow.shade700,
-                                  elevation: 8,
-                                  child: Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                      vertical: 25,
-                                    ),
-                                    child: Row(
-                                      children: <Widget>[
-                                        Icon(
-                                          Icons.location_on,
-                                          color: Colors.white,
-                                        ),
-                                        Text(
-                                          '${distance.floor()} KM ',
-                                          style: TextStyle(
+                            child: RawMaterialButton(
+                              onPressed: () async {
+                                if (Platform.isAndroid) {
+                                  final AndroidIntent intent = AndroidIntent(
+                                    action: 'action_view',
+                                    data:
+                                        "geo:${_character.appearedIn[index].lat},${_character.appearedIn[index].lon}", // replace com.example.app with your applicationId
+                                  );
+                                  await intent.launch();
+                                }
+                              },
+                              child: Row(
+                                children: <Widget>[
+                                  Material(
+                                    type: MaterialType.circle,
+                                    color: Colors.yellow.shade700,
+                                    elevation: 8,
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                        vertical: 25,
+                                      ),
+                                      child: Row(
+                                        children: <Widget>[
+                                          Icon(
+                                            Icons.location_on,
                                             color: Colors.white,
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(placeMark.administrativeArea,
-                                        textAlign: TextAlign.start,
-                                        style: kGreyTextStyle.copyWith(
-                                          color: Colors.black,
-                                          fontWeight: FontWeight.normal,
-                                        )),
-                                    Text(
-                                      placeMark.subAdministrativeArea +
-                                          ' - ' +
-                                          placeMark.name,
-                                      textAlign: TextAlign.start,
-                                      style: kGreyTextStyle.copyWith(
-                                        color: Colors.grey,
-                                        fontSize: 14,
-                                        fontWeight: FontWeight.normal,
+                                          Text(
+                                            '${distance.floor()} KM ',
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ),
-                                  ],
-                                ),
-                              ],
+                                  ),
+                                  SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(placeMark.administrativeArea,
+                                          textAlign: TextAlign.start,
+                                          style: kGreyTextStyle.copyWith(
+                                            color: Colors.black,
+                                            fontWeight: FontWeight.normal,
+                                          )),
+                                      Text(
+                                        placeMark.subAdministrativeArea +
+                                            ' - ' +
+                                            placeMark.name,
+                                        textAlign: TextAlign.start,
+                                        style: kGreyTextStyle.copyWith(
+                                          color: Colors.grey,
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.normal,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         );

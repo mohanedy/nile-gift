@@ -47,6 +47,7 @@ class AncientGodCharacter implements Character {
   String story;
   String symbol;
   String icon;
+  List<String> videos;
 
   AncientGodCharacter(
       {this.since,
@@ -66,6 +67,7 @@ class AncientGodCharacter implements Character {
       this.siblings,
       this.story,
       this.icon,
+      this.videos,
       this.symbol});
 
   factory AncientGodCharacter.fromJson(Map<String, dynamic> json) {
@@ -88,6 +90,8 @@ class AncientGodCharacter implements Character {
       gallery: json['gallery'] != null
           ? new List<String>.from(json['gallery'])
           : null,
+      videos:
+          json['videos'] != null ? new List<String>.from(json['videos']) : [],
       godOf: json['god_of'] != null
           ? (json['god_of'] as List).map((i) => GodOf.fromJson(i)).toList()
           : null,
@@ -148,6 +152,7 @@ class AncientGodCharacter implements Character {
 
   @override
   String get knownFor => nickname;
+
   @override
   int get date => int.parse(since.replaceAll('BC', ''));
 }

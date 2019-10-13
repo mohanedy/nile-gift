@@ -53,6 +53,7 @@ class Pharaoh implements Character {
   String story;
   String successor;
   String to;
+  List<String> videos;
 
   Pharaoh(
       {this.about,
@@ -74,6 +75,7 @@ class Pharaoh implements Character {
       this.knownBy,
       this.name,
       this.parents,
+      this.videos,
       this.predecessor,
       this.story,
       this.successor,
@@ -99,6 +101,8 @@ class Pharaoh implements Character {
           : null,
       died: json['died'],
       dynasty: json['dynasty'],
+      videos:
+          json['videos'] != null ? new List<String>.from(json['videos']) : [],
       facts:
           json['facts'] != null ? new List<String>.from(json['facts']) : null,
       from: json['from'],
@@ -162,6 +166,7 @@ class Pharaoh implements Character {
 
   @override
   int get date => int.parse(from.replaceAll('BC', '').replaceAll('AD', ''));
+
   @override
   // TODO: implement characterType
   CharacterType get characterType => CharacterType.EgyptianPharaohs;

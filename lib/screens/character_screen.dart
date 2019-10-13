@@ -10,6 +10,7 @@ import 'package:gift_of_the_nile/screens/character_tabs/about_ancient_god_tab.da
 import 'package:gift_of_the_nile/screens/character_tabs/about_pharaoh_tab.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/gallery_tab.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/map_tab.dart';
+import 'package:gift_of_the_nile/screens/character_tabs/videos_tab.dart';
 
 class CharacterScreen extends StatefulWidget {
   final Character character;
@@ -34,7 +35,7 @@ class _CharacterScreenState extends State<CharacterScreen>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
     _character = widget.character;
     _bloc = CharacterScreenBloc(_character);
   }
@@ -60,6 +61,7 @@ class _CharacterScreenState extends State<CharacterScreen>
             aboutTab(_character.characterType),
             MapTab(_character),
             GalleryTab(_character),
+            VideosTab(_character),
           ],
         ),
       ),
@@ -121,7 +123,12 @@ class _CharacterScreenState extends State<CharacterScreen>
                     ),
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Share.text(
+                          '${_character.name}',
+                          'Short Story about ${_character.name} (${_character.knownFor}) \n${_character.story.substring(0, 100) + '...'}\nTo know more about ${_character.name} download Nile Gift now to start the journey with the egyptian history',
+                          'text/plain');
+                    },
                     icon: Icon(
                       Icons.share,
                       color: Colors.black,
@@ -241,8 +248,10 @@ class _CharacterScreenState extends State<CharacterScreen>
             tabs: <Widget>[
               Tab(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 5.0,
+                  ),
+                  child: AutoSizeText(
                     'About',
                     style: tabStyle,
                   ),
@@ -250,19 +259,36 @@ class _CharacterScreenState extends State<CharacterScreen>
               ),
               Tab(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 5.0,
+                  ),
                   child: AutoSizeText(
                     'Appeared In',
-                    maxLines: 1,
-                    style: tabStyle.copyWith(fontSize: 15.5),
+                    textAlign: TextAlign.center,
+                    style: tabStyle.copyWith(
+                      fontSize: 12.5,
+                    ),
                   ),
                 ),
               ),
               Tab(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 5.0,
+                  ),
+                  child: AutoSizeText(
                     'Gallery',
+                    style: tabStyle,
+                  ),
+                ),
+              ),
+              Tab(
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 5.0,
+                  ),
+                  child: AutoSizeText(
+                    'Videos',
                     style: tabStyle,
                   ),
                 ),

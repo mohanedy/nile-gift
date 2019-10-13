@@ -236,6 +236,7 @@ class _AboutPharaohTabState extends State<AboutPharaohTab> {
           delay: 500 + 200,
           child: Text(
             val,
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 17,
             ),

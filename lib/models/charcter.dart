@@ -20,6 +20,7 @@ class Character {
   final List<AppearedIn> appearedIn;
   final List<String> gallery;
   final int date;
+  final List<String> videos;
 
   Character(
       this.gallery,
@@ -32,5 +33,6 @@ class Character {
       this.icon,
       this.appearedIn,
       this.date,
+      this.videos,
       this.story);
 }

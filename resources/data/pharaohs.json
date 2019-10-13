@@ -261,6 +261,270 @@
         "UrQLpAEWbx0",
         "5pCN7peywDw"
       ]
+    },
+    {
+      "id": 90,
+      "name": "Amenhotep III",
+      "known_by": "Amenhotep the Magnificent",
+      "icon": "images/amenhotep_iii.png",
+      "animation_path": "",
+      "animation_name": "",
+      "appeared_in": [
+        {
+          "lat": 25.743194,
+          "lon": 32.597222
+        },
+        {
+          "lat": 25.721,
+          "lon": 32.61
+        },
+        {
+          "lat": 25.720556,
+          "lon": 32.610556
+        },
+        {
+          "lat": 25.7075,
+          "lon": 32.644722
+        }
+      ],
+      "from": "1388BC",
+      "to": "1350BC",
+      "born": "1411BC",
+      "died": "1350BC",
+      "parents": [
+        "Thutmose IV",
+        "Mutemwiya"
+      ],
+      "burial": "WV22",
+      "consort": [
+        "Tiye",
+        "Gilukhepa",
+        "Tadukhepa",
+        "Sitamun",
+        "Iset"
+      ],
+      "predecessor": "Thutmose IV",
+      "successor": "Akhenaten",
+      "children": [
+        "Akhenaten",
+        "Thutmose",
+        "Sitamun",
+        "Iset",
+        "Henuttaneb",
+        "Nebetah",
+        "The Younger Lady"
+      ],
+      "dynasty": 18,
+      "facts": [
+      "  He was the ninth pharaoh of the Eighteenth dynasty.",
+       " His father was pharaoh Thutmose IV and his mother was Mutemwiya, a minor wife of Thutmose. It was common for ancient Egyptian pharaohs to have several wives; one queen and several minor wives.",
+       " His name, Amenhotep, translates to \"Amun is satisfied\" (Amun was a powerful god of ancient Egypt).",
+      "  His reign was a very peaceful one. Records of only one very minor military expedition exist. This was too Upper Nubia which is a region along the Nile River located in what is today central Sudan.",
+       " Amenhotep III's queen (Great Royal Wife) was Tiye. They had two sons together. There first son would die before Amenhotep III's death leaving the second son, Amenhotep IV, to succeeded Amenhotep III as ruler of Egypt. Amenhotep IV eventually changed his royal name to Akhenaten.",
+"It is believed that Amenhotep III and his queen Tiye had four daughters together. Their names were Henuttaneb, Sitamun, Nebetah, and Isis (or Iset)."
+      ],
+      "story": "Although Amenhotep III had many wives, as was Egyptian custom, Tiye was undoubtedly his favorite. Tiye was not only a close companion to Amenhotep III, she also helped him with royal affairs, probably running everything when her husband was away. The couple had six children. Four of their children were daughters who had little role in the kingdom. Their eldest son, Thutmosis, who was named after Amenhotep III's father, died as a child. This left the kingdom to their second son, Amenhotep IV, who changed his name and is better known as Akhenaten. When Akhenaten took over, he was not very successful. His son, Tutankhamun, while famous, also did not meet the prosperous standards of Amenhotep III's rule.",
+      "about": "was the ninth pharaoh of the Eighteenth Dynasty. According to different authors, he ruled Egypt from June 1386 to 1349 BC, or from June 1388 BC to December 1351 BC/1350 BC,[4] after his father Thutmose IV died. Amenhotep III was Thutmose's son by a minor wife, Mutemwiya.[5]\n\nHis reign was a period of unprecedented prosperity and artistic splendour, when Egypt reached the peak of its artistic and international power. When he died in the 38th or 39th year of his reign, his son initially ruled as Amenhotep IV, but then changed his own royal name to Akhenaten.",
+      "know_more": "https://en.wikipedia.org/wiki/Amenhotep_III",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/b/bb/Colossal_Amenhotep_III_British_Museum.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/6/64/Fragment_of_a_relief_showing_princess_Sitamun_%28Sitamen%29._From_the_mortuary_temple_of_Amenhotep_II_at_Thebes%2C_Egypt._The_Petrie_Museum_of_Egyptian_Archaeology%2C_London.jpg",
+        "https://en.wikipedia.org/wiki/Amenhotep_III#/media/File:Amenhotep_III_and_Sobek1.jpg",
+        "https://en.wikipedia.org/wiki/File:The_Stela_of_Amenophis_III,_raised_by_Merneptah_and_bearing_the_earliest_mention_of_Israel_--Cairo,_Egypt._(14)_(1904)_-_front_edited_-_TIMEA.jpg",
+        "https://en.wikipedia.org/wiki/File:Egypt.ColossiMemnon.01.jpg"
+      ],
+      "videos": [
+        "0zBGrM_ajO4",
+        "spBkW_dLOCM",
+        "uv3w8GLEozM"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Khafra",
+      "known_by": "The Owner Of Middle Pyramid",
+      "icon": "images/Khafra.png",
+      "animation_path": "",
+      "animation_name": "",
+      "appeared_in": [
+        {
+          "lat": 29.976111,
+          "lon": 31.130833
+        },
+        {
+          "lat": 30.047778,
+          "lon": 31.233333
+        }
+      ],
+      "from": "2558BC",
+      "to": "2532BC",
+      "born": "Unknown",
+      "died": "2532BC",
+      "parents": [
+        "Khufu",
+        "Meritites I or Henutsen"
+      ],
+      "burial": "Pyramid of Khafra",
+      "consort": [
+        "Meresankh III, Khamerernebty I, Persenet, Hekenuhedjet"
+      ],
+      "predecessor": "Djedefre",
+      "successor": "Menkaure",
+      "children": [
+        "Nebemakhet",
+        "Duaenre",
+        "Niuserre",
+        "Khentetka",
+        "Shepsetkau",
+        "Menkaure"
+      ],
+      "dynasty": 4,
+      "facts": [
+        "builder of the second of the three Pyramids of Giza",
+        "The builder of the Sphinx",
+        "King Khafre was the one who established the royal court at Memphis.",
+        "He married his sister Khamerernebti, Meresankh III, and perhaps two other queens"
+      ],
+      "story": "The builder of Giza's second pyramid, Khafra is perhaps best known because his face was the model for that of the Great Sphinx, which guards his tomb site. One of the younger sons of the pharoah Khufu, by his wife Henutsen, Khafra succeeded his half-brother Djedefra",
+      "about": "the son of Khufu and the throne successor of Djedefre. According to the ancient historian Manetho, Khafra was followed by king Bikheris, but according to archaeological evidence he was instead followed by king Menkaure. Khafra was the builder of the second largest pyramid of Giza. The view held by modern Egyptology at large continues to be that the Great Sphinx was built in approximately 2500 BC for Khafra",
+      "know_more": "http://www.bbc.co.uk/history/historic_figures/khafra.shtml",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/d/d5/Khafre_statue.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/7e/%C3%84gyptisches_Museum_Leipzig_035.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/3d/Khafra.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/7/73/Khafre.jpg",
+        "https://live.staticflickr.com/1538/26598985805_700730baed_b.jpg",
+        "https://cdn.britannica.com/s:1500x700,q:85/68/46868-004-E563DD00/Khafre-statue-god-shape-Horus-Egyptian-Museum.jpg"
+      ],
+      "videos": [
+        "acxKhQoeIAQ",
+        "Vk3Mvd_AZHw",
+        "ceUA_RP1C_M",
+        "EYiPg37-Pig"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Nefertiti",
+      "known_by": "the beautiful queen",
+      "icon": "images/Nefertiti.png",
+      "animation_path": "",
+      "animation_name": "",
+      "appeared_in": [
+        {
+          "lat": 22.336823,
+          "lon": 31.625532
+        }
+      ],
+      "from": "1353BC",
+      "to": "1336BC",
+      "born": "1370BC",
+      "died": "1330BC",
+      "parents": [
+        "Ay",
+        "Iuy"
+      ],
+      "burial": "UnKnown",
+      "consort": [
+        "Akhenaten"
+      ],
+      "predecessor": "-",
+      "successor": "-",
+      "children": [
+      ],
+      "dynasty": 18,
+      "facts": [
+        "Nefertiti and her husband were known for a religious revolution, in which they worshipped one god only, Aten, or the sun disc",
+        " With her husband, she reigned at what was arguably the wealthiest period of Ancient Egyptian history",
+        "Nefertiti had many titles including Hereditary Princess"
+      ],
+      "story": "Nefertiti, whose name means a beautiful woman has come, was the queen of Egypt and wife of Pharaoh Akhenaten during the 14th century B.C. She and her husband established the cult of Aten, the sun god, and promoted Egyptian artwork that was radically different from its predecessors. A bust of Nefertiti is one of the most iconic symbols of Egypt",
+      "about": "was an Egyptian queen and the Great Royal Wife of Akhenaten ,an Egyptian Pharaoh",
+      "know_more": "https://en.wikipedia.org/wiki/Nefertiti",
+      "gallery": [
+        "https://www.shorthistory.org/images/Nefertiti_bust.jpg",
+        "https://www.ancient-origins.net/sites/default/files/field/image/Nefertiti.jpg",
+        "https://images-na.ssl-images-amazon.com/images/I/414EhUQ1xJL.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Nefertiti_Standing-striding_Berlin.jpg/320px-Nefertiti_Standing-striding_Berlin.jpg"
+      ],
+      "videos": [
+        "KVtZNo-Xg-c",
+        "e1n15SyDjEQ",
+        "BLBoDYH39Uc",
+        "-1GULSVk5dc"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Thutmose III",
+      "known_by": "pharaoh",
+      "icon": "images/ThutmoseIII.png",
+      "animation_path": "",
+      "animation_name": "",
+      "appeared_in": [
+        {
+          "lat": 25.7075,
+          "lon": 32.644722
+        },
+        {
+          "lat": 25.738194,
+          "lon": 32.600639
+        }
+      ],
+      "from": "1479BC",
+      "to": "1425BC",
+      "born": "Unknown",
+      "died": "1425BC",
+      "parents": [
+        "Thutmose II",
+        "Iset"
+      ],
+      "burial": "KV34",
+      "consort": [
+        "Satiah",
+        "Hatshepsut-Meryetre",
+        "Nebtu",
+        "Menwi",
+        "Merti",
+        "Menhet",
+        "Nebsemi"
+      ],
+      "predecessor": "Hatshepsut",
+      "successor": "Amenhotep II",
+      "children": [
+        "Amenemhat",
+        "Amenhotep II",
+        "Beketamun",
+        "Iset",
+        "Menkheperre",
+        "Meryetamun",
+        "Meryetamun",
+        "Nebetiunet",
+        "Nefertiri",
+        "Siamun"
+      ],
+      "dynasty": 18,
+      "facts": [
+        "THUTMOSE III REIGNED OVER EGYPT FOR AROUND FIFTY-FOUR YEARS",
+        "HIS ACT OF BRAVERY WON EGYPT THE BATTLE OF MEGIDDO",
+        "THUTMOSE III GAINED CONTROL OF NORTHERN CANAAN THROUGH HIS FIRST CAMPAIGN",
+        "THUTMOSE III IS CALLED NAPOLEON OF EGYPT DUE TO HIS MILITARY GENIUS"
+      ],
+      "story": "Pharaoh Thutmose III was the warrior king of Egypt’s 18th and largest dynasty. During his reign, he reestablished Egyptian rule of Syria and Palestine.",
+      "about": "was the sixth pharaoh of the Eighteenth Dynasty. Officially, Thutmose III ruled Egypt for almost 54 years and his reign is usually dated from 24 April 1479 BC to 11 March 1425 BC, from the age of two and until his death at age fifty-six",
+      "know_more": "https://en.wikipedia.org/wiki/Thutmose_III",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/TuthmosisIII-2.JPG/800px-TuthmosisIII-2.JPG",
+        "https://www.ancient.eu/img/r/p/500x600/6893.jpg?v=1500541870",
+        "https://collectionapi.metmuseum.org/api/collection/v1/iiif/553922/1900005/main-image",
+        "http://photos.geni.com/p9/6400/5897/534448379fa6ab84/thutmose_1__large.jpg"
+      ],
+      "videos": [
+        "8o34fB-6WHs",
+        "SpDw2hN7CRs",
+        "qR_GqsV41MY",
+        "dpQn5z8s-dg"
+      ]
     }
   ]
 }

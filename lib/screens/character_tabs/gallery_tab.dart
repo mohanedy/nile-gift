@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:gift_of_the_nile/component/loading_progress.dart';
 import 'package:gift_of_the_nile/models/charcter.dart';
 import 'package:peek_and_pop/Export.dart';
 import 'package:peek_and_pop/misc.dart' as PeekAndPopMisc;
@@ -49,7 +50,7 @@ class _GalleryTabState extends State<GalleryTab> {
                         child: CachedNetworkImage(
                           imageUrl: _character.gallery[index],
                           placeholder: (context, val) {
-                            return Center(child: CircularProgressIndicator());
+                            return Center(child: LoadingProgress());
                           },
                           fadeInCurve: Curves.bounceIn,
                           fadeOutCurve: Curves.bounceIn,

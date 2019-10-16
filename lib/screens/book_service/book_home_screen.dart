@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:gift_of_the_nile/component/loading_progress.dart';
 import 'package:gift_of_the_nile/component/show_up_animation.dart';
 import 'package:gift_of_the_nile/models/book_ref.dart';
 import 'package:gift_of_the_nile/screens/book_service/bloc/books_home_bloc.dart';
@@ -379,8 +380,7 @@ class _BooksHomeScreenState extends State<BooksHomeScreen> {
                   ],
                 );
               } else {
-                return SafeArea(
-                    child: Center(child: CircularProgressIndicator()));
+                return SafeArea(child: Center(child: LoadingProgress()));
               }
             }),
       ),

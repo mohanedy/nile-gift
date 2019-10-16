@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:gift_of_the_nile/component/loading_progress.dart';
 import 'package:gift_of_the_nile/models/book_ref.dart';
 import 'package:gift_of_the_nile/screens/book_service/bloc/library_bloc.dart';
 import 'package:gift_of_the_nile/screens/book_service/pdf_screen.dart';
@@ -132,7 +133,7 @@ class _LibraryScreenState extends State<LibraryScreen> {
                 itemCount: booksSnapshot.data.length,
               );
             } else {
-              return CircularProgressIndicator();
+              return LoadingProgress();
             }
           }),
     );

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:gift_of_the_nile/component/loading_progress.dart';
 import 'package:gift_of_the_nile/models/book_ref.dart';
 import 'package:gift_of_the_nile/screens/book_service/bloc/book_screen_bloc.dart';
 import 'package:gift_of_the_nile/screens/book_service/pdf_screen.dart';
@@ -140,7 +141,7 @@ class _BookScreenState extends State<BookScreen> {
                 ),
               );
             } else {
-              return CircularProgressIndicator();
+              return LoadingProgress();
             }
           }),
       body: Stack(

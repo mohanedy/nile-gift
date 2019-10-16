@@ -3,6 +3,7 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gift_of_the_nile/bloc/home_screen_bloc.dart';
+import 'package:gift_of_the_nile/component/loading_progress.dart';
 import 'package:gift_of_the_nile/component/sliver_floating_search.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 import 'package:gift_of_the_nile/models/charcter.dart';
@@ -191,8 +192,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 child: Container(
                                                     width: 100,
                                                     height: 100,
-                                                    child:
-                                                        CircularProgressIndicator()));
+                                                    child: LoadingProgress()));
                                           }
                                         }),
                                   ]
@@ -387,7 +387,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       );
                     });
               } else {
-                return Center(child: CircularProgressIndicator());
+                return Center(child: LoadingProgress());
               }
             }),
       ),

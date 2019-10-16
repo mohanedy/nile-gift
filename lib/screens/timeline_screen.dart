@@ -2,6 +2,7 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:gift_of_the_nile/bloc/timeline_bloc.dart';
+import 'package:gift_of_the_nile/component/loading_progress.dart';
 import 'package:gift_of_the_nile/constants.dart';
 import 'package:gift_of_the_nile/models/charcter.dart';
 import 'package:gift_of_the_nile/screens/character_screen.dart';
@@ -218,7 +219,7 @@ class _TimelineScreenState extends State<TimelineScreen> {
                 ),
               );
             } else {
-              return CircularProgressIndicator();
+              return LoadingProgress();
             }
           }),
     );

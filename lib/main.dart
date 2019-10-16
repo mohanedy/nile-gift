@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gift_of_the_nile/screens/intro_screen.dart';
+import 'package:gift_of_the_nile/screens/home_screen.dart';
 import 'package:peek_and_pop/misc.dart' as PeekAndPopMisc;
 
 void main() => runApp(MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Righteous',
           primarySwatch: Colors.blue,
         ),
-        home: IntroScreen(),
+        home: HomeScreen(),
       ),
     );
   }

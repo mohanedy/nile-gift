@@ -7,6 +7,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:gift_of_the_nile/component/loading_progress.dart';
 import 'package:gift_of_the_nile/constants.dart';
 import 'package:gift_of_the_nile/models/charcter.dart';
 import 'package:gift_of_the_nile/screens/character_tabs/bloc/map_tab_bloc.dart';
@@ -154,7 +155,7 @@ class _MapTabState extends State<MapTab> {
                     ),
                   );
                 } else {
-                  return CircularProgressIndicator();
+                  return LoadingProgress();
                 }
               }),
           SizedBox(

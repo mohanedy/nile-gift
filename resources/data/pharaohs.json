@@ -316,12 +316,12 @@
       ],
       "dynasty": 18,
       "facts": [
-      "  He was the ninth pharaoh of the Eighteenth dynasty.",
-       " His father was pharaoh Thutmose IV and his mother was Mutemwiya, a minor wife of Thutmose. It was common for ancient Egyptian pharaohs to have several wives; one queen and several minor wives.",
-       " His name, Amenhotep, translates to \"Amun is satisfied\" (Amun was a powerful god of ancient Egypt).",
-      "  His reign was a very peaceful one. Records of only one very minor military expedition exist. This was too Upper Nubia which is a region along the Nile River located in what is today central Sudan.",
-       " Amenhotep III's queen (Great Royal Wife) was Tiye. They had two sons together. There first son would die before Amenhotep III's death leaving the second son, Amenhotep IV, to succeeded Amenhotep III as ruler of Egypt. Amenhotep IV eventually changed his royal name to Akhenaten.",
-"It is believed that Amenhotep III and his queen Tiye had four daughters together. Their names were Henuttaneb, Sitamun, Nebetah, and Isis (or Iset)."
+        "  He was the ninth pharaoh of the Eighteenth dynasty.",
+        " His father was pharaoh Thutmose IV and his mother was Mutemwiya, a minor wife of Thutmose. It was common for ancient Egyptian pharaohs to have several wives; one queen and several minor wives.",
+        " His name, Amenhotep, translates to \"Amun is satisfied\" (Amun was a powerful god of ancient Egypt).",
+        "  His reign was a very peaceful one. Records of only one very minor military expedition exist. This was too Upper Nubia which is a region along the Nile River located in what is today central Sudan.",
+        " Amenhotep III's queen (Great Royal Wife) was Tiye. They had two sons together. There first son would die before Amenhotep III's death leaving the second son, Amenhotep IV, to succeeded Amenhotep III as ruler of Egypt. Amenhotep IV eventually changed his royal name to Akhenaten.",
+        "It is believed that Amenhotep III and his queen Tiye had four daughters together. Their names were Henuttaneb, Sitamun, Nebetah, and Isis (or Iset)."
       ],
       "story": "Although Amenhotep III had many wives, as was Egyptian custom, Tiye was undoubtedly his favorite. Tiye was not only a close companion to Amenhotep III, she also helped him with royal affairs, probably running everything when her husband was away. The couple had six children. Four of their children were daughters who had little role in the kingdom. Their eldest son, Thutmosis, who was named after Amenhotep III's father, died as a child. This left the kingdom to their second son, Amenhotep IV, who changed his name and is better known as Akhenaten. When Akhenaten took over, he was not very successful. His son, Tutankhamun, while famous, also did not meet the prosperous standards of Amenhotep III's rule.",
       "about": "was the ninth pharaoh of the Eighteenth Dynasty. According to different authors, he ruled Egypt from June 1386 to 1349 BC, or from June 1388 BC to December 1351 BC/1350 BC,[4] after his father Thutmose IV died. Amenhotep III was Thutmose's son by a minor wife, Mutemwiya.[5]\n\nHis reign was a period of unprecedented prosperity and artistic splendour, when Egypt reached the peak of its artistic and international power. When he died in the 38th or 39th year of his reign, his son initially ruled as Amenhotep IV, but then changed his own royal name to Akhenaten.",
@@ -524,6 +524,163 @@
         "SpDw2hN7CRs",
         "qR_GqsV41MY",
         "dpQn5z8s-dg"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Akhenaten",
+      "known_by": "Akhenaton",
+      "icon": "images/Akhenaton.png",
+      "animation_path": "",
+      "animation_name": "",
+      "appeared_in": [
+        {
+          "lat": 30.047778,
+          "lon": 31.233333
+        },
+        {
+          "lat": 27.645278,
+          "lon": 30.896389
+        },
+        {
+          "lat": 25.740361,
+          "lon": 32.601667
+        }
+      ],
+      "from": "1353BC",
+      "to": "1336BC",
+      "born": "Unknown",
+      "died": "1336BC",
+      "parents": [
+        "Amenhotep III",
+        "Tiye"
+      ],
+      "burial": "KV55",
+      "consort": [
+        "Nefertiti",
+        "Kiya",
+        "Meritaten"
+      ],
+      "predecessor": "Amenhotep III",
+      "successor": "Smenkhare",
+      "children": [
+        "Smenkhkare",
+        "Meritaten",
+        "Meketaten",
+        "Ankhesenamun",
+        "Neferneferuaten Tasherit",
+        "Neferneferure",
+        "Setepenre",
+        "Tutankhamun",
+        "Ankhesenpaaten Tasherit"
+      ],
+      "dynasty": 18,
+      "facts": [
+        "HE TOOK THE NAME AKHENATEN IN YEAR FIVE OF HIS REIGN",
+        "AKHENATEN ORDERED THE ERADICATION OF ALL OF EGYPT’S TRADITIONAL GODS",
+        "AKHENATEN WAS THE FATHER OF KING TUT",
+        "AKHENATEN AND ATENISM WERE ERASED FROM RECORDS AFTER HIS DEATH"
+      ],
+      "story": "Akhenaten tried to shift his culture from Egypt's traditional religion, but the shifts were not widely accepted. After his death, his monuments were dismantled and hidden, his statues were destroyed, and his name excluded from the king lists.",
+      "about": "was an ancient Egyptian pharaoh of the 18th Dynasty who ruled for 17 years and died perhaps in 1336 BC or 1334 BC. He is noted for abandoning traditional Egyptian polytheism and introducing worship centered on the Aten, which is sometimes described as monolatristic, henotheistic, or even quasi-monotheistic.",
+      "know_more": "https://en.wikipedia.org/wiki/Akhenaten",
+      "gallery": [
+        "https://www.ducksters.com/history/ancient_egypt/akhenaten.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/c/cc/GD-EG-Caire-Mus%C3%A9e061.JPG",
+        "https://upload.wikimedia.org/wikipedia/commons/0/02/La_salle_dAkhenaton_%281356-1340_av_J.C.%29_%28Mus%C3%A9e_du_Caire%29_%282076972086%29.jpg",
+        "https://www.crystalinks.com/akhenatenhat.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/f/f7/Akhenaten_as_a_Sphinx_%28Kestner_Museum%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/b/bf/Gempaaten_talatats.jpg"
+      ],
+      "videos": [
+        "ryycDVWXDvc",
+        "PDzsaK7q6JI",
+        "lmzNvI6KofY",
+        "GWM4UehpmOg"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Ramses III",
+      "known_by": "warrior Pharaoh",
+      "icon": "images/ramses III.png",
+      "animation_path": "",
+      "animation_name": "",
+      "appeared_in": [
+        {
+          "lat": 25.716667,
+          "lon": 32.655833
+        },
+        {
+          "lat": 25.7197,
+          "lon": 32.6007
+        },
+        {
+          "lat": 25.718611,
+          "lon": 32.658611
+        },
+        {
+          "lat": 25.716667,
+          "lon": 32.655833
+        },
+        {
+          "lat": 25.739889,
+          "lon": 32.601083
+        }
+      ],
+      "from": "1186BC",
+      "to": "1155BC",
+      "born": "1217BC",
+      "died": "1155BC",
+      "parents": [
+        "Setnakhte",
+        "Tiy-Merenese"
+      ],
+      "burial": "KV11",
+      "consort": [
+        "Iset",
+        "Ta-Hemdjert",
+        "Tyti",
+        "Tiye"
+      ],
+      "predecessor": "Setnakhte",
+      "successor": "Ramesses IV",
+      "children": [
+        "Ramesses VI",
+        " Ramesses VIII",
+        "Amun-her-khepeshef",
+        "Meryamun",
+        "Pareherwenemef",
+        "Khaemwaset",
+        "Meryatum",
+        "Montuherkhopshef",
+        "Pentawere",
+        "Duatentopet"
+      ],
+      "dynasty": 20,
+      "facts": [
+        "At the 8th year of reign of Ramses III, there occurred one of the greatest achievements of this king in the history of Egypt.",
+        " In his 11th year of reign after the complete destruction of the Sea-People coalition in Asia, they tried again to invade Egypt from the west.",
+        " Ramses III decided to spend the second part of his reign in total luxury",
+        "Ramses III was very much interested in architectural achievements as well so he built his mortuary temple on the western bank of Luxor."
+      ],
+      "story": "His long reign saw the decline of Egyptian political and economic power, linked to a series of invasions and internal economic problems that also plagued pharaohs before him. He has also been described as warrior Pharaoh due to his strong military strategies.",
+      "about": "was the second Pharaoh of the Twentieth Dynasty in Ancient Egypt. He is thought to have reigned from 1186 to 1155 BC and is considered to be the last great monarch of the New Kingdom to wield any substantial authority over Egypt.",
+      "know_more": "https://en.wikipedia.org/wiki/Ramesses_III",
+      "gallery": [
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/Weihrauchopfer_RamsesIII_aus_KV11.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/3/3e/Louvre_egyptologie_22.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/d/df/Medinet_Haboe_Reli%C3%ABf.jpg",
+        "https://en.wikipedia.org/wiki/Ramesses_III#/media/File:KhonsuTemple-Karnak-Incredible.jpg",
+        "https://en.wikipedia.org/wiki/Ramesses_III#/media/File:Medinet_Habu_Ramses_III._Tempel_02.JPG",
+        "https://en.wikipedia.org/wiki/Ramesses_III#/media/File:Great_Harris_Papyrus,_Sheet_2.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/8/83/Ramses_III_mummy_head.png"
+      ],
+      "videos": [
+        "8v20b7054zc",
+        "R6VpS5eT3vg",
+        "tgPab9k-NGg",
+        "8Jmo04MHngY"
       ]
     }
   ]

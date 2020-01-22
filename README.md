@@ -27,6 +27,7 @@
 - [Quick start](#quick-start)
 - [Features](#features)
 - [Screenshots](#screenshots)
+- [Video](#video)
 - [Development Environment](#development-environment)
 - [Creator](#creator)
 - [Copyright and license](#copyright-and-license)
@@ -46,12 +47,12 @@
 
 
 ## Screenshots
- <img src="resources/screenshots/20191017_193845.png" alt="Timeline"  height=350> &nbsp; <img src="resources/screenshots/20191017_193858.png" alt="Timeline"  height=350>
-<br>
- <img src="resources/screenshots/20191017_193910.png" alt="Library"  height=350> &nbsp; <img src="resources/screenshots/Screenshot_1579713531.png" alt="Pharaoh"  height=350>
- <br>
+ <img src="resources/screenshots/Screenshot_1579714060.png" alt="Timeline"  height=350> &nbsp; <img src="resources/screenshots/Screenshot_1579714089.png" alt="Timeline"  height=350>
+ <img src="resources/screenshots/Screenshot_1579714113.png" alt="Library"  height=350> &nbsp; <img src="resources/screenshots/Screenshot_1579713531.png" alt="Pharaoh"  height=350>
  <img src="resources/screenshots/Screenshot_1579713597.png" alt="Library"  height=350> &nbsp; <img src="resources/screenshots/Screenshot_1579713612.png" alt="Pharaoh"  height=350>
 
+## Video
+**SOON**
 
 ## Development Environment
 * The App is developed using Bloc Pattern

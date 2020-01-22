@@ -16,7 +16,7 @@
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-flutter-1f425f.svg)](https://flutter.dev/)
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://github.com/Mohanedy98)
+
 
   </p>
 </p>

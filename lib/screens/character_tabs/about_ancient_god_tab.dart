@@ -154,7 +154,6 @@ class _AboutTabState extends State<AboutTab> {
   Widget buildGodList() {
     return Center(
       child: CircleList(
-        outerCircleRotateWithChildren: true,
         innerCircleRotateWithChildren: true,
         onDragStart: (c) {
           print(c);

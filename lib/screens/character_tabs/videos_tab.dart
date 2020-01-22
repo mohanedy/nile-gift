@@ -12,11 +12,11 @@ class VideosTab extends StatefulWidget {
 }
 
 class _VideosTabState extends State<VideosTab> {
-  YoutubePlayerController _controller;
+  List<YoutubePlayerController> _controllers = [];
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controllers.forEach((c) => c?.dispose());
     super.dispose();
   }
 
@@ -26,6 +26,13 @@ class _VideosTabState extends State<VideosTab> {
       itemCount: widget._character.videos.length,
       physics: ClampingScrollPhysics(),
       itemBuilder: (context, index) {
+        final controller = YoutubePlayerController(
+          initialVideoId: widget._character.videos[index],
+          flags: YoutubePlayerFlags(
+            autoPlay: false,
+          ),
+        );
+        _controllers.add(controller);
         if (widget._character.videos != null &&
             widget._character.videos.length > 0) {
           return Padding(
@@ -33,20 +40,10 @@ class _VideosTabState extends State<VideosTab> {
             child: Container(
               height: 250,
               child: YoutubePlayer(
-                context: context,
-                videoId: widget._character.videos[index],
-                flags: YoutubePlayerFlags(
-                  autoPlay: false,
-                  showVideoProgressIndicator: true,
-                ),
-                videoProgressIndicatorColor: Colors.amber,
-                progressColors: ProgressColors(
-                  playedColor: Colors.amber,
-                  handleColor: Colors.amberAccent,
-                ),
-                onPlayerInitialized: (controller) {
-                  _controller = controller;
-                },
+                controller: controller,
+                liveUIColor: Colors.amber,
+                progressIndicatorColor: Colors.amber,
+                showVideoProgressIndicator: true,
               ),
             ),
           );

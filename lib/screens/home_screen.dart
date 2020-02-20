@@ -9,13 +9,11 @@ import 'package:gift_of_the_nile/models/ancient_gods.dart';
 import 'package:gift_of_the_nile/models/charcter.dart';
 import 'package:gift_of_the_nile/models/pharaoh.dart';
 import 'package:gift_of_the_nile/screens/about_screen.dart';
-import 'package:gift_of_the_nile/screens/book_service/book_home_screen.dart';
 import 'package:gift_of_the_nile/screens/character_screen.dart';
 import 'package:gift_of_the_nile/screens/fav_characters.dart';
 import 'package:gift_of_the_nile/screens/timeline_screen.dart';
 import 'package:koukicons/info.dart';
 import 'package:koukicons/likeX.dart';
-import 'package:koukicons/notebook1.dart';
 import 'package:koukicons/share.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -85,21 +83,21 @@ class _HomeScreenState extends State<HomeScreen> {
                                               'resources/images/pyramids.png'),
                                         ),
                                       ),
-                                      Positioned(
-                                        top: 20,
-                                        right: 10,
-                                        child: IconButton(
-                                          icon: KoukiconsNotebook1(),
-                                          onPressed: () {
-                                            Navigator.push(
-                                                context,
-                                                MaterialPageRoute(
-                                                    builder: (c) =>
-                                                        BooksHomeScreen()));
-                                          },
-                                          tooltip: 'Library',
-                                        ),
-                                      ),
+//                                      Positioned(
+//                                        top: 20,
+//                                        right: 10,
+//                                        child: IconButton(
+//                                          icon: KoukiconsNotebook1(),
+//                                          onPressed: () {
+//                                            Navigator.push(
+//                                                context,
+//                                                MaterialPageRoute(
+//                                                    builder: (c) =>
+//                                                        BooksHomeScreen()));
+//                                          },
+//                                          tooltip: 'Library',
+//                                        ),
+//                                      ),
                                     ],
                                   ),
                                   Text(

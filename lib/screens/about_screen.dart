@@ -49,126 +49,190 @@ class _AboutScreenState extends State<AboutScreen> {
               ],
             ),
           ),
+          RawMaterialButton(
+            onPressed: () {
+              launchURL('https://hyper-dev.github.io/');
+            },
+            child: Image.asset(
+              'resources/images/logo-gray-wide.png',
+              height: 80,
+            ),
+          ),
           Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Material(
-              elevation: 20,
-              borderRadius: BorderRadius.circular(25),
-              child: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    gradient: LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: [
-                          Colors.amber,
-                          Colors.amberAccent.shade700,
-                        ])),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: <Widget>[
-                      Material(
-                        elevation: 10,
-                        borderRadius: BorderRadius.circular(40),
-                        child: CircleAvatar(
-                          backgroundImage: AssetImage(
-                            'resources/images/me.png',
-                          ),
-                          radius: 40,
-                        ),
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            'Mohaned Yossry Al-feqy',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              IconButton(
-                                icon: Icon(
-                                  Icons.email,
-                                  color: Colors.white,
-                                  size: 32,
-                                ),
-                                onPressed: () {
-                                  launch(
-                                      'mailto:mohaned.y98@gmail.com?subject=Nile Gift App');
-                                },
-                              ),
-                              IconButton(
-                                icon: Icon(
-                                  FontAwesome.getIconData('github'),
-                                  color: Colors.white,
-                                  size: 32,
-                                ),
-                                onPressed: () {
-                                  launchURL(
-                                      'https://github.com/Mohanedy98/Gift-of-The-Nile');
-                                },
-                              ),
-                              IconButton(
-                                icon: Icon(
-                                  Entypo.getIconData('facebook-with-circle'),
-                                  color: Colors.white,
-                                  size: 32,
-                                ),
-                                onPressed: () {
-                                  launchURL(
-                                      'https://www.facebook.com/mohanedy98');
-                                },
-                              ),
-                              IconButton(
-                                icon: Icon(
-                                  Entypo.getIconData('twitter-with-circle'),
-                                  color: Colors.white,
-                                  size: 32,
-                                ),
-                                onPressed: () {
-                                  launchURL('https://twitter.com/mohanedy98');
-                                },
-                              ),
-                            ],
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ),
+            padding: const EdgeInsets.all(8.0),
+            child: DeveloperCard(
+              'resources/images/me.png',
+              'Mohaned Yossry Al-Feqy',
+              'Android & iOS Mobile Developer',
+              email: 'mohaned.y98@gmail.com',
+              github: 'https://github.com/Mohanedy98',
+              facebook: 'https://www.facebook.com/mohanedy98',
+              twitter: 'https://twitter.com/mohanedy98',
             ),
           ),
           SizedBox(
             height: 10,
           ),
-          Padding(
+        ],
+      ),
+    );
+  }
+
+  launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+}
+
+class DeveloperCard extends StatelessWidget {
+  final String imgURL;
+  final String name;
+  final String about;
+  final String email;
+  final String github;
+  final String facebook;
+  final String twitter;
+  final Color color1;
+  final Color color2;
+
+  DeveloperCard(this.imgURL, this.name, this.about,
+      {this.color1 = Colors.blue,
+      this.color2 = Colors.lightBlueAccent,
+      this.email,
+      this.github,
+      this.facebook,
+      this.twitter});
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: <Widget>[
+        Container(
+          margin: EdgeInsets.fromLTRB(5, 0, 5, 30.0),
+          padding: EdgeInsets.only(bottom: 10),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: [
+                new BoxShadow(
+                  color: color2,
+                  blurRadius: 10.0,
+                  offset: new Offset(0.0, 10.0),
+                ),
+                new BoxShadow(
+                  color: color2,
+                  blurRadius: 10.0,
+                  offset: new Offset(5.0, 0),
+                ),
+              ],
+              gradient: LinearGradient(
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
+                  colors: [
+                    color1,
+                    color2,
+                  ])),
+          child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
               children: <Widget>[
-                Flexible(
-                  child: Image.asset(
-                    'resources/images/uni_en.png',
+                Material(
+                  elevation: 10,
+                  borderRadius: BorderRadius.circular(40),
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage(imgURL),
+                    radius: 35,
                   ),
                 ),
-                Flexible(
-                  child: Image.asset(
-                    'resources/images/fci_en.png',
-                  ),
+                SizedBox(
+                  width: 10,
                 ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      name,
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      about,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),
+        ),
+        Positioned(
+          bottom: 6,
+          right: 20,
+          child: social(),
+        ),
+      ],
+    );
+  }
+
+  Widget social() {
+    return Material(
+      borderRadius: BorderRadius.circular(50),
+      color: Color(0xffF2F2F2),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          if (email != null)
+            IconButton(
+              icon: Icon(
+                Icons.email,
+                color: color1,
+                size: 32,
+              ),
+              onPressed: () {
+                launch('mailto:$email?subject=Educate Me App');
+              },
+            ),
+          if (github != null)
+            IconButton(
+              icon: Icon(
+                FontAwesome.getIconData('github'),
+                color: color1,
+                size: 32,
+              ),
+              onPressed: () {
+                launchURL(github);
+              },
+            ),
+          if (facebook != null)
+            IconButton(
+              icon: Icon(
+                Entypo.getIconData('facebook-with-circle'),
+                color: color1,
+                size: 32,
+              ),
+              onPressed: () {
+                launchURL(facebook);
+              },
+            ),
+          if (twitter != null)
+            IconButton(
+              icon: Icon(
+                Entypo.getIconData('twitter-with-circle'),
+                color: color1,
+                size: 32,
+              ),
+              onPressed: () {
+                launchURL(twitter);
+              },
+            ),
         ],
       ),
     );

@@ -81,7 +81,7 @@ class _CharacterScreenState extends State<CharacterScreen>
 
   Widget buildSliverAppBar(BuildContext context) {
 //    top = constraints.biggest.height;
-    print('height ' + (MediaQuery.of(context).size.height / 2).toString());
+
     return StreamBuilder<double>(
       stream: _bloc.barOffsetStream,
       initialData: MediaQuery.of(context).size.height / 2,
@@ -117,9 +117,12 @@ class _CharacterScreenState extends State<CharacterScreen>
                           ? FlareActor(
                               'resources/animation/${_character.animationPath}',
                               animation: _character.animationName,
-                              fit: BoxFit.fitHeight,
+                              fit: BoxFit.contain,
                             )
-                          : Image.asset('resources/' + _character.icon),
+                          : Image.asset(
+                              'resources/' + _character.icon,
+                              fit: BoxFit.scaleDown,
+                            ),
                     ),
                   ),
                   IconButton(

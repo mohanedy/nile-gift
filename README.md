@@ -33,7 +33,7 @@
 - [Copyright and license](#copyright-and-license)
 
 ## Quick start
-**you can download the APK from [releases](https://github.com/Mohanedy98/Gift-of-The-Nile/releases)**
+**you can download the APK from Google Play [Nile Gift App](https://play.google.com/store/apps/details?id=com.mohanedy98.gift_of_the_nile)**
 
 ## Features
   |                      Features                      |

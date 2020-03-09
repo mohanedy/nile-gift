@@ -146,7 +146,6 @@ class _CharacterScreenState extends State<CharacterScreen>
             title: LayoutBuilder(
               builder: (context, constraints) {
                 //Fixes Rebuild Issue
-                print(constraints.biggest.height);
                 if (constraints.biggest.height != offsetSnapshot.data) {
                   _bloc.changeBarOffset(constraints.biggest.height);
                 }

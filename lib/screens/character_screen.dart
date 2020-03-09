@@ -25,6 +25,7 @@ class _CharacterScreenState extends State<CharacterScreen>
     with SingleTickerProviderStateMixin {
   CharacterScreenBloc _bloc;
   String _loveAnimationName = 'Unlove';
+  final int barHeight = 117;
   TabController _tabController;
   final tabStyle = TextStyle(
     fontFamily: 'Righteous',
@@ -85,7 +86,7 @@ class _CharacterScreenState extends State<CharacterScreen>
     return StreamBuilder<double>(
       stream: _bloc.barOffsetStream,
       initialData: MediaQuery.of(context).size.height / 2,
-      builder: (context, snapshot) {
+      builder: (context, offsetSnapshot) {
         return SliverAppBar(
           leading: IconButton(
             onPressed: () {
@@ -99,7 +100,7 @@ class _CharacterScreenState extends State<CharacterScreen>
           backgroundColor: Colors.white,
           forceElevated: true,
           title: AnimatedOpacity(
-              opacity: snapshot.data <= 117 ? 1 : 0,
+              opacity: offsetSnapshot.data <= barHeight ? 1 : 0,
               duration: Duration(milliseconds: 500),
               child: Row(
                 children: <Widget>[
@@ -112,7 +113,7 @@ class _CharacterScreenState extends State<CharacterScreen>
                   Spacer(),
                   Expanded(
                     child: Container(
-                      height: MediaQuery.of(context).size.height / 2 - 50,
+                      height: 60,
                       child: _character.icon == null
                           ? FlareActor(
                               'resources/animation/${_character.animationPath}',
@@ -121,7 +122,7 @@ class _CharacterScreenState extends State<CharacterScreen>
                             )
                           : Image.asset(
                               'resources/' + _character.icon,
-                              fit: BoxFit.scaleDown,
+                              fit: BoxFit.contain,
                             ),
                     ),
                   ),
@@ -142,10 +143,16 @@ class _CharacterScreenState extends State<CharacterScreen>
           pinned: true,
           expandedHeight: MediaQuery.of(context).size.height / 2,
           flexibleSpace: FlexibleSpaceBar(
-            title: LayoutBuilder(builder: (context, constraints) {
-              _bloc.changeBarOffset(constraints.biggest.height);
-              return Container();
-            }),
+            title: LayoutBuilder(
+              builder: (context, constraints) {
+                //Fixes Rebuild Issue
+                print(constraints.biggest.height);
+                if (constraints.biggest.height != offsetSnapshot.data) {
+                  _bloc.changeBarOffset(constraints.biggest.height);
+                }
+                return Container();
+              },
+            ),
             background: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,

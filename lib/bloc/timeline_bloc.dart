@@ -8,7 +8,7 @@ class TimelineBloc {
   final _charactersFiltered = BehaviorSubject<List<Character>>();
   DataServiceProvider _provider = DataServiceProvider();
 
-  Observable<List<Character>> get characters => _charactersFiltered.stream;
+  ValueStream<List<Character>> get characters => _charactersFiltered.stream;
 
   TimelineBloc(BuildContext context) {
     initData(context);

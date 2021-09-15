@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_full_pdf_viewer/flutter_full_pdf_viewer.dart';
 import 'package:path/path.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class PDFScreen extends StatefulWidget {
   final String pdfPath;
@@ -25,7 +25,7 @@ class _PDFScreenState extends State<PDFScreen> {
   Widget build(BuildContext context) {
     final file = File(widget.pdfPath);
 
-    return PDFViewerScaffold(
+    return Scaffold(
       appBar: AppBar(
         elevation: 7,
         centerTitle: true,
@@ -39,7 +39,9 @@ class _PDFScreenState extends State<PDFScreen> {
           ),
         ),
       ),
-      path: widget.pdfPath,
+      body: SfPdfViewer.file(File(
+        widget.pdfPath,
+      )),
     );
   }
 }

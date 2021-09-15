@@ -1,7 +1,7 @@
-import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_share/flutter_share.dart';
 import 'package:gift_of_the_nile/bloc/home_screen_bloc.dart';
 import 'package:gift_of_the_nile/component/loading_progress.dart';
 import 'package:gift_of_the_nile/component/sliver_floating_search.dart';
@@ -339,10 +339,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ],
                                         ),
                                         onPressed: () {
-                                          Share.text(
-                                              'Nile Gift',
-                                              'Download Nile Gift now to start the journey with the egyptian history',
-                                              'text/plain');
+                                          FlutterShare.share(
+                                            title: 'Nile Gift',
+                                            text:
+                                                'Download Nile Gift now to start the journey with the egyptian history',
+                                            chooserTitle: 'Nile Gift',
+                                          );
+                                          // title: 'Nile Gift',
+                                          //
+                                          // 'Download Nile Gift now to start the journey with the egyptian history',
+                                          // 'text/plain',
                                         },
                                       ),
                                     ),

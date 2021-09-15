@@ -203,7 +203,7 @@ class DeveloperCard extends StatelessWidget {
           if (github != null)
             IconButton(
               icon: Icon(
-                FontAwesome.getIconData('github'),
+                FontAwesome.github,
                 color: color1,
                 size: 32,
               ),
@@ -214,7 +214,7 @@ class DeveloperCard extends StatelessWidget {
           if (facebook != null)
             IconButton(
               icon: Icon(
-                Entypo.getIconData('facebook-with-circle'),
+                Entypo.facebook_with_circle,
                 color: color1,
                 size: 32,
               ),
@@ -225,7 +225,7 @@ class DeveloperCard extends StatelessWidget {
           if (twitter != null)
             IconButton(
               icon: Icon(
-                Entypo.getIconData('twitter-with-circle'),
+                Entypo.twitter_with_circle,
                 color: color1,
                 size: 32,
               ),

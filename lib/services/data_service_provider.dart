@@ -49,8 +49,8 @@ class DataServiceProvider {
   }
 
   Future<GBookResult> getBook(String isbn) async {
-    final response = await http.get(
-        'https://www.googleapis.com/books/v1/volumes?q=$isbn+isbn&key=AIzaSyD4xI678VBxw_SXMAzLE7naH54rR6L-ZSo');
+    final response = await http.get(Uri.parse(
+        'https://www.googleapis.com/books/v1/volumes?q=$isbn+isbn&key=AIzaSyD4xI678VBxw_SXMAzLE7naH54rR6L-ZSo'));
     final data = json.decode(response.body);
     final gBook = GBookResult.fromJson(data);
     return gBook;
@@ -151,7 +151,7 @@ class DataServiceProvider {
     return [];
   }
 
-  Future<Characters> loadData(
+  Future<AppCharacters> loadData(
       BuildContext context, CharacterType characterType) async {
     switch (characterType) {
       case CharacterType.EgyptianGod:

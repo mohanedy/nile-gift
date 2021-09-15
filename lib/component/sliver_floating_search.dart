@@ -26,7 +26,7 @@ class SliverSearchFloatingBar extends StatelessWidget {
           minHeight: 50,
           minWidth: 50,
         ),
-        child: Icon(AntDesign.getIconData('closecircleo')),
+        child: Icon(AntDesign.closecircleo),
       ),
       title: TextField(
         controller: controller,
@@ -37,7 +37,7 @@ class SliverSearchFloatingBar extends StatelessWidget {
           hintStyle: TextStyle(fontFamily: 'STC'),
           border: InputBorder.none,
           icon: Icon(
-            Feather.getIconData('search'),
+            Feather.search,
             size: 30,
           ),
         ),

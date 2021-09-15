@@ -214,7 +214,7 @@ class _BookScreenState extends State<BookScreen> {
                           color: Colors.grey,
                         ),
                       ),
-                      RatingBar(
+                      RatingBar.builder(
                         itemBuilder: (context, _) {
                           return Icon(
                             Icons.star,

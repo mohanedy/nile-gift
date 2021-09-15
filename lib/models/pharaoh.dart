@@ -2,7 +2,7 @@ import 'package:gift_of_the_nile/constants.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 import 'package:gift_of_the_nile/models/charcter.dart';
 
-class Pharaohs implements Characters {
+class Pharaohs implements AppCharacters {
   List<Pharaoh> characters;
   String type;
 

@@ -1,4 +1,4 @@
-import 'package:geolocator/geolocator.dart';
+import 'package:geocoding/geocoding.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 import 'package:gift_of_the_nile/models/charcter.dart';
 import 'package:gift_of_the_nile/services/location_service_provider.dart';
@@ -9,7 +9,7 @@ class MapTabBloc {
   final _locService = LocationServiceProvider();
   final _locationsList = BehaviorSubject<List<Map<String, dynamic>>>();
 
-  Observable<List<Map<String, dynamic>>> get locationList =>
+  ValueStream<List<Map<String, dynamic>>> get locationList =>
       _locationsList.stream;
   final Character _currentCharacter;
 
@@ -21,8 +21,7 @@ class MapTabBloc {
     List<Map<String, dynamic>> locationsData = [];
     for (AppearedIn loc in _currentCharacter.appearedIn) {
       final distance = await _locService.getDistance(LatLng(loc.lat, loc.lon));
-      final placeMark =
-          await Geolocator().placemarkFromCoordinates(loc.lat, loc.lon);
+      final placeMark = await placemarkFromCoordinates(loc.lat, loc.lon);
       print(placeMark.first.name);
       locationsData.add({
         'distance': distance,

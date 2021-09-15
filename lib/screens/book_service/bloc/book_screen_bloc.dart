@@ -11,9 +11,9 @@ class BookScreenBloc {
   final _downloadState = BehaviorSubject<DownloadTaskStatus>();
   final _progressValue = BehaviorSubject<int>();
 
-  Observable<DownloadTaskStatus> get downloadState => _downloadState.stream;
+  ValueStream<DownloadTaskStatus> get downloadState => _downloadState.stream;
 
-  Observable<int> get progressValue => _progressValue.stream;
+  ValueStream<int> get progressValue => _progressValue.stream;
   Book _currentBook;
   String _currentTaskId;
 

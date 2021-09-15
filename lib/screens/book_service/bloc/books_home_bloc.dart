@@ -9,9 +9,9 @@ class BooksHomeBloc {
   final _loading = BehaviorSubject<bool>();
   final _booksList = BehaviorSubject<List<Book>>();
 
-  Observable<bool> get showProgressBar => _loading.stream;
+  ValueStream<bool> get showProgressBar => _loading.stream;
 
-  Observable<List<Book>> get booksStream => _booksList.stream;
+  ValueStream<List<Book>> get booksStream => _booksList.stream;
 
   BooksHomeBloc(BuildContext context) {
     _initData(context);

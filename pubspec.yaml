@@ -14,49 +14,54 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.2.2 <3.0.0"
+  sdk: ">=2.9.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flare_flutter: ^1.5.6
-  floating_search_bar: ^0.2.0
-  flutter_icons: ^0.3.1
-  rxdart: ^0.22.0
-  circle_list: ^1.0.0
+  flare_flutter: ^3.0.2
+  floating_search_bar:
+    git:
+      url: https://github.com/brumbrumm/floating_search_bar.git
+      ref: 3527d04
+  flutter_icons: ^1.1.0
+  rxdart:
+  circle_list: ^1.0.5
   auto_size_text: ^2.1.0
-  google_maps_flutter: ^0.5.21+6
-  geolocator: ^5.1.3
-  flutter_staggered_animations: ^0.1.2
-  flutter_staggered_grid_view: ^0.3.0
-  cached_network_image: ^2.0.0
-  peek_and_pop: ^1.0.2
-  url_launcher: ^5.1.4
-  timeline_list: ^0.0.5
-  koukicons: ^2.0.1
-  shared_preferences: ^0.5.3+4
-  http: ^0.12.0+2
-  flutter_rating_bar: ^3.0.0
+  google_maps_flutter: ^2.0.9
+  geolocator: ^7.6.1
+  flutter_staggered_animations: ^1.0.0
+  flutter_staggered_grid_view: ^0.4.0
+  cached_network_image: ^3.1.0
+  url_launcher: ^6.0.10
+  timeline_list: ^0.0.6
+  koukicons: ^2.0.3
+  shared_preferences: ^2.0.7
+  http: ^0.13.3
+  flutter_rating_bar: ^4.0.0
   flutter_swiper: ^1.1.6
-  dio: ^3.0.3
-  dio_http_cache: ^0.2.0
-  marquee: ^1.3.1
-  flutter_html: ^0.11.0
-  path_provider: ^1.3.0
-  flutter_downloader: ^1.2.2
-  path: ^1.6.4
-  flutter_full_pdf_viewer: ^1.0.6
-  esys_flutter_share: ^1.0.2
-  youtube_player_flutter: ^6.0.3+2
-  android_intent: ^0.3.3+2
-  intro_slider: ^2.2.8
+  dio: ^4.0.0
+  dio_http_cache: ^0.3.0
+  marquee: ^2.2.0
+  flutter_html: ^2.1.2
+  path_provider:
+  flutter_downloader: ^1.7.0
+  path:
+#  flutter_full_pdf_viewer: ^1.0.6
+#  esys_flutter_share: ^1.0.2
+  youtube_player_flutter: ^8.0.0
+  android_intent: ^2.0.2
+  intro_slider: ^3.0.2
+  flutter_share: ^2.0.0
+  geocoding: ^2.0.1
+  syncfusion_flutter_pdfviewer: ^19.2.62-beta
 
 
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^1.0.3
 
 dev_dependencies:
   flutter_test:

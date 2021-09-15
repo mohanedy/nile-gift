@@ -1,11 +1,11 @@
 import 'package:gift_of_the_nile/constants.dart';
 import 'package:gift_of_the_nile/models/ancient_gods.dart';
 
-class Characters {
+class AppCharacters {
   final List<Character> characters;
   final String type;
 
-  Characters(this.characters, this.type);
+  AppCharacters(this.characters, this.type);
 }
 
 class Character {

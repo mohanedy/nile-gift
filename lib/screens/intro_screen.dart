@@ -140,8 +140,6 @@ class _IntroScreenState extends State<IntroScreen> {
 
       // Skip button
       renderSkipBtn: this.renderSkipBtn(),
-      colorSkipBtn: Color(0x33000000),
-      highlightColorSkipBtn: Color(0xff000000),
 
       // Next button
       renderNextBtn: this.renderNextBtn(),
@@ -149,16 +147,17 @@ class _IntroScreenState extends State<IntroScreen> {
       // Done button
       renderDoneBtn: this.renderDoneBtn(),
       onDonePress: this.onDonePress,
-      colorDoneBtn: Color(0x33000000),
-      highlightColorDoneBtn: Color(0xff000000),
 
+      doneButtonStyle: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Color(0x33000000)),
+      ),
       // Dot indicator
       colorDot: Color(0x33D02090),
       colorActiveDot: Color(0xffD02090),
       sizeDot: 13.0,
 
       // Show or hide status bar
-      shouldHideStatusBar: true,
+      hideStatusBar: true,
       backgroundColorAllSlides: Colors.grey,
     );
   }

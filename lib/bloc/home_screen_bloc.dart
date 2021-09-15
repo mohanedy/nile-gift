@@ -15,17 +15,17 @@ class HomeScreenBloc {
   final _searchResult = BehaviorSubject<List<Character>>();
   DataServiceProvider _provider = DataServiceProvider();
 
-  Observable<AncientGods> get ancientGods => _ancientGods.stream;
+  ValueStream<AncientGods> get ancientGods => _ancientGods.stream;
 
-  Observable<Pharaohs> get pharaohs => _pharaohs.stream;
+  ValueStream<Pharaohs> get pharaohs => _pharaohs.stream;
 
-  Observable<List<Character>> get searchResult => _searchResult.stream;
+  ValueStream<List<Character>> get searchResult => _searchResult.stream;
 
-  Observable<String> get searchText => _searchText.stream;
+  ValueStream<String> get searchText => _searchText.stream;
 
-  Observable<bool> get isLoading => _isLoading.stream;
+  ValueStream<bool> get isLoading => _isLoading.stream;
 
-  Observable<bool> get isSearching => _isSearching.stream;
+  ValueStream<bool> get isSearching => _isSearching.stream;
 
   Function(bool) get onSearchingChange => _isSearching.sink.add;
 

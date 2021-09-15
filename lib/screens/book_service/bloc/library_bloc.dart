@@ -8,7 +8,7 @@ class LibraryBloc {
   final _downloadedBooks = BehaviorSubject<List<Map<String, dynamic>>>();
   final _provider = DataServiceProvider();
 
-  Observable<List<Map<String, dynamic>>> get downloadedBooks =>
+  ValueStream<List<Map<String, dynamic>>> get downloadedBooks =>
       _downloadedBooks.stream;
   final List<Book> _books;
 

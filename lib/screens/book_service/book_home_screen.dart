@@ -303,7 +303,7 @@ class _BooksHomeScreenState extends State<BooksHomeScreen> {
                                                       MainAxisAlignment
                                                           .spaceBetween,
                                                   children: <Widget>[
-                                                    RatingBar(
+                                                    RatingBar.builder(
                                                       itemBuilder:
                                                           (context, _) {
                                                         return Icon(
@@ -311,9 +311,6 @@ class _BooksHomeScreenState extends State<BooksHomeScreen> {
                                                           color: Colors.amber,
                                                         );
                                                       },
-                                                      onRatingUpdate:
-                                                          (rating) {},
-                                                      ignoreGestures: true,
                                                       itemSize: 20,
                                                       itemCount: 5,
                                                       unratedColor: Colors.grey,
@@ -325,6 +322,8 @@ class _BooksHomeScreenState extends State<BooksHomeScreen> {
                                                               .volumeInfo
                                                               .averageRating ??
                                                           0,
+                                                      onRatingUpdate:
+                                                          (double value) {},
                                                     ),
                                                     Padding(
                                                       padding: EdgeInsets.only(

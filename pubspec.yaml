@@ -29,7 +29,6 @@ dependencies:
   cached_network_image: ^3.2.3
   url_launcher: ^6.1.11
   timeline_list: ^0.0.6
-  shared_preferences: ^2.1.2
   flutter_rating_bar: ^4.0.1
   dio: ^5.2.1+1
   marquee: ^2.2.3

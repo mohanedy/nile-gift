@@ -64,65 +64,13 @@ class HomeContent extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 20,
+                )
               ]),
             ),
-            // SliverPadding(
-            //   padding: EdgeInsets.only(top: 20),
-            //   sliver: StreamBuilder<String>(
-            //       stream: _bloc.searchText,
-            //       builder: (context, searchQuery) {
-            //         return SliverSearchFloatingBar(
-            //           placeHolder: 'Search here',
-            //           onTextChanged: (txt) {
-            //             if (txt != null && txt.isNotEmpty) {
-            //               _bloc.onSearchingChange(true);
-            //               _bloc.onSearchChange(txt);
-            //             } else {
-            //               _bloc.onSearchingChange(false);
-            //             }
-            //           },
-            //           controller: _controller,
-            //         );
-            //       }),
-            // ),
             SliverList(
               delegate: SliverChildListDelegate(
-                //     false
-                //     ? [
-                //   if (result.hasData && (result.data?.length ?? 0) > 0)
-                //     Padding(
-                //       padding: const EdgeInsets.all(10.0),
-                //       child: ListView.separated(
-                //         shrinkWrap: true,
-                //         physics: ClampingScrollPhysics(),
-                //         itemBuilder: (context, index) {
-                //           return CharacterListWidget(
-                //             character: result.data[index],
-                //           );
-                //         },
-                //         separatorBuilder: (context, index) {
-                //           return Divider();
-                //         },
-                //         itemCount: result.data?.length ?? 0,
-                //       ),
-                //     )
-                //   else
-                //     if (result.hasData &&
-                //         (result.data == null ||
-                //             (result.data?.length ?? 0) == 0))
-                //       Padding(
-                //         padding: const EdgeInsets.all(10.0),
-                //         child: Center(
-                //           child: Text(
-                //             'No Matching',
-                //             style: TextStyle(
-                //               fontSize: 18,
-                //             ),
-                //           ),
-                //         ),
-                //       )
-                // ]
-                //     :
                 [
                   Padding(
                     padding: const EdgeInsets.all(8.0),

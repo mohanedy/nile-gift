@@ -3,7 +3,6 @@ import 'package:flutter_share/flutter_share.dart';
 import 'package:gift_of_the_nile/index.dart';
 import 'package:gift_of_the_nile/presentation/base/base_bloc_builder.dart';
 
-
 class HomeContent extends StatelessWidget {
   const HomeContent({super.key});
 
@@ -88,203 +87,176 @@ class HomeContent extends StatelessWidget {
             // ),
             SliverList(
               delegate: SliverChildListDelegate(
-                  //     false
-                  //     ? [
-                  //   if (result.hasData && (result.data?.length ?? 0) > 0)
-                  //     Padding(
-                  //       padding: const EdgeInsets.all(10.0),
-                  //       child: ListView.separated(
-                  //         shrinkWrap: true,
-                  //         physics: ClampingScrollPhysics(),
-                  //         itemBuilder: (context, index) {
-                  //           return CharacterListWidget(
-                  //             character: result.data[index],
-                  //           );
-                  //         },
-                  //         separatorBuilder: (context, index) {
-                  //           return Divider();
-                  //         },
-                  //         itemCount: result.data?.length ?? 0,
-                  //       ),
-                  //     )
-                  //   else
-                  //     if (result.hasData &&
-                  //         (result.data == null ||
-                  //             (result.data?.length ?? 0) == 0))
-                  //       Padding(
-                  //         padding: const EdgeInsets.all(10.0),
-                  //         child: Center(
-                  //           child: Text(
-                  //             'No Matching',
-                  //             style: TextStyle(
-                  //               fontSize: 18,
-                  //             ),
-                  //           ),
-                  //         ),
-                  //       )
-                  // ]
-                  //     :
-                  [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CategoryWidget(
-                        state.ancientGods.map((v) {
-                          return Padding(
-                            padding: const EdgeInsets.only(
-                              left: 20.0,
-                              right: 20,
+                //     false
+                //     ? [
+                //   if (result.hasData && (result.data?.length ?? 0) > 0)
+                //     Padding(
+                //       padding: const EdgeInsets.all(10.0),
+                //       child: ListView.separated(
+                //         shrinkWrap: true,
+                //         physics: ClampingScrollPhysics(),
+                //         itemBuilder: (context, index) {
+                //           return CharacterListWidget(
+                //             character: result.data[index],
+                //           );
+                //         },
+                //         separatorBuilder: (context, index) {
+                //           return Divider();
+                //         },
+                //         itemCount: result.data?.length ?? 0,
+                //       ),
+                //     )
+                //   else
+                //     if (result.hasData &&
+                //         (result.data == null ||
+                //             (result.data?.length ?? 0) == 0))
+                //       Padding(
+                //         padding: const EdgeInsets.all(10.0),
+                //         child: Center(
+                //           child: Text(
+                //             'No Matching',
+                //             style: TextStyle(
+                //               fontSize: 18,
+                //             ),
+                //           ),
+                //         ),
+                //       )
+                // ]
+                //     :
+                [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: CategoryWidget(
+                      state.ancientGods.map((v) {
+                        return Padding(
+                          padding: const EdgeInsets.only(
+                            left: 20.0,
+                            right: 20,
+                          ),
+                          child: ItemWidget(
+                            itemLabel: v.name ?? '',
+                            onPressed: () {},
+                            // onPressed: () {
+                            //   Navigator.push(
+                            //       context,
+                            //       MaterialPageRoute(
+                            //           builder: (c) => CharacterScreen(
+                            //                 v,
+                            //               )));
+                            // },
+                          ),
+                        );
+                      }).toList(),
+                      animationName: 'Ra Animation',
+                      flareImage: 'assets/animation/Ra.flr',
+                      label: 'Egyptian Gods',
+                      color: Colors.transparent,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: CategoryWidget(
+                      state.pharaohs.map((v) {
+                        return Padding(
+                          padding: const EdgeInsets.only(
+                            left: 20.0,
+                            right: 20,
+                          ),
+                          child: ItemWidget(
+                            itemLabel: v.name ?? '',
+                            onPressed: () {},
+                            // onPressed: () => Navigator.push(
+                            //   context,
+                            //   MaterialPageRoute(
+                            //     builder: (c) => CharacterScreen(
+                            //       v,
+                            //     ),
+                            //   ),
+                            // ),
+                          ),
+                        );
+                      }).toList(),
+                      animationName: 'eye',
+                      flareImage: 'assets/animation/pharoh.flr',
+                      label: 'Egyptian Pharaohs',
+                      color: Colors.transparent,
+                    ),
+                  ),
+                  Divider(
+                    height: 50,
+                    thickness: 3,
+                    endIndent: 20,
+                    indent: 20,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.0),
+                    child: RawMaterialButton(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(
+                            Icons.favorite,
+                            color: Colors.red,
+                            size: 30,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'Your Favorites',
+                            style: TextStyle(
+                              fontSize: 18,
                             ),
-                            child: ItemWidget(
-                              itemLabel: v.name ?? '',
-                              onPressed: () {},
-                              // onPressed: () {
-                              //   Navigator.push(
-                              //       context,
-                              //       MaterialPageRoute(
-                              //           builder: (c) => CharacterScreen(
-                              //                 v,
-                              //               )));
-                              // },
-                            ),
-                          );
-                        }).toList(),
-                        animationName: 'Ra Animation',
-                        flareImage: 'assets/animation/Ra.flr',
-                        label: 'Egyptian Gods',
-                        color: Colors.transparent,
+                          ),
+                        ],
                       ),
+                      onPressed: () {
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (c) => FavoritesCharacters()));
+                      },
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: CategoryWidget(
-                        state.pharaohs.map((v) {
-                          return Padding(
-                            padding: const EdgeInsets.only(
-                              left: 20.0,
-                              right: 20,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.0),
+                    child: RawMaterialButton(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          Icon(
+                            Icons.share,
+                            size: 30,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            'Share',
+                            style: TextStyle(
+                              fontSize: 18,
                             ),
-                            child: ItemWidget(
-                              itemLabel: v.name ?? '',
-                              onPressed: () {},
-                              // onPressed: () => Navigator.push(
-                              //   context,
-                              //   MaterialPageRoute(
-                              //     builder: (c) => CharacterScreen(
-                              //       v,
-                              //     ),
-                              //   ),
-                              // ),
-                            ),
-                          );
-                        }).toList(),
-                        animationName: 'eye',
-                        flareImage: 'assets/animation/pharoh.flr',
-                        label: 'Egyptian Pharaohs',
-                        color: Colors.transparent,
+                          ),
+                        ],
                       ),
+                      onPressed: () {
+                        FlutterShare.share(
+                          title: 'Nile Gift',
+                          text:
+                              'Download Nile Gift now to start the journey with the egyptian history',
+                          chooserTitle: 'Nile Gift',
+                        );
+                        // title: 'Nile Gift',
+                        //
+                        // 'Download Nile Gift now to start the journey with the egyptian history',
+                        // 'text/plain',
+                      },
                     ),
-                    Divider(
-                      height: 50,
-                      thickness: 3,
-                      endIndent: 20,
-                      indent: 20,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10.0),
-                      child: RawMaterialButton(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(
-                              Icons.favorite,
-                              color: Colors.red,
-                              size: 30,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              'Your Favorites',
-                              style: TextStyle(
-                                fontSize: 18,
-                              ),
-                            ),
-                          ],
-                        ),
-                        onPressed: () {
-                          // Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //         builder: (c) => FavoritesCharacters()));
-                        },
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10.0),
-                      child: RawMaterialButton(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(
-                              Icons.share,
-                              size: 30,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              'Share',
-                              style: TextStyle(
-                                fontSize: 18,
-                              ),
-                            ),
-                          ],
-                        ),
-                        onPressed: () {
-                          FlutterShare.share(
-                            title: 'Nile Gift',
-                            text:
-                                'Download Nile Gift now to start the journey with the egyptian history',
-                            chooserTitle: 'Nile Gift',
-                          );
-                          // title: 'Nile Gift',
-                          //
-                          // 'Download Nile Gift now to start the journey with the egyptian history',
-                          // 'text/plain',
-                        },
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 10.0),
-                      child: RawMaterialButton(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Icon(
-                              Icons.info_outline,
-                              size: 30,
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Text(
-                              'About',
-                              style: TextStyle(
-                                fontSize: 18,
-                              ),
-                            ),
-                          ],
-                        ),
-                        onPressed: () {
-                          // Navigator.push(context,
-                          //     MaterialPageRoute(builder: (c) => AboutScreen()));
-                        },
-                      ),
-                    ),
-                  ]),
+                  ),
+                ],
+              ),
             ),
           ],
         );

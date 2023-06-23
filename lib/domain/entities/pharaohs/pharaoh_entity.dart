@@ -27,7 +27,9 @@ class PharaohEntity extends CharacterEntity {
     super.story,
     this.successor,
     this.to,
-  }) : super(characterType: CharacterType.EgyptianPharaohs);
+    super.knownFor,
+    super.date,
+  }) : super(characterType: CharacterType.pharaoh);
 
   final String? about;
   final String? born;

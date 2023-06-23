@@ -1,16 +1,16 @@
-import 'package:gift_of_the_nile/core/index.dart';
-import 'package:gift_of_the_nile/data/index.dart';
+import 'package:gift_of_the_nile/index.dart';
 
-class AncientGodModel extends CharacterModel {
- final String? since;
- final String? about;
- final List<String>? believedIn;
- final List<String>? consort;
- final List<AbilitiesModel>? godOf;
- final String? knowMore;
- final List<String>? parents;
- final List<String>? siblings;
- final String? symbol;
+class AncientGodModel extends CharacterModel
+    implements BaseModel<AncientGodEntity> {
+  final String? since;
+  final String? about;
+  final List<String>? believedIn;
+  final List<String>? consort;
+  final List<AbilitiesModel>? godOf;
+  final String? knowMore;
+  final List<String>? parents;
+  final List<String>? siblings;
+  final String? symbol;
 
   const AncientGodModel(
       {this.since,
@@ -32,7 +32,7 @@ class AncientGodModel extends CharacterModel {
       super.icon,
       super.videos,
       this.symbol})
-      : super(characterType: CharacterType.EgyptianGod);
+      : super(characterType: CharacterType.ancientGod);
 
   factory AncientGodModel.fromJson(Map<String, dynamic> json) {
     return AncientGodModel(
@@ -57,7 +57,9 @@ class AncientGodModel extends CharacterModel {
       videos:
           json['videos'] != null ? new List<String>.from(json['videos']) : [],
       godOf: json['god_of'] != null
-          ? (json['god_of'] as List).map((i) => AbilitiesModel.fromJson(i)).toList()
+          ? (json['god_of'] as List)
+              .map((i) => AbilitiesModel.fromJson(i))
+              .toList()
           : null,
       id: json['id'],
       knowMore: json['know_more'],
@@ -113,4 +115,28 @@ class AncientGodModel extends CharacterModel {
 
   @override
   int get date => int.parse((since?.replaceAll('BC', '') ?? '0'));
+
+  @override
+  AncientGodEntity toEntity() {
+    return AncientGodEntity(
+      about: about,
+      animationName: animationName,
+      animationPath: animationPath,
+      appearedIn: appearedIn!.map((e) => e.toEntity()).toList(),
+      believedIn: believedIn,
+      consort: consort,
+      gallery: gallery,
+      godOf: godOf?.map((e) => e.toEntity()).toList() ?? [],
+      id: id,
+      knowMore: knowMore,
+      name: name,
+      knownFor: knownFor,
+      parents: parents,
+      siblings: siblings,
+      story: story,
+      symbol: symbol,
+      icon: icon,
+      videos: videos,
+    );
+  }
 }

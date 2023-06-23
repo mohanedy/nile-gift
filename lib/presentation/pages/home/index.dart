@@ -1,2 +1,3 @@
 export 'bloc/index.dart';
-export 'home_screen.dart';
+export 'widgets/index.dart';
+export 'home_page.dart';

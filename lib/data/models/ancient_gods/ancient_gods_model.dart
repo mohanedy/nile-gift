@@ -1,7 +1,6 @@
-import 'package:gift_of_the_nile/data/models/ancient_gods/ancient_god_model.dart';
-import 'package:gift_of_the_nile/data/models/characters_model.dart';
+import 'package:gift_of_the_nile/index.dart';
 
-class AncientGodsModel extends CharactersModel<AncientGodModel> {
+class AncientGodsModel extends CharactersModel<AncientGodModel> implements BaseModel<AncientGodsEntity> {
   const AncientGodsModel({super.characters, super.type});
 
   factory AncientGodsModel.fromJson(Map<String, dynamic> json) {
@@ -22,5 +21,13 @@ class AncientGodsModel extends CharactersModel<AncientGodModel> {
       data['characters'] = this.characters!.map((v) => v.toJson()).toList();
     }
     return data;
+  }
+  
+  @override
+  AncientGodsEntity toEntity() {
+    return AncientGodsEntity(
+      characters: characters!.map((e) => e.toEntity()).toList(),
+      type: type,
+    );
   }
 }

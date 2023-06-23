@@ -1,7 +1,8 @@
-import 'package:gift_of_the_nile/data/index.dart';
+import 'package:gift_of_the_nile/data/models/base_model.dart';
+import 'package:gift_of_the_nile/index.dart';
 
 
-class PharaohsModel extends CharactersModel<PharaohModel> {
+class PharaohsModel extends CharactersModel<PharaohModel> implements BaseModel<PharaohsEntity> {
 
   const PharaohsModel({super.characters, super.type});
 
@@ -23,5 +24,13 @@ class PharaohsModel extends CharactersModel<PharaohModel> {
       data['characters'] = this.characters!.map((v) => v.toJson()).toList();
     }
     return data;
+  }
+  
+  @override
+  PharaohsEntity toEntity() {
+    return PharaohsEntity(
+      characters: characters!.map((e) => e.toEntity()).toList(),
+      type: type,
+    );
   }
 }

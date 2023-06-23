@@ -6,15 +6,18 @@ class ShowUp extends StatefulWidget {
   final Widget child;
   final int delay;
 
-  ShowUp({@required this.child, this.delay});
+  ShowUp({
+    required this.child,
+    this.delay = 500,
+  });
 
   @override
   _ShowUpState createState() => _ShowUpState();
 }
 
 class _ShowUpState extends State<ShowUp> with TickerProviderStateMixin {
-  AnimationController _animController;
-  Animation<Offset> _animOffset;
+  late AnimationController _animController;
+  late Animation<Offset> _animOffset;
 
   @override
   void initState() {
@@ -39,8 +42,9 @@ class _ShowUpState extends State<ShowUp> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    super.dispose();
     _animController.dispose();
+
+    super.dispose();
   }
 
   @override

@@ -1,4 +1,7 @@
-class AppearanceModel {
+import 'package:gift_of_the_nile/data/models/base_model.dart';
+import 'package:gift_of_the_nile/index.dart';
+
+class AppearanceModel implements BaseModel<AppearanceEntity> {
   double lat;
   double lon;
 
@@ -17,6 +20,12 @@ class AppearanceModel {
     data['lon'] = this.lon;
     return data;
   }
+
+  @override
+  AppearanceEntity toEntity() {
+    return AppearanceEntity(
+      lat: lat,
+      lon: lon,
+    );
+  }
 }
-
-

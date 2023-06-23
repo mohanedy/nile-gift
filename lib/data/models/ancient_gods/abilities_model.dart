@@ -1,6 +1,8 @@
-class AbilitiesModel {
- final String asset;
- final String value;
+import 'package:gift_of_the_nile/index.dart';
+
+class AbilitiesModel implements BaseModel<AbilitiesEntity> {
+  final String asset;
+  final String value;
 
   const AbilitiesModel({
     required this.asset,
@@ -19,5 +21,13 @@ class AbilitiesModel {
     data['asset'] = this.asset;
     data['value'] = this.value;
     return data;
+  }
+
+  @override
+  AbilitiesEntity toEntity() {
+    return AbilitiesEntity(
+      asset: asset,
+      value: value,
+    );
   }
 }

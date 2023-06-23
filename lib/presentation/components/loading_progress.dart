@@ -8,7 +8,7 @@ class LoadingProgress extends StatelessWidget {
       width: 250,
       height: 150,
       child: FlareActor(
-        'resources/animation/cat.flr',
+        'assets/animation/cat.flr',
         animation: 'animation',
       ),
     );

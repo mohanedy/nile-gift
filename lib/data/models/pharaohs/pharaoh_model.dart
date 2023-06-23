@@ -1,8 +1,6 @@
-import 'package:gift_of_the_nile/core/index.dart';
-import 'package:gift_of_the_nile/data/index.dart';
+import 'package:gift_of_the_nile/index.dart';
 
-
-class PharaohModel extends CharacterModel {
+class PharaohModel extends CharacterModel implements BaseModel<PharaohEntity> {
   PharaohModel({
     this.about,
     super.animationName,
@@ -27,8 +25,9 @@ class PharaohModel extends CharacterModel {
     this.predecessor,
     super.story,
     this.successor,
+    super.knownFor,
     this.to,
-  }) : super(characterType: CharacterType.EgyptianPharaohs);
+  }) : super(characterType: CharacterType.pharaoh);
 
   String? about;
   String? born;
@@ -78,6 +77,7 @@ class PharaohModel extends CharacterModel {
       id: json['id'],
       knowMore: json['know_more'],
       knownBy: json['known_by'],
+      knownFor: json['known_by'],
       name: json['name'],
       parents: json['parents'] != null
           ? new List<String>.from(json['parents'])
@@ -134,6 +134,34 @@ class PharaohModel extends CharacterModel {
       int.parse((from?.replaceAll('BC', '').replaceAll('AD', '')) ?? '0');
 
   @override
-  // TODO: implement characterType
-  CharacterType get characterType => CharacterType.EgyptianPharaohs;
+  PharaohEntity toEntity() {
+    return PharaohEntity(
+      about: about,
+      animationName: animationName,
+      animationPath: animationPath,
+      appearedIn: appearedIn?.map((e) => e.toEntity()).toList(),
+      born: born,
+      burial: burial,
+      children: children,
+      consort: consort,
+      died: died,
+      dynasty: dynasty,
+      facts: facts,
+      from: from,
+      gallery: gallery,
+      icon: icon,
+      id: id,
+      knowMore: knowMore,
+      knownBy: knownBy,
+      name: name,
+      parents: parents,
+      predecessor: predecessor,
+      story: story,
+      successor: successor,
+      to: to,
+      videos: videos,
+      knownFor: knownFor,
+      date: date,
+    );
+  }
 }

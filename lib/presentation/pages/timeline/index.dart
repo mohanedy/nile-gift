@@ -1,1 +1,1 @@
-export 'timeline_screen.dart';
+export 'timeline_page.dart';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gift_of_the_nile/index.dart';
 
 class App extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class App extends StatelessWidget {
         fontFamily: 'Righteous',
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
+      home: HomePage(),
     );
   }
 }

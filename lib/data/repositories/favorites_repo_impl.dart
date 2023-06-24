@@ -43,5 +43,5 @@ final class FavoritesRepoImpl implements FavoritesRepo {
 
   @override
   Future<bool> isInFavorites(CharacterEntity character) async =>
-      await favoritesDataSource.isInFavorites(character.id ?? -1);
+      favoritesDataSource.isInFavorites(character.id ?? -1);
 }

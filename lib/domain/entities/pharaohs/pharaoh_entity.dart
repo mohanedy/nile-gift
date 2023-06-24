@@ -49,5 +49,5 @@ class PharaohEntity extends CharacterEntity {
 
   @override
   int get date =>
-      int.parse((from?.replaceAll('BC', '').replaceAll('AD', '')) ?? '0');
+      int.parse(from?.replaceAll('BC', '').replaceAll('AD', '') ?? '0');
 }

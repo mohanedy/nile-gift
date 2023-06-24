@@ -1,11 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:circle_list/circle_list.dart';
 import 'package:flutter/material.dart';
-import 'package:gift_of_the_nile/constants.dart';
-import 'package:gift_of_the_nile/domain/entities/ancient_gods/ancient_god_entity.dart';
-import 'package:gift_of_the_nile/presentation/components/show_up_animation.dart';
-import 'package:gift_of_the_nile/presentation/utils/extensions/safe_string_ext.dart';
-import 'package:url_launcher/url_launcher_string.dart';
+import 'package:gift_of_the_nile/index.dart';
 
 class AncientGodAboutTab extends StatelessWidget {
   const AncientGodAboutTab({required this.character});
@@ -14,9 +10,6 @@ class AncientGodAboutTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const delay = 500;
-    const contentDelay = 700;
-
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -25,11 +18,11 @@ class AncientGodAboutTab extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             topRow(),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             buildGodList(),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             aboutRow(),
@@ -37,11 +30,7 @@ class AncientGodAboutTab extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 ElevatedButton(
-                  onPressed: () async {
-                    if (await canLaunchUrlString('http://www.egypt.travel/')) {
-                      await launchUrlString('http://www.egypt.travel/');
-                    }
-                  },
+                  onPressed: () => 'http://www.egypt.travel/'.launchUrl(),
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(
@@ -50,7 +39,7 @@ class AncientGodAboutTab extends StatelessWidget {
                     ),
                     backgroundColor: Colors.teal,
                   ),
-                  child: Text(
+                  child: const Text(
                     'Visit Egypt',
                     style: TextStyle(
                       fontSize: 18,
@@ -59,11 +48,7 @@ class AncientGodAboutTab extends StatelessWidget {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: () async {
-                    if (await canLaunchUrlString(character.knowMore ?? '')) {
-                      await launchUrlString(character.knowMore ?? '');
-                    }
-                  },
+                  onPressed: () => character.knowMore?.launchUrl(),
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(
@@ -72,7 +57,7 @@ class AncientGodAboutTab extends StatelessWidget {
                     ),
                     backgroundColor: Colors.lightBlue,
                   ),
-                  child: Text(
+                  child: const Text(
                     'Know More',
                     style: TextStyle(
                       fontSize: 18,
@@ -91,13 +76,11 @@ class AncientGodAboutTab extends StatelessWidget {
   Widget aboutRow() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         ShowUp(
-          delay: 500,
           child: Text(
             'Who Is ${character.name} ?',
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -113,13 +96,13 @@ class AncientGodAboutTab extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         ShowUp(
           child: Text(
             'Stories About ${character.name}',
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -143,27 +126,12 @@ class AncientGodAboutTab extends StatelessWidget {
     return Center(
       child: CircleList(
         innerCircleRotateWithChildren: true,
-        onDragStart: (c) {
-          print(c);
-        },
         outerRadius: 130,
-        origin: Offset(0, 0),
+        origin: Offset.zero,
         showInitialAnimation: true,
-        children: character.godOf?.map((v) {
-              return TextWithAsset(
-                txt: v.value,
-                asset: 'assets/${v.asset}',
-                color: Colors.white,
-              );
-            })?.toList() ??
-            [],
         outerCircleColor: Colors.lightBlue,
         innerRadius: 36,
-        isChildrenVertical: true,
-        onDragUpdate: (v) {
-          print(v.angle);
-        },
-        centerWidget: Text(
+        centerWidget: const Text(
           'God of',
           style: TextStyle(
             fontWeight: FontWeight.normal,
@@ -171,6 +139,14 @@ class AncientGodAboutTab extends StatelessWidget {
             color: Colors.grey,
           ),
         ),
+        children: character.godOf?.map((v) {
+              return TextWithAsset(
+                txt: v.value,
+                asset: 'assets/${v.asset}',
+                color: Colors.white,
+              );
+            }).toList() ??
+            [],
       ),
     );
   }
@@ -224,23 +200,17 @@ class AncientGodAboutTab extends StatelessWidget {
         infoColumn('When', character.since ?? ''),
         infoColumn('Symbol', character.symbol ?? ''),
         infoColumn(
-            'Parents',
-            character.parents
-                .toString()
-                .replaceAll('[', '')
-                .replaceAll(']', '')),
+          'Parents',
+          character.parents.toString().replaceAll('[', '').replaceAll(']', ''),
+        ),
         infoColumn(
-            'Consort',
-            character.consort
-                .toString()
-                .replaceAll('[', '')
-                .replaceAll(']', '')),
+          'Consort',
+          character.consort.toString().replaceAll('[', '').replaceAll(']', ''),
+        ),
         infoColumn(
-            'Siblings',
-            character.siblings
-                .toString()
-                .replaceAll('[', '')
-                .replaceAll(']', '')),
+          'Siblings',
+          character.siblings.toString().replaceAll('[', '').replaceAll(']', ''),
+        ),
       ],
     );
   }
@@ -251,18 +221,17 @@ class AncientGodAboutTab extends StatelessWidget {
         ShowUp(
           child: Text(
             label,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 17,
               color: Colors.grey,
             ),
           ),
-          delay: 500,
         ),
         ShowUp(
           delay: 500 + 200,
           child: Text(
             val,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 17,
             ),
           ),
@@ -277,7 +246,11 @@ class TextWithAsset extends StatelessWidget {
   final String asset;
   final Color color;
 
-  TextWithAsset({required this.txt, required this.asset, required this.color});
+  const TextWithAsset({
+    required this.txt,
+    required this.asset,
+    required this.color,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -295,7 +268,7 @@ class TextWithAsset extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 0,
         ),
         Image.asset(

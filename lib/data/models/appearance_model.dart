@@ -1,4 +1,3 @@
-import 'package:gift_of_the_nile/data/models/base_model.dart';
 import 'package:gift_of_the_nile/index.dart';
 
 class AppearanceModel implements BaseModel<AppearanceEntity> {
@@ -9,15 +8,16 @@ class AppearanceModel implements BaseModel<AppearanceEntity> {
 
   factory AppearanceModel.fromJson(Map<String, dynamic> json) {
     return AppearanceModel(
-      lat: json['lat'],
-      lon: json['lon'],
+      lat: json['lat'] as double,
+      lon: json['lon'] as double,
     );
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['lat'] = this.lat;
-    data['lon'] = this.lon;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['lat'] = lat;
+    data['lon'] = lon;
+
     return data;
   }
 

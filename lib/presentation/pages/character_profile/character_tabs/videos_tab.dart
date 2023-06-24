@@ -13,11 +13,13 @@ class VideosTab extends StatefulWidget {
 }
 
 class _VideosTabState extends State<VideosTab> {
-  List<YoutubePlayerController> _controllers = [];
+  final List<YoutubePlayerController> _controllers = [];
 
   @override
   void dispose() {
-    _controllers.forEach((c) => c.dispose());
+    for (final c in _controllers) {
+      c.dispose();
+    }
     super.dispose();
   }
 
@@ -26,11 +28,11 @@ class _VideosTabState extends State<VideosTab> {
     return ListView.builder(
       itemCount: widget.character.videos?.length ?? 0,
       shrinkWrap: true,
-      physics: ClampingScrollPhysics(),
+      physics: const ClampingScrollPhysics(),
       itemBuilder: (context, index) {
         final controller = YoutubePlayerController(
           initialVideoId: widget.character.videos![index],
-          flags: YoutubePlayerFlags(
+          flags: const YoutubePlayerFlags(
             autoPlay: false,
           ),
         );
@@ -38,8 +40,8 @@ class _VideosTabState extends State<VideosTab> {
         if (widget.character.videos != null &&
             widget.character.videos!.isNotEmpty == true) {
           return Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Container(
+            padding: const EdgeInsets.all(10.0),
+            child: SizedBox(
               height: 250,
               child: YoutubePlayer(
                 controller: controller,
@@ -50,7 +52,7 @@ class _VideosTabState extends State<VideosTab> {
             ),
           );
         } else {
-          return Center(
+          return const Center(
             child: Text(
               'No Videos Available',
               style: TextStyle(

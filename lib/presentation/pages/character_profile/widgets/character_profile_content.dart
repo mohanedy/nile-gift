@@ -32,7 +32,7 @@ class CharacterProfileContent extends HookWidget {
         onPressed: () {
           Navigator.pop(context);
         },
-        icon: Icon(
+        icon: const Icon(
           Icons.arrow_back,
           color: Colors.black,
         ),
@@ -64,19 +64,18 @@ class CharacterProfileContent extends HookWidget {
         children: <Widget>[
           Text(
             character.name ?? '',
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black,
             ),
           ),
-          Spacer(),
+          const Spacer(),
           Expanded(
-            child: Container(
+            child: SizedBox(
               height: 60,
               child: character.icon == null
                   ? FlareActor(
                       'assets/animation/${character.animationPath}',
                       animation: character.animationName,
-                      fit: BoxFit.contain,
                     )
                   : Image.asset(
                       'assets/${character.icon}',
@@ -92,7 +91,7 @@ class CharacterProfileContent extends HookWidget {
                     'Short Story about ${character.name} (${character.knownFor}) \n${character.story?.substring(0, 100)}...\nTo know more about ${character.name} download Nile Gift now to start the journey with the egyptian history',
               );
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.share,
               color: Colors.black,
             ),
@@ -100,11 +99,10 @@ class CharacterProfileContent extends HookWidget {
         ],
       ),
       expandedContent: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Flexible(
-            child: Container(
+            child: SizedBox(
               height: MediaQuery.of(context).size.height / 4,
               child: (character.icon == null)
                   ? FlareActor(
@@ -122,7 +120,7 @@ class CharacterProfileContent extends HookWidget {
           ),
           Text(
             character.name ?? '',
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,
               fontSize: 19,
@@ -131,7 +129,7 @@ class CharacterProfileContent extends HookWidget {
           Text(
             character.knownFor ?? '',
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.grey,
               fontWeight: FontWeight.normal,
               fontSize: 17,
@@ -141,14 +139,13 @@ class CharacterProfileContent extends HookWidget {
             Text(
               '${(character as PharaohEntity).from} - ${(character as PharaohEntity).to}',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.grey,
                 fontWeight: FontWeight.normal,
                 fontSize: 17,
               ),
             ),
           Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               IconButton(
@@ -159,11 +156,11 @@ class CharacterProfileContent extends HookWidget {
                         'Short Story about ${character.name} (${character.knownFor}) \n${character.story?.substring(0, 100)}...\nTo know more about ${character.name} download Nile Gift now to start the journey with the egyptian history',
                   );
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.share,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               ValueListenableBuilder(
@@ -173,7 +170,7 @@ class CharacterProfileContent extends HookWidget {
                     onTap: () => context.read<CharacterProfileBloc>().add(
                           CharacterFavoritesTriggered(character),
                         ),
-                    child: Container(
+                    child: SizedBox(
                       width: 30,
                       height: 35,
                       child: FlareActor(
@@ -181,7 +178,6 @@ class CharacterProfileContent extends HookWidget {
                         animation: box.containsKey(character.id ?? -1)
                             ? 'Love'
                             : 'Unlove',
-                        fit: BoxFit.contain,
                         shouldClip: false,
                       ),
                     ),
@@ -193,14 +189,13 @@ class CharacterProfileContent extends HookWidget {
         ],
       ),
       expandedContentHeight: MediaQuery.of(context).size.height / 2,
-      pinned: true,
       bottom: TabBar(
         unselectedLabelColor: Colors.grey,
         labelColor: Colors.yellow.shade600,
         indicatorColor: Colors.yellow.shade600,
         controller: tabController,
         onTap: (index) => currentTabIndex.value = index,
-        tabs: <Widget>[
+        tabs: const <Widget>[
           Tab(
             child: AutoSizeText(
               'About',

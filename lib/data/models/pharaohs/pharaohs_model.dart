@@ -1,4 +1,3 @@
-import 'package:gift_of_the_nile/data/models/base_model.dart';
 import 'package:gift_of_the_nile/index.dart';
 
 
@@ -18,10 +17,10 @@ class PharaohsModel extends CharactersModel<PharaohModel> implements BaseModel<P
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['type'] = this.type;
-    if (this.characters != null) {
-      data['characters'] = this.characters!.map((v) => v.toJson()).toList();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['type'] = type;
+    if (characters != null) {
+      data['characters'] = characters!.map((v) => v.toJson()).toList();
     }
     return data;
   }

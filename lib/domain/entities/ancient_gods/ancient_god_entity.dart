@@ -35,5 +35,5 @@ class AncientGodEntity extends CharacterEntity {
   }) : super(characterType: CharacterType.ancientGod);
 
   @override
-  int get date => int.parse((since?.replaceAll('BC', '') ?? '0'));
+  int get date => int.parse(since?.replaceAll('BC', '') ?? '0');
 }

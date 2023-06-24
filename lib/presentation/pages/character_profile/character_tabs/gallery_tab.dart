@@ -20,6 +20,8 @@ class GalleryTab extends StatelessWidget {
       child: AnimationLimiter(
         child: StaggeredGrid.count(
           crossAxisCount: 2,
+          mainAxisSpacing: 10,
+          crossAxisSpacing: 10,
           children: character.gallery
                   ?.map((img) => AnimationConfiguration.staggeredGrid(
                         position: character.gallery!.indexOf(img),
@@ -42,7 +44,7 @@ class GalleryTab extends StatelessWidget {
                                 fadeOutCurve: Curves.bounceIn,
                                 fit: BoxFit.cover,
                                 errorWidget: (context, status, o) {
-                                  return Icon(
+                                  return const Icon(
                                     Icons.error,
                                   );
                                 },
@@ -50,11 +52,9 @@ class GalleryTab extends StatelessWidget {
                             ),
                           ),
                         ),
-                      ))
-                  ?.toList() ??
+                      ),)
+                  .toList() ??
               [],
-          mainAxisSpacing: 10,
-          crossAxisSpacing: 10,
         ),
       ),
     );

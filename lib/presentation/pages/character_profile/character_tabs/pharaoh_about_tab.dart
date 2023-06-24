@@ -23,10 +23,10 @@ class PharaohAboutTab extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             topRow(),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             aboutRow(),
@@ -43,7 +43,7 @@ class PharaohAboutTab extends StatelessWidget {
                     ),
                     backgroundColor: Colors.teal,
                   ),
-                  child: Text(
+                  child: const Text(
                     'Visit Egypt',
                     style: TextStyle(
                       fontSize: 18,
@@ -61,7 +61,7 @@ class PharaohAboutTab extends StatelessWidget {
                     ),
                     backgroundColor: Colors.lightBlue,
                   ),
-                  child: Text(
+                  child: const Text(
                     'Know More',
                     style: TextStyle(
                       fontSize: 18,
@@ -80,12 +80,11 @@ class PharaohAboutTab extends StatelessWidget {
   Widget aboutRow() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         ShowUp(
           child: Text(
             'Who Is ${character.name} ?',
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -101,13 +100,13 @@ class PharaohAboutTab extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         ShowUp(
           child: Text(
             'Quick Facts About ${character.name}',
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -116,13 +115,13 @@ class PharaohAboutTab extends StatelessWidget {
         ShowUp(
             delay: 700,
             child: ListView.separated(
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               shrinkWrap: true,
               itemCount: character.facts?.length ?? 0,
-              physics: ClampingScrollPhysics(),
+              physics: const ClampingScrollPhysics(),
               itemBuilder: (context, index) {
                 return Text(
-                  '${index + 1}) ' + character.facts![index],
+                  '${index + 1}) ${character.facts![index]}',
                   style: kGreyTextStyle.copyWith(
                     fontSize: 17,
                     fontWeight: FontWeight.normal,
@@ -130,16 +129,16 @@ class PharaohAboutTab extends StatelessWidget {
                 );
               },
               separatorBuilder: (context, index) {
-                return Divider();
+                return const Divider();
               },
-            )),
-        SizedBox(
+            ),),
+        const SizedBox(
           height: 10,
         ),
         ShowUp(
           child: Text(
             'Stories About ${character.name}',
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
             ),
@@ -169,7 +168,7 @@ class PharaohAboutTab extends StatelessWidget {
       children: <Widget>[
         infoColumn(
           'Dynasty',
-          character.dynasty.toString() + 'th',
+          '${character.dynasty}th',
         ),
         infoColumn(
           'Burial',
@@ -184,19 +183,19 @@ class PharaohAboutTab extends StatelessWidget {
             character.parents
                 .toString()
                 .replaceAll('[', '')
-                .replaceAll(']', '')),
+                .replaceAll(']', ''),),
         infoColumn(
             'Consort',
             character.consort
                 .toString()
                 .replaceAll('[', '')
-                .replaceAll(']', '')),
+                .replaceAll(']', ''),),
         infoColumn(
             'Children',
             character.children
                 .toString()
                 .replaceAll('[', '')
-                .replaceAll(']', '')),
+                .replaceAll(']', ''),),
       ],
     );
   }
@@ -207,19 +206,18 @@ class PharaohAboutTab extends StatelessWidget {
         ShowUp(
           child: Text(
             label,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 17,
               color: Colors.grey,
             ),
           ),
-          delay: 500,
         ),
         ShowUp(
           delay: 500 + 200,
           child: Text(
             val,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 17,
             ),
           ),
@@ -234,7 +232,7 @@ class TextWithAsset extends StatelessWidget {
   final String asset;
   final Color color;
 
-  TextWithAsset({
+  const TextWithAsset({
     required this.txt,
     required this.asset,
     required this.color,
@@ -256,7 +254,7 @@ class TextWithAsset extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 0,
         ),
         Image.asset(

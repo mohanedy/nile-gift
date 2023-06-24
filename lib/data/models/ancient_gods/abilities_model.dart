@@ -11,15 +11,16 @@ class AbilitiesModel implements BaseModel<AbilitiesEntity> {
 
   factory AbilitiesModel.fromJson(Map<String, dynamic> json) {
     return AbilitiesModel(
-      asset: json['asset'],
-      value: json['value'],
+      asset: json['asset'] as String,
+      value: json['value'] as String,
     );
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['asset'] = this.asset;
-    data['value'] = this.value;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['asset'] = asset;
+    data['value'] = value;
+
     return data;
   }
 

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class LoadingProgress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return const SizedBox(
       width: 250,
       height: 150,
       child: FlareActor(

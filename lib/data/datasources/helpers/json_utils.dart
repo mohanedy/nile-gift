@@ -9,6 +9,7 @@ class JsonUtils {
 
   Future<Map<String, dynamic>> loadJsonData(String path) async {
     final data = await rootBundle.loadString(path);
-    return jsonDecode(data);
+
+    return jsonDecode(data) as Map<String, dynamic>;
   }
 }

@@ -6,28 +6,27 @@ class ItemWidget extends StatelessWidget {
     required this.itemLabel,
   });
 
-  final Function onPressed;
+  final void Function() onPressed;
   final String itemLabel;
 
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
       onPressed: () {
-        onPressed();
+        onPressed.call();
       },
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text(
             itemLabel,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 20,
               fontFamily: 'Righteous',
             ),
           ),
-          Spacer(),
-          Icon(
+          const Spacer(),
+          const Icon(
             Icons.arrow_forward_ios,
             color: Colors.white,
           )

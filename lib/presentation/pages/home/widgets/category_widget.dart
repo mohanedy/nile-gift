@@ -10,7 +10,7 @@ class CategoryWidget extends StatelessWidget {
   final Color color;
   final Function(bool)? onExpand;
 
-  CategoryWidget(
+  const CategoryWidget(
     this.items, {
     required this.flareImage,
      this.key2,
@@ -31,7 +31,7 @@ class CategoryWidget extends StatelessWidget {
       elevation: 10,
       color: color,
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
               'assets/images/heroBackground.jpg',
@@ -41,20 +41,17 @@ class CategoryWidget extends StatelessWidget {
         ),
         child: ExpansionTile(
           onExpansionChanged: onExpand,
-          trailing: Icon(
+          trailing: const Icon(
             Icons.add,
             color: Colors.white,
           ),
           backgroundColor: color,
-          title: Container(
+          title: SizedBox(
             height: 120,
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 Flexible(
-                  flex: 1,
-                  child: Container(
+                  child: SizedBox(
                     height: 130,
                     child: FlareActor(
                       flareImage,
@@ -67,7 +64,7 @@ class CategoryWidget extends StatelessWidget {
                   flex: 2,
                   child: Text(
                     label,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 27,
                       fontWeight: FontWeight.normal,
                       color: Colors.white,

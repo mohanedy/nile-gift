@@ -1,4 +1,3 @@
-import 'package:gift_of_the_nile/domain/usecases/characters_uc/characters_uc.dart';
 import 'package:gift_of_the_nile/index.dart';
 import 'package:injectable/injectable.dart';
 

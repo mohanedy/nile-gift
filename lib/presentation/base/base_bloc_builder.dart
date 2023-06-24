@@ -20,7 +20,7 @@ class BaseBlocBuilder<T extends Bloc<dynamic, S>, S extends BaseState>
             return onSuccess.call(context, state);
 
           case PageStatus.error:
-            return Center(
+            return const Center(
               child: Text(
                 'An error occurred',
                 textAlign: TextAlign.center,

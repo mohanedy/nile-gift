@@ -14,7 +14,7 @@ final class FavoriteUCImpl implements FavoriteUC {
 
   @override
   Future<List<CharacterEntity>> getFavorites() async {
-    return await _repository.getFavorites();
+    return  _repository.getFavorites();
   }
 
   @override

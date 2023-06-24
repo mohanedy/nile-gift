@@ -1,4 +1,3 @@
-import 'package:gift_of_the_nile/data/index.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:injectable/injectable.dart';
 import 'package:path_provider/path_provider.dart' as path;

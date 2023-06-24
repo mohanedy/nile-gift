@@ -14,7 +14,7 @@ final class FavoriteDatasourceImpl implements FavoritesDataSource {
 
   @override
   Future<List<int>> getFavorites() async =>
-      db.charactersBox?.values?.toList() ?? <int>[];
+      db.charactersBox?.values.toList() ?? <int>[];
 
   @override
   Future<void> removeFavorite(int id) async =>
@@ -22,5 +22,5 @@ final class FavoriteDatasourceImpl implements FavoritesDataSource {
 
   @override
   Future<bool> isInFavorites(int id) async =>
-      await db.charactersBox?.containsKey(id) ?? false;
+      db.charactersBox?.containsKey(id) ?? false;
 }

@@ -12,7 +12,7 @@ part 'character_profile_state.dart';
 @Injectable()
 class CharacterProfileBloc
     extends Bloc<CharacterProfileEvent, CharacterProfileState> {
-  CharacterProfileBloc(this._favoriteUC) : super(CharacterProfileState()) {
+  CharacterProfileBloc(this._favoriteUC) : super(const CharacterProfileState()) {
     on<CharacterFavoritesTriggered>(_onCharacterFavoritesTriggered);
   }
 
@@ -20,7 +20,7 @@ class CharacterProfileBloc
 
   FutureOr<void> _onCharacterFavoritesTriggered(
       CharacterFavoritesTriggered event,
-      Emitter<CharacterProfileState> emit) async {
+      Emitter<CharacterProfileState> emit,) async {
     final isInFavorites = await _favoriteUC.isInFavorites(event.character);
     if (isInFavorites) {
       await _favoriteUC.removeFavorite(event.character);

@@ -5,6 +5,4 @@ final class CharacterProfileState extends BaseState {
     super.status = PageStatus.initial,
   });
 
-  @override
-  List<Object?> get props => super.props;
 }

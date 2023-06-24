@@ -18,12 +18,17 @@ class TimelineBloc extends Bloc<TimelineEvent, TimelineState> {
 
   final CharactersUC _charactersUC;
 
-  FutureOr<void> _onTimelineInitialized(
-      TimelineInitialized event, Emitter<TimelineState> emit) async {
+  FutureOr<void> _onTimelineInitialized(TimelineInitialized event,
+      Emitter<TimelineState> emit) async {
     emit(state.copyWith(status: PageStatus.loading));
     try {
       final data = await _charactersUC.getCharacters();
-      data.sort((a, b) => (a.date ?? 0).compareTo(b.date ?? 0));
+      data.sort((a, b) {
+        if (a is PharaohEntity && b is PharaohEntity)
+          return (b.date ).compareTo(a.date);
+        else
+          return 0;
+      });
       emit(state.copyWith(
         status: PageStatus.success,
         characters: data,

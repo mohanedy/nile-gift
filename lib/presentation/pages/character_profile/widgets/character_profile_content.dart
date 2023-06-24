@@ -19,7 +19,7 @@ class CharacterProfileContent extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final tabController = useTabController(initialLength: 4);
+    final tabController = useTabController(initialLength: 3);
     final currentTabIndex = useState(0);
     const tabStyle = TextStyle(
       fontSize: 14,

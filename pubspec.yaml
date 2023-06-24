@@ -34,20 +34,12 @@ dependencies:
   marquee: ^2.2.3
   flutter_html: ^2.2.1
   path_provider: ^2.0.15
-  path:
-#  flutter_full_pdf_viewer: ^1.0.6
-#  esys_flutter_share: ^1.0.2
+  path: ^1.8.3
   youtube_player_flutter: ^8.1.2
   android_intent: ^2.0.2
   intro_slider: ^4.2.0
   flutter_share: ^2.0.0
   geocoding: ^2.1.0
-
-
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.5
   equatable: ^2.0.5
   bloc: ^8.1.2

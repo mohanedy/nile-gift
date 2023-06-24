@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://flutter.io/">
-    <img src="resources/images/nilegiftIcon.png" alt="Logo" width=250 height=250>
+    <img src="assets/images/nilegiftIcon.png" alt="Logo" width=250 height=250>
   </a>
   <h3 align="center">Nile Gift</h3>
   <p align="center">
@@ -47,9 +47,9 @@
 
 
 ## Screenshots
- <img src="resources/screenshots/Screenshot_1579714060.png" alt="Timeline"  height=350> &nbsp; <img src="resources/screenshots/Screenshot_1579714089.png" alt="Timeline"  height=350>
- <img src="resources/screenshots/Screenshot_1579714113.png" alt="Library"  height=350> &nbsp; <img src="resources/screenshots/Screenshot_1579713531.png" alt="Pharaoh"  height=350>
- <img src="resources/screenshots/Screenshot_1579713597.png" alt="Library"  height=350> &nbsp; <img src="resources/screenshots/Screenshot_1579713612.png" alt="Pharaoh"  height=350>
+ <img src="assets/screenshots/Screenshot_1579714060.png" alt="Timeline"  height=350> &nbsp; <img src="assets/screenshots/Screenshot_1579714089.png" alt="Timeline"  height=350>
+ <img src="assets/screenshots/Screenshot_1579714113.png" alt="Library"  height=350> &nbsp; <img src="assets/screenshots/Screenshot_1579713531.png" alt="Pharaoh"  height=350>
+ <img src="assets/screenshots/Screenshot_1579713597.png" alt="Library"  height=350> &nbsp; <img src="assets/screenshots/Screenshot_1579713612.png" alt="Pharaoh"  height=350>
 
 ## Video
 **SOON**

@@ -1,19 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gift_of_the_nile/screens/home_screen.dart';
+import 'package:gift_of_the_nile/core/index.dart';
+import 'package:gift_of_the_nile/data/datasources/helpers/hive_db.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Nile Gift',
-      theme: ThemeData(
-        fontFamily: 'Righteous',
-        primarySwatch: Colors.blue,
-      ),
-      home: HomeScreen(),
-    );
-  }
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  configureDependencies();
+  await di<HiveDB>().initDB();
+  runApp(App());
 }

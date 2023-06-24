@@ -9,7 +9,7 @@ class App extends StatelessWidget {
       title: 'Nile Gift',
       theme: ThemeData(
         fontFamily: 'Righteous',
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.amber,
       ),
       home: HomePage(),
     );

@@ -7,7 +7,7 @@ final class CharactersRepoImpl implements CharactersRepo {
     required this.charactersDataSource,
   });
 
-  final CharactersDataSource charactersDataSource;
+  final CharactersDatasource charactersDataSource;
 
   @override
   Future<AncientGodsEntity> getAncientGods()async {

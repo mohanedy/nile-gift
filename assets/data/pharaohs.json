@@ -2,7 +2,7 @@
   "type": "pharaohs",
   "characters": [
     {
-      "id": 1,
+      "id": 8,
       "name": "Tutankhamun",
       "known_by": "King Tut",
       "icon": "images/king_tut.png",
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 9,
       "name": "Ramesses II",
       "known_by": "Ramesses the Great",
       "icon": "images/ramsesii.png",
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 10,
       "name": "Hatshepsut",
       "known_by": "Foremost of Noble Ladies",
       "icon": "images/hatsh.png",
@@ -193,7 +193,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 11,
       "name": "Khufu",
       "known_by": "The Owner Of Great Pyramid",
       "icon": "images/khufu.png",
@@ -263,7 +263,7 @@
       ]
     },
     {
-      "id": 90,
+      "id": 12,
       "name": "Amenhotep III",
       "known_by": "Amenhotep the Magnificent",
       "icon": "images/amenhotep_iii.png",
@@ -340,7 +340,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 13,
       "name": "Khafra",
       "known_by": "The Owner Of Middle Pyramid",
       "icon": "images/Khafra.png",
@@ -404,7 +404,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 14,
       "name": "Nefertiti",
       "known_by": "the beautiful queen",
       "icon": "images/Nefertiti.png",
@@ -455,7 +455,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": 15,
       "name": "Thutmose III",
       "known_by": "pharaoh",
       "icon": "images/ThutmoseIII.png",
@@ -527,7 +527,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": 16,
       "name": "Akhenaten",
       "known_by": "Akhenaton",
       "icon": "images/Akhenaton.png",
@@ -600,7 +600,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": 17,
       "name": "Ramses III",
       "known_by": "warrior Pharaoh",
       "icon": "images/ramsesiii.png",

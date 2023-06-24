@@ -75,23 +75,22 @@ class HomeContent extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: CategoryWidget(
-                      state.ancientGods.map((v) {
+                      state.ancientGods.map((character) {
                         return Padding(
                           padding: const EdgeInsets.only(
                             left: 20.0,
                             right: 20,
                           ),
                           child: ItemWidget(
-                            itemLabel: v.name ?? '',
-                            onPressed: () {},
-                            // onPressed: () {
-                            //   Navigator.push(
-                            //       context,
-                            //       MaterialPageRoute(
-                            //           builder: (c) => CharacterScreen(
-                            //                 v,
-                            //               )));
-                            // },
+                            itemLabel: character.name ?? '',
+                            onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (c) => CharacterProfilePage(
+                                  character: character,
+                                ),
+                              ),
+                            ),
                           ),
                         );
                       }).toList(),
@@ -104,23 +103,22 @@ class HomeContent extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: CategoryWidget(
-                      state.pharaohs.map((v) {
+                      state.pharaohs.map((character) {
                         return Padding(
                           padding: const EdgeInsets.only(
                             left: 20.0,
                             right: 20,
                           ),
                           child: ItemWidget(
-                            itemLabel: v.name ?? '',
-                            onPressed: () {},
-                            // onPressed: () => Navigator.push(
-                            //   context,
-                            //   MaterialPageRoute(
-                            //     builder: (c) => CharacterScreen(
-                            //       v,
-                            //     ),
-                            //   ),
-                            // ),
+                            itemLabel: character.name ?? '',
+                            onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (c) => CharacterProfilePage(
+                                  character: character,
+                                ),
+                              ),
+                            ),
                           ),
                         );
                       }).toList(),
@@ -132,40 +130,9 @@ class HomeContent extends StatelessWidget {
                   ),
                   Divider(
                     height: 50,
-                    thickness: 3,
+                    thickness: 1,
                     endIndent: 20,
                     indent: 20,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
-                    child: RawMaterialButton(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: <Widget>[
-                          Icon(
-                            Icons.favorite,
-                            color: Colors.red,
-                            size: 30,
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            'Your Favorites',
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                          ),
-                        ],
-                      ),
-                      onPressed: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (c) => FavoritesCharacters()));
-                      },
-                    ),
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10.0),

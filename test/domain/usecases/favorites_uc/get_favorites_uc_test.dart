@@ -7,14 +7,14 @@ class MockFavoritesRepo extends Mock implements FavoritesRepo {}
 
 void main() {
   /// System Under Test
-  late FavoriteUC sut;
+  late GetFavoritesUC sut;
 
   /// Dependencies
   late FavoritesRepo favoritesRepo;
 
   setUp(() {
     favoritesRepo = MockFavoritesRepo();
-    sut = FavoriteUCImpl(favoritesRepo);
+    sut = GetFavoritesUC(favoritesRepo);
   });
 
   test("Should return list of favorite characters when successful", () async {
@@ -30,7 +30,7 @@ void main() {
     );
 
     /// Act
-    final result = await sut.getFavorites();
+    final result = await sut(const NoParams());
 
     /// Assert
     verify(() => favoritesRepo.getFavorites()).called(1);
@@ -59,7 +59,7 @@ void main() {
     );
 
     /// Act
-    final result = await sut.getFavorites();
+    final result = await sut(const NoParams());
 
     /// Assert
     verify(() => favoritesRepo.getFavorites()).called(1);
@@ -83,7 +83,7 @@ void main() {
     );
 
     /// Act
-    final result = await sut.getFavorites();
+    final result = await sut(const NoParams());
 
     /// Assert
     verify(() => favoritesRepo.getFavorites()).called(1);
@@ -100,7 +100,7 @@ void main() {
     );
 
     /// Act
-    final result = await sut.getFavorites();
+    final result = await sut(const NoParams());
 
     /// Assert
     verify(() => favoritesRepo.getFavorites()).called(1);
@@ -116,10 +116,10 @@ void main() {
     when(() => favoritesRepo.getFavorites()).thenThrow(Exception());
 
     /// Act
-    final call = sut.getFavorites;
+    final call = sut;
 
     /// Assert
-    expect(() => call(), throwsA(isA<Exception>()));
+    expect(() => call(const NoParams()), throwsA(isA<Exception>()));
     verify(() => favoritesRepo.getFavorites()).called(1);
     verifyNoMoreInteractions(favoritesRepo);
   });

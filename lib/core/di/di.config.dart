@@ -21,14 +21,16 @@ import '../../data/datasources/local/favorites_datasource/favorites_datasource_i
 import '../../data/index.dart' as _i5;
 import '../../data/repositories/characters_repo_impl.dart' as _i8;
 import '../../data/repositories/favorites_repo_impl.dart' as _i10;
-import '../../domain/index.dart' as _i14;
+import '../../domain/index.dart' as _i13;
 import '../../domain/usecases/characters_uc/get_characters_uc.dart' as _i11;
-import '../../domain/usecases/favorites_uc/favorites_uc_impl.dart' as _i15;
+import '../../domain/usecases/favorites_uc/check_favorites_uc.dart' as _i18;
+import '../../domain/usecases/favorites_uc/get_favorites_uc.dart' as _i12;
+import '../../domain/usecases/favorites_uc/toggle_favorite_uc.dart' as _i16;
 import '../../index.dart' as _i7;
 import '../../presentation/pages/character_profile/bloc/character_profile_bloc.dart'
-    as _i16;
-import '../../presentation/pages/home/bloc/home_bloc.dart' as _i12;
-import '../../presentation/pages/timeline/bloc/timeline_bloc.dart' as _i13;
+    as _i17;
+import '../../presentation/pages/home/bloc/home_bloc.dart' as _i14;
+import '../../presentation/pages/timeline/bloc/timeline_bloc.dart' as _i15;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -55,13 +57,17 @@ extension GetItInjectableX on _i1.GetIt {
         ));
     gh.lazySingleton<_i11.GetCharactersUC>(
         () => _i11.GetCharactersUC(charactersRepo: gh<_i7.CharactersRepo>()));
-    gh.factory<_i12.HomeBloc>(() => _i12.HomeBloc(gh<_i7.GetCharactersUC>()));
-    gh.factory<_i13.TimelineBloc>(
-        () => _i13.TimelineBloc(gh<_i7.GetCharactersUC>()));
-    gh.lazySingleton<_i14.FavoriteUC>(
-        () => _i15.FavoriteUCImpl(gh<_i14.FavoritesRepo>()));
-    gh.factory<_i16.CharacterProfileBloc>(
-        () => _i16.CharacterProfileBloc(gh<_i7.FavoriteUC>()));
+    gh.lazySingleton<_i12.GetFavoritesUC>(
+        () => _i12.GetFavoritesUC(gh<_i13.FavoritesRepo>()));
+    gh.factory<_i14.HomeBloc>(() => _i14.HomeBloc(gh<_i7.GetCharactersUC>()));
+    gh.factory<_i15.TimelineBloc>(
+        () => _i15.TimelineBloc(gh<_i7.GetCharactersUC>()));
+    gh.lazySingleton<_i16.ToggleFavoriteUC>(
+        () => _i16.ToggleFavoriteUC(gh<_i13.FavoritesRepo>()));
+    gh.factory<_i17.CharacterProfileBloc>(() => _i17.CharacterProfileBloc(
+        toggleFavoriteUC: gh<_i7.ToggleFavoriteUC>()));
+    gh.lazySingleton<_i18.CheckFavoritesUC>(
+        () => _i18.CheckFavoritesUC(gh<_i13.FavoritesRepo>()));
     return this;
   }
 }

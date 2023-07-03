@@ -12,20 +12,18 @@ part 'character_profile_state.dart';
 @Injectable()
 class CharacterProfileBloc
     extends Bloc<CharacterProfileEvent, CharacterProfileState> {
-  CharacterProfileBloc(this._favoriteUC) : super(const CharacterProfileState()) {
+  CharacterProfileBloc({
+    required this.toggleFavoriteUC,
+  }) : super(const CharacterProfileState()) {
     on<CharacterFavoritesTriggered>(_onCharacterFavoritesTriggered);
   }
 
-  final FavoriteUC _favoriteUC;
+  final ToggleFavoriteUC toggleFavoriteUC;
 
   FutureOr<void> _onCharacterFavoritesTriggered(
-      CharacterFavoritesTriggered event,
-      Emitter<CharacterProfileState> emit,) async {
-    final isInFavorites = await _favoriteUC.isInFavorites(event.character);
-    if (isInFavorites) {
-      await _favoriteUC.removeFavorite(event.character);
-    } else {
-      await _favoriteUC.addFavorite(event.character);
-    }
+    CharacterFavoritesTriggered event,
+    Emitter<CharacterProfileState> emit,
+  ) async {
+    await toggleFavoriteUC(event.character);
   }
 }

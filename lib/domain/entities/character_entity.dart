@@ -1,7 +1,8 @@
+import 'package:equatable/equatable.dart';
 import 'package:gift_of_the_nile/core/index.dart';
 import 'package:gift_of_the_nile/domain/index.dart';
 
-class CharacterEntity {
+class CharacterEntity extends Equatable {
   const CharacterEntity({
     this.gallery,
     this.name,
@@ -29,4 +30,20 @@ class CharacterEntity {
   final List<String>? gallery;
   final int? date;
   final List<String>? videos;
+
+  @override
+  List<Object?> get props => [
+        name,
+        characterType,
+        knownFor,
+        id,
+        animationName,
+        icon,
+        animationPath,
+        story,
+        appearedIn,
+        gallery,
+        date,
+        videos,
+      ];
 }

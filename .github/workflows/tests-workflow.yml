@@ -1,4 +1,4 @@
-name: Upload code coverage to Codecov
+name: Run Tests and Upload code coverage to Codecov
 on:
   push:
     branches: [ main ]

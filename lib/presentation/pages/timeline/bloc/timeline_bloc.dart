@@ -27,7 +27,7 @@ class TimelineBloc extends Bloc<TimelineEvent, TimelineState> {
       final data = await _getCharactersUC(const NoParams());
       data.sort((a, b) {
         if (a is PharaohEntity && b is PharaohEntity) {
-          return (b.date).compareTo(a.date);
+          return (b.date)?.compareTo(a?.date ?? 0) ?? 0;
         } else {
           return 0;
         }

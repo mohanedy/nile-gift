@@ -9,11 +9,16 @@
   <img src="https://img.shields.io/badge/Platform-Flutter-02569B?logo=flutter"
     alt="Platform" />
 </a>
-<a href="https://github.com/A-Fawzyy/sliver-snap/blob/main/LICENSE">
+<a href="https://github.com/Mohanedy98/nile-gift/blob/main/LICENSE">
 <img src="https://img.shields.io/github/license/aagarwal1012/animated-text-kit?color=red"
 alt="License: MIT" />
 </a>
-<a href="https://github.com/Mohanedy98/Gift-of-The-Nile"><img src="https://img.shields.io/github/stars/mohanedy98/Gift-of-The-Nile.svg?style=flat&logo=github&colorB=deeppink&label=stars" alt="Star on Github"></a>
+<a href="https://codecov.io/gh/Mohanedy98/nile-gift">
+<img src="https://codecov.io/gh/Mohanedy98/nile-gift/branch/main/graph/badge.svg" alt="codecov">
+</a>
+<a href="https://github.com/Mohanedy98/Gift-of-The-Nile">
+<img src="https://img.shields.io/github/stars/mohanedy98/Gift-of-The-Nile.svg?style=flat&logo=github&colorB=deeppink&label=stars" alt="Star on Github">
+</a>
 <br>
     The Nile Gift Flutter app is a vertical timeline featuring ancient Egyptian characters such as deities and pharaohs. It offers the opportunity to explore their stories, images, and videos with fully animated and illustrated characters.
     <br>

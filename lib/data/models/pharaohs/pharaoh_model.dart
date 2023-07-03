@@ -1,7 +1,7 @@
 import 'package:gift_of_the_nile/index.dart';
 
 class PharaohModel extends CharacterModel implements BaseModel<PharaohEntity> {
-  PharaohModel({
+  const PharaohModel({
     this.about,
     super.animationName,
     super.animationPath,
@@ -29,21 +29,21 @@ class PharaohModel extends CharacterModel implements BaseModel<PharaohEntity> {
     this.to,
   }) : super(characterType: CharacterType.pharaoh);
 
-  String? about;
-  String? born;
-  String? burial;
-  List<String>? children;
-  List<String>? consort;
-  String? died;
-  int? dynasty;
-  List<String>? facts;
-  String? from;
-  String? knowMore;
-  String? knownBy;
-  List<String>? parents;
-  String? predecessor;
-  String? successor;
-  String? to;
+  final String? about;
+  final String? born;
+  final String? burial;
+  final List<String>? children;
+  final List<String>? consort;
+  final String? died;
+  final int? dynasty;
+  final List<String>? facts;
+  final String? from;
+  final String? knowMore;
+  final String? knownBy;
+  final List<String>? parents;
+  final String? predecessor;
+  final String? successor;
+  final String? to;
 
   factory PharaohModel.fromJson(Map<String, dynamic> json) {
     return PharaohModel(
@@ -57,31 +57,25 @@ class PharaohModel extends CharacterModel implements BaseModel<PharaohEntity> {
           : null,
       born: json['born'],
       burial: json['burial'],
-      children: json['children'] != null
-          ? List<String>.from(json['children'])
-          : null,
-      consort: json['consort'] != null
-          ? List<String>.from(json['consort'])
-          : null,
+      children:
+          json['children'] != null ? List<String>.from(json['children']) : null,
+      consort:
+          json['consort'] != null ? List<String>.from(json['consort']) : null,
       died: json['died'],
       dynasty: json['dynasty'],
-      videos:
-          json['videos'] != null ? List<String>.from(json['videos']) : [],
-      facts:
-          json['facts'] != null ? List<String>.from(json['facts']) : null,
+      videos: json['videos'] != null ? List<String>.from(json['videos']) : [],
+      facts: json['facts'] != null ? List<String>.from(json['facts']) : null,
       from: json['from'],
-      gallery: json['gallery'] != null
-          ? List<String>.from(json['gallery'])
-          : null,
+      gallery:
+          json['gallery'] != null ? List<String>.from(json['gallery']) : null,
       icon: json['icon'],
       id: json['id'],
       knowMore: json['know_more'],
       knownBy: json['known_by'],
       knownFor: json['known_by'],
       name: json['name'],
-      parents: json['parents'] != null
-          ? List<String>.from(json['parents'])
-          : null,
+      parents:
+          json['parents'] != null ? List<String>.from(json['parents']) : null,
       predecessor: json['predecessor'],
       story: json['story'],
       successor: json['successor'],

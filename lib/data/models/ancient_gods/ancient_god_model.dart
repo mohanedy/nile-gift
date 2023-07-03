@@ -117,7 +117,7 @@ class AncientGodModel extends CharacterModel
       about: about,
       animationName: animationName,
       animationPath: animationPath,
-      appearedIn: appearedIn!.map((e) => e.toEntity()).toList(),
+      appearedIn: appearedIn?.map((e) => e.toEntity()).toList()??[],
       believedIn: believedIn,
       consort: consort,
       gallery: gallery,

@@ -1,8 +1,9 @@
+import 'package:equatable/equatable.dart';
 import 'package:gift_of_the_nile/core/index.dart';
 import 'package:gift_of_the_nile/domain/index.dart';
 
 class PharaohEntity extends CharacterEntity {
-  PharaohEntity({
+  const PharaohEntity({
     this.about,
     super.animationName,
     super.animationPath,

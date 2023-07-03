@@ -19,7 +19,7 @@ void main() {
   ];
 
   final List<PharaohEntity> fakePharaohsData = [
-    PharaohEntity(
+    const PharaohEntity(
       name: "Khufu",
       about: "The Great Pyramid of Giza",
       icon: "assets/images/pharaohs/khufu.png",
@@ -62,7 +62,7 @@ void main() {
   test("Should throw an exception when the charactersRepo is null", () {
     /// Arrange
     when(() => charactersRepo.getAncientGods()).thenAnswer(
-          (_) async => throw UnimplementedError(),
+      (_) async => throw UnimplementedError(),
     );
 
     /// Act

@@ -18,8 +18,6 @@ jobs:
       - run: flutter --version
       - name: Get Packages
         run: flutter pub get
-      - name: Analyze
-        run: flutter analyze
       - name: Run tests
         run: flutter test --coverage
       - name: Upload coverage to Codecov

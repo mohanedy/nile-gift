@@ -28,10 +28,10 @@ class CharacterProfileContent extends HookWidget {
     return SliverSnap(
       expandedBackgroundColor: Colors.white,
       collapsedBackgroundColor: Colors.white,
+      forceElevated: true,
+      elevation: 5,
       leading: IconButton(
-        onPressed: () {
-          Navigator.pop(context);
-        },
+        onPressed: () => Navigator.pop(context),
         icon: const Icon(
           Icons.arrow_back,
           color: Colors.black,
@@ -164,7 +164,8 @@ class CharacterProfileContent extends HookWidget {
                 width: 10,
               ),
               ValueListenableBuilder(
-                valueListenable: Hive.box<int>(HiveConst.charactersBox).listenable(),
+                valueListenable:
+                    Hive.box<int>(HiveConst.charactersBox).listenable(),
                 builder: (context, box, child) {
                   return GestureDetector(
                     onTap: () => context.read<CharacterProfileBloc>().add(

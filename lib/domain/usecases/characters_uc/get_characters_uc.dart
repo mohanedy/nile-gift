@@ -2,8 +2,7 @@ import 'package:gift_of_the_nile/index.dart';
 import 'package:injectable/injectable.dart';
 
 @LazySingleton()
-final class GetCharactersUC
-    implements UseCase<List<CharacterEntity>, NoParams?> {
+class GetCharactersUC implements UseCase<List<CharacterEntity>, NoParams?> {
   const GetCharactersUC({
     required this.charactersRepo,
   });

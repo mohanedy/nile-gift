@@ -2,7 +2,7 @@ import 'package:gift_of_the_nile/domain/index.dart';
 import 'package:injectable/injectable.dart';
 
 @LazySingleton()
-final class GetFavoritesUC implements UseCase<List<CharacterEntity>, NoParams> {
+class GetFavoritesUC implements UseCase<List<CharacterEntity>, NoParams> {
   GetFavoritesUC(this._favoritesRepo);
 
   final FavoritesRepo _favoritesRepo;

@@ -12,18 +12,18 @@ part 'home_state.dart';
 @Injectable()
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc(
-    this._charactersUC,
+    this._getCharactersUC,
   ) : super(const HomeState()) {
     on<HomeInitialized>(_onHomeInitialized);
   }
 
-  final CharactersUC _charactersUC;
+  final GetCharactersUC _getCharactersUC;
 
   FutureOr<void> _onHomeInitialized(
       HomeInitialized event, Emitter<HomeState> emit,) async {
     emit(state.copyWith(status: PageStatus.loading));
     try {
-      final characters = await _charactersUC.getCharacters();
+      final characters = await _getCharactersUC(const NoParams());
       emit(state.copyWith(status: PageStatus.success, characters: characters));
     } catch (e) {
       emit(state.copyWith(status: PageStatus.error));

@@ -1,2 +1,1 @@
-export 'characters_uc.dart';
-export 'characters_uc_impl.dart';
+export 'get_characters_uc.dart';

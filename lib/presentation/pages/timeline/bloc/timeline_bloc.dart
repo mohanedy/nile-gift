@@ -12,11 +12,11 @@ part 'timeline_state.dart';
 
 @Injectable()
 class TimelineBloc extends Bloc<TimelineEvent, TimelineState> {
-  TimelineBloc(this._charactersUC) : super(const TimelineState()) {
+  TimelineBloc(this._getCharactersUC) : super(const TimelineState()) {
     on<TimelineInitialized>(_onTimelineInitialized);
   }
 
-  final CharactersUC _charactersUC;
+  final GetCharactersUC _getCharactersUC;
 
   FutureOr<void> _onTimelineInitialized(
     TimelineInitialized event,
@@ -24,7 +24,7 @@ class TimelineBloc extends Bloc<TimelineEvent, TimelineState> {
   ) async {
     emit(state.copyWith(status: PageStatus.loading));
     try {
-      final data = await _charactersUC.getCharacters();
+      final data = await _getCharactersUC(const NoParams());
       data.sort((a, b) {
         if (a is PharaohEntity && b is PharaohEntity) {
           return (b.date).compareTo(a.date);

@@ -1,16 +1,17 @@
 import 'package:gift_of_the_nile/index.dart';
 import 'package:injectable/injectable.dart';
 
-@LazySingleton(as: CharactersUC)
-final class CharactersUCImpl implements CharactersUC {
-  const CharactersUCImpl({
+@LazySingleton()
+final class GetCharactersUC
+    implements UseCase<List<CharacterEntity>, NoParams?> {
+  const GetCharactersUC({
     required this.charactersRepo,
   });
 
   final CharactersRepo charactersRepo;
 
   @override
-  Future<List<CharacterEntity>> getCharacters() async {
+  Future<List<CharacterEntity>> call(_) async {
     final characters = <CharacterEntity>[];
     final ancientGods = await charactersRepo.getAncientGods();
     final pharaohs = await charactersRepo.getPharaohs();

@@ -6,7 +6,7 @@ class MockCharactersRepo extends Mock implements CharactersRepo {}
 
 void main() {
   /// [sut] System Under Test
-  late CharactersUC sut;
+  late GetCharactersUC sut;
 
   late MockCharactersRepo charactersRepo;
 
@@ -28,7 +28,7 @@ void main() {
 
   setUp(() {
     charactersRepo = MockCharactersRepo();
-    sut = CharactersUCImpl(charactersRepo: charactersRepo);
+    sut = GetCharactersUC(charactersRepo: charactersRepo);
   });
 
   test("Should return list of characters when successful", () async {
@@ -47,7 +47,7 @@ void main() {
     );
 
     /// Act
-    final result = await sut.getCharacters();
+    final result = await sut(const NoParams());
 
     /// Assert
     verify(() => charactersRepo.getAncientGods()).called(1);
@@ -62,14 +62,14 @@ void main() {
   test("Should throw an exception when the charactersRepo is null", () {
     /// Arrange
     when(() => charactersRepo.getAncientGods()).thenAnswer(
-      (_) async => throw UnimplementedError(),
+      (_) async => throw Exception(),
     );
 
     /// Act
-    final call = sut.getCharacters;
+    final call = sut;
 
     /// Assert
-    expect(() => call(), throwsA(isA<UnimplementedError>()));
+    expect(() => call(const NoParams()), throwsA(isA<Exception>()));
   });
 
   test("Should return an empty list when the charactersRepo returns no data",
@@ -89,7 +89,7 @@ void main() {
     );
 
     /// Act
-    final result = await sut.getCharacters();
+    final result = await sut(const NoParams());
 
     /// Assert
     verify(() => charactersRepo.getAncientGods()).called(1);
@@ -117,7 +117,7 @@ void main() {
     );
 
     /// Act
-    final result = await sut.getCharacters();
+    final result = await sut(const NoParams());
 
     /// Assert
     verify(() => charactersRepo.getAncientGods()).called(1);
@@ -146,7 +146,7 @@ void main() {
     );
 
     /// Act
-    final result = await sut.getCharacters();
+    final result = await sut(const NoParams());
 
     /// Assert
     verify(() => charactersRepo.getAncientGods()).called(1);

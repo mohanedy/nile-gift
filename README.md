@@ -30,15 +30,13 @@ alt="License: MIT" />
 
 
 <!-- TOC -->
-
-* [Quick start](#quick-start)
-* [Project Structure](#project-structure)
+  * [Quick start](#quick-start)
+  * [Project Structure](#project-structure)
     * [Folder Structure](#folder-structure)
-* [Tools Used](#tools-used)
-* [Screenshots](#screenshots)
-* [Development Environment](#development-environment)
-* [Creator](#creator)
-
+  * [Tools Used](#tools-used)
+  * [Screenshots](#screenshots)
+  * [Development Environment](#development-environment)
+  * [License](#license)
 <!-- TOC -->
 
 ## Quick start

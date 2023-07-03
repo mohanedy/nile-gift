@@ -1,32 +1,28 @@
 name: Upload code coverage to Codecov
 on:
   push:
-    branches: [main]
+    branches: [ main ]
   pull_request:
-    branches: [main]
+    branches: [ main ]
 jobs:
   tests:
-    runs-on: macos-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-    env:
-      OS: ${{ matrix.os }}
-      PYTHON: '3.10'
-    steps:  
-    - name: Checkout the code
-      uses: actions/checkout@v2
-    - name: Install and set Flutter version
-      uses: subosito/flutter-action@v1.4.0
-      with:
-        flutter-version: '3.10.5'
-    - name: Get Packages
-      run: flutter pub get
-    - name: Analyze
-      run: flutter analyze
-    - name: Run tests
-      run: flutter test --coverage
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+      - name: Install and set Flutter version
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      - run: flutter --version
+      - name: Get Packages
+        run: flutter pub get
+      - name: Analyze
+        run: flutter analyze
+      - name: Run tests
+        run: flutter test --coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
